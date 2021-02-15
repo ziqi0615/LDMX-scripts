@@ -10,6 +10,7 @@ import uproot
 import awkward
 import concurrent.futures
 executor = concurrent.futures.ThreadPoolExecutor(12)
+import time
 
 #ecalBranches = [  # EcalVeto data to save.  Could add more, but probably unnecessary.
 #    'discValue_',
@@ -45,7 +46,35 @@ radius_recoil_68_theta_20_end = [4.0754238481177705, 4.193693485630508, 5.142094
 
 radius_68 = [radius_beam_68,radius_recoil_68_p_0_500_theta_0_10, radius_recoil_68_p_500_1500_theta_0_10,radius_recoil_68_theta_10_20,radius_recoil_68_theta_20_end]
 
+### DEFINING FUNCTIONS AND VARIABLES ###
 
+scoringPlaneZ = 240.5015
+ecalFaceZ = 248.35
+cell_radius = 5
+
+def CallX(Hitz, Recoilx, Recoily, Recoilz, RPx, RPy, RPz):
+    Point_xz = [Recoilx, Recoilz]
+    #Almost never happens
+    if RPx == 0:
+        slope_xz = 99999
+    else:
+        slope_xz = RPz / RPx
+
+    x_val = (float(Hitz - Point_xz[1]) / float(slope_xz)) + Point_xz[0]
+    return x_val
+
+def CallY(Hitz, Recoilx, Recoily, Recoilz, RPx, RPy, RPz):
+    Point_yz = [Recoily, Recoilz]
+    #Almost never happens
+    if RPy == 0:
+        slope_yz = 99999
+    else:
+        slope_yz = RPz / RPy
+
+    y_val = (float(Hitz - Point_yz[1]) / float(slope_yz)) + Point_yz[0]
+    return y_val
+
+### ###
 
 def _concat(arrays, axis=0):
     if len(arrays) == 0:
@@ -203,6 +232,65 @@ class ECalHitsDataset(Dataset):
             if n_selected == 0:   #Ignore this file
                 print("ERROR:  ParticleNet can't handle files with no events passing selection!")
 
+
+	    ### DEFINING recoilX, recoilY, recoilPx, recoilPy, recoilPz ###
+            def _pad_array(arr):
+                # = t['EcalScoringPlaneHits_v12.x_'].array()[el].pad(1, clip=True).fillna(0).flatten()  #Arr of floats.  [0][0] fails.
+                arr = awkward.pad_none(arr, 1, clip=True)
+                arr = awkward.fill_none(arr, 0)
+                return awkward.flatten(arr)
+
+            el = (t['EcalScoringPlaneHits_v12.pdgID_'].array() == 11) * \
+                 (t['EcalScoringPlaneHits_v12.z_'].array() > 240) * \
+                 (t['EcalScoringPlaneHits_v12.z_'].array() < 241) * \
+                 (t['EcalScoringPlaneHits_v12.pz_'].array() > 0)   
+
+            recoilX = _pad_array(t['EcalScoringPlaneHits_v12.x_'].array()[el])[start:stop][pos_pass_presel]
+            recoilY = _pad_array(t['EcalScoringPlaneHits_v12.y_'].array()[el])[start:stop][pos_pass_presel]
+            recoilPx = _pad_array(t['EcalScoringPlaneHits_v12.px_'].array()[el])[start:stop][pos_pass_presel]
+            recoilPy = _pad_array(t['EcalScoringPlaneHits_v12.py_'].array()[el])[start:stop][pos_pass_presel]
+            recoilPz = _pad_array(t['EcalScoringPlaneHits_v12.pz_'].array()[el])[start:stop][pos_pass_presel]
+            ### ###     
+
+            ### LOOPING THROUGH EACH EVENT AND MAKE A BOOLEAN ARRAY FOR THE EVENTS ###
+
+            simEvents = np.zeros(len(recoilPx), dtype=bool)
+
+
+            for i in range(len(recoilPx)):
+
+                recoilfX = CallX(ecalFaceZ, recoilX[i], recoilY[i], scoringPlaneZ, recoilPx[i], recoilPy[i], recoilPz[i])
+                recoilfY = CallY(ecalFaceZ, recoilX[i], recoilY[i], scoringPlaneZ, recoilPx[i], recoilPy[i], recoilPz[i])
+
+                # FIDUCIAL OR NOT #
+
+                nonFiducial = True
+
+                if not recoilX[i] == -9999 and not recoilY[i] ==  -9999 and not recoilPx[i] == -9999 and not recoilPy[i] == -9999 and not recoilPz[i] == -9999:
+                    for x in self._cellMap.values():
+                        xdis = recoilfY - x[1]
+                        ydis = recoilfX - x[0]
+                        celldis = np.sqrt(xdis**2 + ydis**2)
+                        if celldis <= cell_radius:
+                            nonFiducial = False
+                            break
+                # #
+
+                # If the i-th event is not in the Fiducial Region, mark the i-th index of the simEvents array with a 1 aka TRUE #
+                if nonFiducial == True:
+                    simEvents[i] = 1
+           
+            ### ###
+            
+            ### APPLYING simEvents TO THE PRESELECTION ###  
+            
+            for k in table:
+                table[k] = table[k][simEvents]
+            
+            
+            print("the number of non-fiducial is : " + str(sum(simEvents)))
+
+            ### ###
             eid = table[self._id_branch]
             energy = table[self._energy_branch]
             pos = (energy > 0)
