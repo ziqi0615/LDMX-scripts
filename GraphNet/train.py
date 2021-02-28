@@ -66,7 +66,7 @@ args = parser.parse_args()
 ###### location of the signal and background files ######
 bkglist = {
     # (filepath, num_events_for_training)
-    0: ('/home/pmasterson/GraphNet_input/v12/*pn*.root', -1)
+    0: ('/home/pmasterson/GraphNet_input/v12/bkg_12M/*.root', -1)
     }
 
 siglist = {
@@ -175,9 +175,9 @@ dev = torch.device(args.device)
 if training_mode:
     # for training: we use the first 0-20% for testing, and 20-80% for training
     print("Usage: {}".format(psutil.virtual_memory().percent))
-    train_data = ECalHitsDataset(siglist=siglist, bkglist=bkglist, load_range=(0.2, 1), coord_ref=args.coord_ref)
+    train_data = ECalHitsDataset(siglist=siglist, bkglist=bkglist, load_range=(0.2, 1), coord_ref=args.coord_ref) # turn off preselection
     print("Usage: {}".format(psutil.virtual_memory().percent))
-    val_data = ECalHitsDataset(siglist=siglist, bkglist=bkglist, load_range=(0, 0.2), coord_ref=args.coord_ref)
+    val_data = ECalHitsDataset(siglist=siglist, bkglist=bkglist, load_range=(0, 0.2), coord_ref=args.coord_ref)  # turn off preselection
     print("Usage: {}".format(psutil.virtual_memory().percent))
     train_loader = DataLoader(train_data, num_workers=args.num_workers, batch_size=args.batch_size,
                               collate_fn=collate_fn, shuffle=True, drop_last=True, pin_memory=True)
@@ -196,7 +196,7 @@ else:
 
     test_frac = (0, 1) if args.test_sig or args.test_bkg else (0, 0.2)
     test_data = ECalHitsDataset(siglist=siglist, bkglist=bkglist, load_range=test_frac, ignore_evt_limits=(not args.demo),
-                                obs_branches=obs_branches, veto_branches=veto_branches, coord_ref=args.coord_ref)
+                                obs_branches=obs_branches, veto_branches=veto_branches, coord_ref=args.coord_ref)  # turn off preselection
     test_loader = DataLoader(test_data, num_workers=args.num_workers, batch_size=args.batch_size,
                              collate_fn=collate_fn, shuffle=False, drop_last=False, pin_memory=True)
 

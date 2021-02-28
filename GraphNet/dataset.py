@@ -74,8 +74,6 @@ def CallY(Hitz, Recoilx, Recoily, Recoilz, RPx, RPy, RPz):
     y_val = (float(Hitz - Point_yz[1]) / float(slope_yz)) + Point_yz[0]
     return y_val
 
-### ###
-
 def _concat(arrays, axis=0):
     if len(arrays) == 0:
         return np.array()
@@ -232,10 +230,8 @@ class ECalHitsDataset(Dataset):
             if n_selected == 0:   #Ignore this file
                 print("ERROR:  ParticleNet can't handle files with no events passing selection!")
 
-
-	    ### DEFINING recoilX, recoilY, recoilPx, recoilPy, recoilPz ###
+            ### DEFINING recoilX, recoilY, recoilPx, recoilPy, recoilPz ###
             def _pad_array(arr):
-                # = t['EcalScoringPlaneHits_v12.x_'].array()[el].pad(1, clip=True).fillna(0).flatten()  #Arr of floats.  [0][0] fails.
                 arr = awkward.pad_none(arr, 1, clip=True)
                 arr = awkward.fill_none(arr, 0)
                 return awkward.flatten(arr)
@@ -243,21 +239,21 @@ class ECalHitsDataset(Dataset):
             el = (t['EcalScoringPlaneHits_v12.pdgID_'].array() == 11) * \
                  (t['EcalScoringPlaneHits_v12.z_'].array() > 240) * \
                  (t['EcalScoringPlaneHits_v12.z_'].array() < 241) * \
-                 (t['EcalScoringPlaneHits_v12.pz_'].array() > 0)   
+                 (t['EcalScoringPlaneHits_v12.pz_'].array() > 0)
 
             recoilX = _pad_array(t['EcalScoringPlaneHits_v12.x_'].array()[el])[start:stop][pos_pass_presel]
             recoilY = _pad_array(t['EcalScoringPlaneHits_v12.y_'].array()[el])[start:stop][pos_pass_presel]
             recoilPx = _pad_array(t['EcalScoringPlaneHits_v12.px_'].array()[el])[start:stop][pos_pass_presel]
             recoilPy = _pad_array(t['EcalScoringPlaneHits_v12.py_'].array()[el])[start:stop][pos_pass_presel]
             recoilPz = _pad_array(t['EcalScoringPlaneHits_v12.pz_'].array()[el])[start:stop][pos_pass_presel]
-            ### ###     
 
             ### LOOPING THROUGH EACH EVENT AND MAKE A BOOLEAN ARRAY FOR THE EVENTS ###
+            N = len(recoilPx)
 
-            simEvents = np.zeros(len(recoilPx), dtype=bool)
+            simEvents = np.zeros(N, dtype=bool)
 
 
-            for i in range(len(recoilPx)):
+            for i in range(N):
 
                 recoilfX = CallX(ecalFaceZ, recoilX[i], recoilY[i], scoringPlaneZ, recoilPx[i], recoilPy[i], recoilPz[i])
                 recoilfY = CallY(ecalFaceZ, recoilX[i], recoilY[i], scoringPlaneZ, recoilPx[i], recoilPy[i], recoilPz[i])
@@ -267,37 +263,30 @@ class ECalHitsDataset(Dataset):
                 nonFiducial = True
 
                 if not recoilX[i] == -9999 and not recoilY[i] ==  -9999 and not recoilPx[i] == -9999 and not recoilPy[i] == -9999 and not recoilPz[i] == -9999:
-                    for x in self._cellMap.values():
-                        xdis = recoilfY - x[1]
-                        ydis = recoilfX - x[0]
+                    for c_val in self._cellMap.values():
+                        xdis = recoilfY - c_val[1]
+                        ydis = recoilfX - c_val[0]
                         celldis = np.sqrt(xdis**2 + ydis**2)
                         if celldis <= cell_radius:
                             nonFiducial = False
                             break
-                # #
 
                 # If the i-th event is not in the Fiducial Region, mark the i-th index of the simEvents array with a 1 aka TRUE #
                 if nonFiducial == True:
                     simEvents[i] = 1
-           
-            ### ###
-            
+
             ### APPLYING simEvents TO THE PRESELECTION ###  
-            
+
             for k in table:
                 table[k] = table[k][simEvents]
             
-            
-            print("the number of non-fiducial is : " + str(sum(simEvents)))
 
-            ### ###
             eid = table[self._id_branch]
             energy = table[self._energy_branch]
             pos = (energy > 0)
             eid = eid[pos]  # Gets rid of all (AND ONLY) hits with 0 energy
             energy = energy[pos]
             (x, y, z), layer_id = self._parse_cid(eid)  # layer_id > 0, so can use layer_id-1 to index e/ptraj_ref
-
 
             # Now, work with table['etraj_ref'] and table['ptraj_ref'].
             # Create lists:  x/y/z_e, p
