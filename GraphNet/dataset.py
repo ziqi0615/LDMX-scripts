@@ -214,7 +214,6 @@ class ECalHitsDataset(Dataset):
             #print("**CHECK TABLE DIMS, post basic: ", awkward.type(table["EcalRecHits_v12.id_"]))
             #print(awkward.type(table["EcalRecHits_v12.id_"][0]))
 
-
             if apply_preselection:
                 #pos_pass_presel = (table[self._energy_branch] > 0).sum() < MAX_NUM_ECAL_HITS
                 pos_pass_presel = awkward.sum(table[self._energy_branch] > 0, axis=1) < MAX_NUM_ECAL_HITS
@@ -318,7 +317,11 @@ class ECalHitsDataset(Dataset):
                 enorm_sp = table['etraj_ref'][i][1]  # normalized (dz=1) momentum = direction of trajectory
                 ptraj_sp = table['ptraj_ref'][i][0]
                 pnorm_sp = table['ptraj_ref'][i][1]
-                for j in range(len(x[i])):  #range(MAX_NUM_ECAL_HITS):  # For every hit...
+                #print(str(i))
+                #print("1) x AXIS 0: " + str(np.size(x, axis=0)) + " x AXIS 1: " +  str(np.size(x, axis=0)))
+                #print("1) x_e AXIS 0: " + str(np.size(x_e, axis=0)) + " x_e AXIS 1: " + str(np.size(x_e, axis=1)))
+
+                for j in range(min(len(x[i]), MAX_NUM_ECAL_HITS)):  #range(MAX_NUM_ECAL_HITS):  # For every hit...
                     layer_index = int(layer_id[i][j])
                     # Calculate xy for projected trajectory in same layer
                     delta_z = self._layerZs[layer_index] - etraj_sp[2]
@@ -362,6 +365,9 @@ class ECalHitsDataset(Dataset):
                     # ***TEMP:** Revert to 1-region net!
                     insideElectronRadius = True
                     if insideElectronRadius:
+                        #print(str(i) +  "," +  str(j))
+                        #print("2) x AXIS 0: " + str(np.size(x, axis=0)) + " x AXIS 1: " +  str(np.size(x, axis=0)))
+                        #print("2) x_e AXIS 0: " + str(np.size(x_e, axis=0)) + " x_e AXIS 1: " + str(np.size(x_e, axis=1)))
                         x_e[i][j] = x[i][j] - etraj_point[0]  # Store coordinates relative to the xy distance from the trajectory
                         y_e[i][j] = y[i][j] - etraj_point[1]
                         z_e[i][j] = z[i][j] - self._layerZs[0]  # Defined relative to the ecal face
