@@ -12,6 +12,8 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader
 
+torch.set_default_dtype(torch.float64)
+
 import tqdm
 import os
 import datetime
@@ -57,30 +59,37 @@ parser.add_argument('--test-sig', type=str, default='',
 parser.add_argument('--test-bkg', type=str, default='',
                     help='background sample to be used for testing')
 parser.add_argument('--save-extra', action='store_true', default=False,
-                    help='save extra information defined in `obs_branches` and `ecal_branches` to the prediction output')
+                    help='save extra information defined in `obs_branches` and `veto_branches` to the prediction output')
 parser.add_argument('--test-output-path', type=str, default='test-outputs/particle_net_output',
                     help='path to save the prediction output')
 
 args = parser.parse_args()
 
-###### location of the signal and background files ######
+#####i# location of the signal and background files ######
 bkglist = {
     # (filepath, num_events_for_training)
+<<<<<<< HEAD
     0: ('/home/pmasterson/GraphNet_input/v12/bkg_12M/*.root', -1)
+=======
+    # In 
+    0: ('/home/pmasterson/GraphNet_input/v12/bkg_12M/*.root', -1)
+    #0: ('/home/pmasterson/GraphNet_input/v12/kaon_training/*.root', -1)
+>>>>>>> dev/PN_v12
     }
 
 siglist = {
     # (filepath, num_events_for_training)
-    1:    ('/home/pmasterson/GraphNet_input/v12/*0.001*.root', 200000),
-    10:   ('/home/pmasterson/GraphNet_input/v12/*0.01*.root',  200000),
-    100:  ('/home/pmasterson/GraphNet_input/v12/*0.1*.root',   200000),
-    1000: ('/home/pmasterson/GraphNet_input/v12/*1.0*.root',   200000),
+    # NOTE:  the signal files in /v12/ are incorrect!  (Recent ldmx-sw change affecting signal hit distr)
+    1:    ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.001*.root', 200000),
+    10:   ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.01*.root',  200000),
+    100:  ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.1*.root',   200000),
+    1000: ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*1.0*.root',   200000),
     }
 
 if args.demo:
     bkglist = {
         # (filepath, num_events_for_training)
-        0: ('/home/pmasterson/GraphNet_input/v12/*pn*.root', 4000)
+        0: ('/home/pmasterson/GraphNet_input/v12/large_bkg/*.root', 4000)
         }
 
     siglist = {
@@ -94,9 +103,8 @@ if args.demo:
 
 ###### `observer` variables to be saved in the prediction output ######
 obs_branches = []
-ecal_branches = []
+veto_branches = []
 if args.save_extra:
-    print("***SAVING EXTRA")
     # NOW using v12:
     # Commented 
     obs_branches = [
@@ -190,9 +198,6 @@ if training_mode:
     test_data = val_data
     test_loader = val_loader
 else:
-    print("Siglist adn bkglist:")
-    print(siglist)
-    print(bkglist)
 
     test_frac = (0, 1) if args.test_sig or args.test_bkg else (0, 0.2)
     test_data = ECalHitsDataset(siglist=siglist, bkglist=bkglist, load_range=test_frac, ignore_evt_limits=(not args.demo),

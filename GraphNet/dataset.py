@@ -9,8 +9,14 @@ import tqdm
 import uproot
 import awkward
 import concurrent.futures
+
+import psutil
+import gc  # May reduce RAM usage
+
 executor = concurrent.futures.ThreadPoolExecutor(12)
 import time
+
+torch.set_default_dtype(torch.float64)
 
 #ecalBranches = [  # EcalVeto data to save.  Could add more, but probably unnecessary.
 #    'discValue_',
@@ -18,9 +24,8 @@ import time
 #    'recoilY_',
 #    ]
 
-#MAX_NUM_ECAL_HITS = 50
-# NEW:
-MAX_NUM_ECAL_HITS = 80
+MAX_NUM_ECAL_HITS = 110  # Still need this to determine array sizes...110 gives >98% efficiency, so using that.
+MAX_ISO_ENERGY = 650  # 600 gives slightly under 95% sig eff; shoot for a bit over
 
 # NEW:  LayerZ data (may be outdated)
 # Assumed outdated; not currently used
@@ -96,7 +101,7 @@ class ECalHitsDataset(Dataset):
         self._load_cellMap(version=detector_version)
         self._id_branch = 'EcalRecHits_v12.id_'  # Technically not necessary anymore
         self._energy_branch = 'EcalRecHits_v12.energy_'
-        ecal_veto_branches = ['EcalVeto_v12.'+b for b in veto_branches]
+        ecal_veto_branches = ['EcalVeto_v12.'+b for b in veto_branches + ['summedTightIso_']]
         #self._test_branch = 'EcalVeto_v12'
         #self._x_branch = 'EcalRecHits_v12.xpos_'
         #self._y_branch = 'EcalRecHits_v12.ypos_'
@@ -166,8 +171,8 @@ class ECalHitsDataset(Dataset):
 
             # Calc z relative to ecal face
 
-            etraj_ref = np.zeros((len(etraj_p_norm), 2, 3), dtype='float32')  # Note the 2:  Only storing start and pvec_norm
-            ptraj_ref = np.zeros((len(etraj_p_norm), 2, 3), dtype='float32')
+            etraj_ref = np.zeros((len(etraj_p_norm), 2, 3), dtype='float64')  # Note the 2:  Only storing start and pvec_norm
+            ptraj_ref = np.zeros((len(etraj_p_norm), 2, 3), dtype='float64')
             # Format is [event#] x [start of traj/p_norm] x [etraj_xyz]
             for i in range(len(etraj_p_norm)):
                 etraj_ref[i][0][0] = etraj_x_sp[i]
@@ -211,20 +216,16 @@ class ECalHitsDataset(Dataset):
                 table[k] = table[k][start:stop]
             n_inclusive = len(table[self._branches[0]])  # before preselection
 
-            #print("**CHECK TABLE DIMS, post basic: ", awkward.type(table["EcalRecHits_v12.id_"]))
-            #print(awkward.type(table["EcalRecHits_v12.id_"][0]))
 
             if apply_preselection:
-                #pos_pass_presel = (table[self._energy_branch] > 0).sum() < MAX_NUM_ECAL_HITS
                 pos_pass_presel = awkward.sum(table[self._energy_branch] > 0, axis=1) < MAX_NUM_ECAL_HITS
-                #print(awkward.type(table[self._energy_branch] > 0))
-                print("First few hit sums: ", awkward.sum(table[self._energy_branch] > 0, axis=1)[:10])
-                #print(pos_pass_presel)
+                # NEW:
+                pos_pass_presel = (table['EcalVeto_v12.summedTightIso_'] < MAX_ISO_ENERGY) * pos_pass_presel
                 for k in table:
                     table[k] = table[k][pos_pass_presel]
             n_selected = len(table[self._branches[0]])  # after preselection
-            print("EVENTS BEFORE PRESELECTION (in _read_file):  {}".format(n_inclusive))
-            print("EVENTS AFTER PRESELECTION: ", n_selected)
+            #print("EVENTS BEFORE PRESELECTION (in _read_file):  {}".format(n_inclusive))
+            #print("EVENTS AFTER PRESELECTION: ", n_selected)
 
             if n_selected == 0:   #Ignore this file
                 print("ERROR:  ParticleNet can't handle files with no events passing selection!")
@@ -292,18 +293,18 @@ class ECalHitsDataset(Dataset):
             # For each event, look through all hits.
             # - Determine whether hit falls inside either the e or p RoCs
             # - If so, fill corresp xyzlayer, energy, eid lists...
-            x_e =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float32')  # In theory, can lower size of 2nd dimension...
-            y_e =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float32')
-            z_e =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float32')
-            # eid_e =         np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float32')
-            log_energy_e =  np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float32')
-            layer_id_e =    np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float32')
-            #x_p =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float32')
-            #y_p =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float32')
-            #z_p =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float32')
-            # eid_p =         np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float32')
-            #log_energy_p =  np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float32')
-            #layer_id_p =    np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float32')
+            x_e =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')  # In theory, can lower size of 2nd dimension...
+            y_e =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
+            z_e =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
+            # eid_e =         np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
+            log_energy_e =  np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
+            layer_id_e =    np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
+            #x_p =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
+            #y_p =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
+            #z_p =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
+            # eid_p =         np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
+            #log_energy_p =  np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
+            #layer_id_p =    np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
             # Optional 3rd region:
             #x_o =           np.zeros((len(x), MAX_NUM_ECAL_HITS))
             #y_o =           np.zeros((len(x), MAX_NUM_ECAL_HITS))
@@ -433,19 +434,17 @@ class ECalHitsDataset(Dataset):
                             continue
                         load_branches = [k for k in self._branches + obs_branches if '.' in k and k[-1] == '_']
                         table_temp = t.arrays(expressions=load_branches, interpretation_executor=executor)  #, library="ak")
-                        #print("New table type is", awkward.type(table))
-                        #print(awkward.type(table["EcalRecHits_v12.id_"]))
-                        # NOTE:  New type of table is an awkward array.  Can index w/ ["BranchName..."], but it's not a dict anymore.
-                        # Fix that:  Want to combine everything into a single dict.
                         table = {}
                         for k in load_branches:
                             table[k] = table_temp[k]
 
 
                         # Now go through and load Ecal branches separately.
+                        # New branch for cut:
+                        EcalVeto = t["EcalVeto_v12"]
+                        table["EcalVeto_v12.summedTightIso_"] = EcalVeto["summedTightIso_"].array(interpretation_executor=executor)
+                        # All other ecal branches:
                         if veto_branches:
-                            # Manually add EcalVeto vars to table
-                            EcalVeto = t["EcalVeto_v12"]
                             for branch in veto_branches:
                                 table["EcalVeto_v12."+branch] = EcalVeto[branch].array(interpretation_executor=executor)
 
@@ -456,9 +455,8 @@ class ECalHitsDataset(Dataset):
 
                         n_total_inclusive += n_inc
                         n_total_selected += n_sel
-                        print("N_SELECTED:  ", n_sel)
-                        print("TOTAL SELECTED:  ", n_total_selected)
-                        
+                        #print("N_SELECTED:  ", n_sel)
+                        #print("TOTAL SELECTED:  ", n_total_selected)
 
                         for k in v_d:
                             if k in var_dict:
@@ -469,6 +467,8 @@ class ECalHitsDataset(Dataset):
                             obs_dict[k].append(o_d[k])
                         if max_event > 0 and n_total_selected >= max_event:
                             break
+
+                        gc.collect()  # May reduce RAM usage
 
                 # calc preselection eff before dropping events more than `max_event`
                 self.presel_eff[extra_label] = float(n_total_selected) / n_total_inclusive
@@ -497,12 +497,17 @@ class ECalHitsDataset(Dataset):
                 for k in obs_branches + ecal_veto_branches:
                     self.obs_data[k].append(obs_dict[k])
                 n_sum += n_total_loaded
+                
+                gc.collect()
+                #print("Usage after load: {}".format(psutil.virtual_memory().percent))
             return n_sum
 
         nsig = _load_dataset(siglist, 'sig')
         nbkg = _load_dataset(bkglist, 'bkg')
-        # label for training
-        self.label = np.zeros(nsig + nbkg, dtype='float32')
+        print("Preparing to train on {} background events, {} (total) signal events".format(nbkg, nsig)) 
+
+       # label for training
+        self.label = np.zeros(nsig + nbkg, dtype='float64')
         self.label[:nsig] = 1
 
         self.extra_labels = np.concatenate(self.extra_labels)
@@ -514,8 +519,8 @@ class ECalHitsDataset(Dataset):
         # training features
         # There may be a better way to do this syntactically, but it saves RAM
         # **WAS PREVIOUSLY** 3, 3; 3, 5
-        self.coordinates = np.zeros((len(self.var_data['x_e']), 1, 3, MAX_NUM_ECAL_HITS), dtype='float32')
-        self.features =    np.zeros((len(self.var_data['x_e']), 1, 5, MAX_NUM_ECAL_HITS), dtype='float32')
+        self.coordinates = np.zeros((len(self.var_data['x_e']), 1, 3, MAX_NUM_ECAL_HITS), dtype='float64')
+        self.features =    np.zeros((len(self.var_data['x_e']), 1, 5, MAX_NUM_ECAL_HITS), dtype='float64')
         tmp_coord_arr = [[self.var_data['x_e'], self.var_data['y_e'], self.var_data['z_e'], self.var_data['layer_id_e'], self.var_data['log_energy_e']]
                          #[self.var_data['x_p'], self.var_data['y_p'], self.var_data['z_p'], self.var_data['layer_id_p'], self.var_data['log_energy_p']],
                          #[self.var_data['x_o'], self.var_data['y_o'], self.var_data['z_o'], self.var_data['layer_id_o'], self.var_data['log_energy_o']]
@@ -537,6 +542,7 @@ class ECalHitsDataset(Dataset):
         #    del item
         #for key, item in self.obs_data.items():
         #    del item
+        gc.collect()
 
 
     def _load_cellMap(self, version='v12'):
@@ -561,7 +567,7 @@ class ECalHitsDataset(Dataset):
             # x = 1D flattened np array, base_array has the desired shape
             return awkward.Array(awkward.layout.ListOffsetArray64(
                                     base_array.layout.offsets,
-                                    awkward.layout.NumpyArray(np.array(x, dtype='float32'))
+                                    awkward.layout.NumpyArray(np.array(x, dtype='float64'))
                                     )
                                 )
         x        = unflatten_array(x, cid)
