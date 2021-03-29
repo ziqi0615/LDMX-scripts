@@ -94,7 +94,7 @@ def _concat(arrays, axis=0):
 
 class ECalHitsDataset(Dataset):
 
-    def __init__(self, siglist, bkglist, load_range=(0, 1), apply_preselection=True, ignore_evt_limits=False, obs_branches=[], veto_branches=[], coord_ref=None, detector_version='v12'):
+    def __init__(self, siglist, bkglist, load_range=(0, 1), apply_preselection=False, ignore_evt_limits=False, obs_branches=[], veto_branches=[], coord_ref=None, detector_version='v12'):
         super(ECalHitsDataset, self).__init__()
 
         # first load cell map
@@ -224,8 +224,8 @@ class ECalHitsDataset(Dataset):
                 for k in table:
                     table[k] = table[k][pos_pass_presel]
             n_selected = len(table[self._branches[0]])  # after preselection
-            #print("EVENTS BEFORE PRESELECTION (in _read_file):  {}".format(n_inclusive))
-            #print("EVENTS AFTER PRESELECTION: ", n_selected)
+            print("EVENTS BEFORE PRESELECTION (in _read_file):  {}".format(n_inclusive))
+            print("EVENTS AFTER PRESELECTION: ", n_selected)
 
             if n_selected == 0:   #Ignore this file
                 print("ERROR:  ParticleNet can't handle files with no events passing selection!")
@@ -242,10 +242,10 @@ class ECalHitsDataset(Dataset):
                  (t['EcalScoringPlaneHits_v12.pz_'].array() > 0)
 
             recoilX = _pad_array(t['EcalScoringPlaneHits_v12.x_'].array()[el])[start:stop]#[pos_pass_presel]
-            recoilY = _pad_array(t['EcalScoringPlaneHits_v12.y_'].array()[el])[start:stop][pos_pass_presel]
-            recoilPx = _pad_array(t['EcalScoringPlaneHits_v12.px_'].array()[el])[start:stop][pos_pass_presel]
-            recoilPy = _pad_array(t['EcalScoringPlaneHits_v12.py_'].array()[el])[start:stop][pos_pass_presel]
-            recoilPz = _pad_array(t['EcalScoringPlaneHits_v12.pz_'].array()[el])[start:stop][pos_pass_presel]
+            recoilY = _pad_array(t['EcalScoringPlaneHits_v12.y_'].array()[el])[start:stop]#[pos_pass_presel]
+            recoilPx = _pad_array(t['EcalScoringPlaneHits_v12.px_'].array()[el])[start:stop]#[pos_pass_presel]
+            recoilPy = _pad_array(t['EcalScoringPlaneHits_v12.py_'].array()[el])[start:stop]#[pos_pass_presel]
+            recoilPz = _pad_array(t['EcalScoringPlaneHits_v12.pz_'].array()[el])[start:stop]#[pos_pass_presel]
 
             ### LOOPING THROUGH EACH EVENT AND MAKE A BOOLEAN ARRAY FOR THE EVENTS ###
             N = len(recoilPx)
@@ -369,6 +369,7 @@ class ECalHitsDataset(Dataset):
                         #print(str(i) +  "," +  str(j))
                         #print("2) x AXIS 0: " + str(np.size(x, axis=0)) + " x AXIS 1: " +  str(np.size(x, axis=0)))
                         #print("2) x_e AXIS 0: " + str(np.size(x_e, axis=0)) + " x_e AXIS 1: " + str(np.size(x_e, axis=1)))
+                        #print('2) The shape of x_e: ' + str(np.shape(x_e)))
                         x_e[i][j] = x[i][j] - etraj_point[0]  # Store coordinates relative to the xy distance from the trajectory
                         y_e[i][j] = y[i][j] - etraj_point[1]
                         z_e[i][j] = z[i][j] - self._layerZs[0]  # Defined relative to the ecal face
