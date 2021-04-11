@@ -9,7 +9,7 @@ import tqdm
 import uproot
 import awkward
 import concurrent.futures
-
+import matplotlib.pyplot as plt
 import psutil
 import gc  # May reduce RAM usage
 
@@ -252,11 +252,13 @@ class ECalHitsDataset(Dataset):
 
             simEvents = np.zeros(N, dtype=bool)
 
-
             for i in range(N):
 
                 recoilfX = CallX(ecalFaceZ, recoilX[i], recoilY[i], scoringPlaneZ, recoilPx[i], recoilPy[i], recoilPz[i])
                 recoilfY = CallY(ecalFaceZ, recoilX[i], recoilY[i], scoringPlaneZ, recoilPx[i], recoilPy[i], recoilPz[i])
+                
+                fX[i] = recoilfX
+                fY[i] = recoilfY
 
                 # FIDUCIAL OR NOT #
 
@@ -545,7 +547,7 @@ class ECalHitsDataset(Dataset):
         #    del item
         gc.collect()
 
-
+    
     def _load_cellMap(self, version='v12'):
         self._cellMap = {}
         for i, x, y in np.loadtxt('data/%s/cellmodule.txt' % version):

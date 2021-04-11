@@ -1,0 +1,33 @@
+conv_params: [(7, (32, 32, 32)), (7, (64, 64, 64))]
+fc_params: [(128, 0.1)]
+Usage: 38.5
+Loaded detector info
+Using coord_ref=none
+Start loading dataset /home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.001*.root (sig)
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [01:36<14:32, 96.90s/it] 20%|██        | 2/10 [02:57<12:16, 92.03s/it]/home/dgj1118/LDMX-scripts/GraphNet/dataset.py:332: RuntimeWarning: invalid value encountered in double_scalars
+  recoilangle = enorm_sp[2] / np.sqrt(enorm_sp[0]**2 + enorm_sp[1]**2 + enorm_sp[2]**2)
+ 30%|███       | 3/10 [03:56<09:35, 82.19s/it] 40%|████      | 4/10 [05:42<08:55, 89.32s/it] 50%|█████     | 5/10 [06:57<07:04, 84.88s/it] 60%|██████    | 6/10 [08:16<05:32, 83.07s/it] 70%|███████   | 7/10 [09:14<03:47, 75.81s/it] 80%|████████  | 8/10 [10:33<02:33, 76.53s/it] 90%|█████████ | 9/10 [11:54<01:18, 78.05s/it] 90%|█████████ | 9/10 [12:52<01:25, 85.86s/it]
+Total 218384 events, selected 210183 events, finally loaded 0 events.
+Start loading dataset /home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.01*.root (sig)
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:55<08:23, 55.89s/it] 20%|██        | 2/10 [01:13<05:55, 44.48s/it] 30%|███       | 3/10 [01:54<05:04, 43.50s/it] 40%|████      | 4/10 [02:39<04:23, 43.86s/it] 50%|█████     | 5/10 [03:24<03:41, 44.23s/it] 60%|██████    | 6/10 [04:19<03:10, 47.50s/it] 70%|███████   | 7/10 [04:53<02:09, 43.22s/it] 80%|████████  | 8/10 [05:37<01:27, 43.54s/it] 90%|█████████ | 9/10 [06:21<00:43, 43.78s/it]100%|██████████| 10/10 [07:34<00:00, 52.50s/it]100%|██████████| 10/10 [07:34<00:00, 45.46s/it]
+Total 122496 events, selected 121336 events, finally loaded 1530 events.
+Start loading dataset /home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.1*.root (sig)
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:18<02:46, 18.53s/it] 20%|██        | 2/10 [00:50<02:59, 22.49s/it] 30%|███       | 3/10 [01:22<02:58, 25.48s/it] 40%|████      | 4/10 [01:55<02:46, 27.81s/it] 50%|█████     | 5/10 [02:09<01:57, 23.50s/it] 60%|██████    | 6/10 [02:34<01:36, 24.00s/it] 70%|███████   | 7/10 [03:07<01:20, 26.80s/it] 80%|████████  | 8/10 [03:26<00:48, 24.27s/it] 90%|█████████ | 9/10 [03:51<00:24, 24.59s/it]100%|██████████| 10/10 [04:16<00:00, 24.68s/it]100%|██████████| 10/10 [04:16<00:00, 25.65s/it]
+Total 67129 events, selected 66848 events, finally loaded 954 events.
+Start loading dataset /home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*1.0*.root (sig)
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [01:06<09:58, 66.52s/it] 20%|██        | 2/10 [01:53<08:06, 60.76s/it] 30%|███       | 3/10 [03:10<07:37, 65.40s/it] 40%|████      | 4/10 [04:14<06:30, 65.16s/it] 50%|█████     | 5/10 [05:01<04:58, 59.63s/it] 60%|██████    | 6/10 [06:07<04:06, 61.68s/it] 70%|███████   | 7/10 [07:12<03:07, 62.65s/it] 80%|████████  | 8/10 [07:59<01:55, 57.91s/it] 90%|█████████ | 9/10 [09:06<01:00, 60.53s/it]100%|██████████| 10/10 [10:35<00:00, 69.13s/it]100%|██████████| 10/10 [10:35<00:00, 63.55s/it]
+Total 160020 events, selected 159744 events, finally loaded 6104 events.
+Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/*.root (bkg)
+  0%|          | 0/88 [00:00<?, ?it/s]  1%|          | 1/88 [00:51<1:14:38, 51.48s/it]  2%|▏         | 2/88 [01:46<1:15:26, 52.63s/it]  3%|▎         | 3/88 [02:42<1:16:03, 53.69s/it]  5%|▍         | 4/88 [03:36<1:15:10, 53.69s/it]  6%|▌         | 5/88 [04:30<1:14:17, 53.71s/it]  7%|▋         | 6/88 [05:22<1:12:40, 53.18s/it]  8%|▊         | 7/88 [06:17<1:12:33, 53.74s/it]  9%|▉         | 8/88 [07:11<1:11:40, 53.76s/it] 10%|█         | 9/88 [08:07<1:11:37, 54.40s/it] 11%|█▏        | 10/88 [09:02<1:10:57, 54.59s/it] 12%|█▎        | 11/88 [09:55<1:09:31, 54.18s/it] 14%|█▎        | 12/88 [10:48<1:08:03, 53.73s/it] 15%|█▍        | 13/88 [11:41<1:06:56, 53.56s/it] 16%|█▌        | 14/88 [12:32<1:05:03, 52.75s/it] 17%|█▋        | 15/88 [13:23<1:03:51, 52.49s/it] 18%|█▊        | 16/88 [14:13<1:01:53, 51.57s/it] 19%|█▉        | 17/88 [15:01<59:48, 50.54s/it]   20%|██        | 18/88 [15:46<57:04, 48.91s/it] 22%|██▏       | 19/88 [16:36<56:29, 49.13s/it] 23%|██▎       | 20/88 [17:27<56:26, 49.80s/it] 24%|██▍       | 21/88 [18:16<55:13, 49.46s/it] 25%|██▌       | 22/88 [19:04<54:05, 49.17s/it] 26%|██▌       | 23/88 [19:53<53:10, 49.09s/it] 27%|██▋       | 24/88 [20:45<53:10, 49.85s/it] 28%|██▊       | 25/88 [21:40<54:04, 51.51s/it] 30%|██▉       | 26/88 [22:31<53:03, 51.34s/it] 31%|███       | 27/88 [23:27<53:42, 52.82s/it] 31%|███       | 27/88 [23:37<53:21, 52.49s/it]
+Traceback (most recent call last):
+  File "train.py", line 181, in <module>
+    train_data = ECalHitsDataset(siglist=siglist, bkglist=bkglist, load_range=(0.2, 1), coord_ref=args.coord_ref) # turn off preselection
+  File "/home/dgj1118/LDMX-scripts/GraphNet/dataset.py", line 506, in __init__
+    nbkg = _load_dataset(bkglist, 'bkg')
+  File "/home/dgj1118/LDMX-scripts/GraphNet/dataset.py", line 454, in _load_dataset
+    (n_inc, n_sel), v_d, o_d = _read_file(t, table)
+  File "/home/dgj1118/LDMX-scripts/GraphNet/dataset.py", line 289, in _read_file
+    (x, y, z), layer_id = self._parse_cid(eid)  # layer_id > 0, so can use layer_id-1 to index e/ptraj_ref
+  File "/home/dgj1118/LDMX-scripts/GraphNet/dataset.py", line 563, in _parse_cid
+    x, y = zip(*map(self._cellMap.__getitem__, mcid))
+ValueError: not enough values to unpack (expected 2, got 0)

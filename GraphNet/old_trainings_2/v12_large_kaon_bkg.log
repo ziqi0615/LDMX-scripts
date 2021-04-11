@@ -1,0 +1,1111 @@
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:45<00:00, 525.51s/it]100%|██████████| 1/1 [08:45<00:00, 525.51s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]***SAVING EXTRA
+conv_params: [(7, (32, 32, 32)), (7, (64, 64, 64))]
+fc_params: [(128, 0.1)]
+Initializing model
+INITIALIZING SPLITNET
+INITIALIZED PARTICLENET
+FINISHED INIT
+Loading model models/v12_kaon_training/model_state_epoch-19_acc-0.9948.pt for eval
+bkg /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/*.root
+sig 
+0/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run0.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run0.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126438
+EVENTS AFTER PRESELECTION:  126438
+Total 126438 events, selected 126438 events, finally loaded 552 events.
+Preparing to train on 552 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.95it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.95it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.95it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.95it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.95it/s, Acc=1.00000, AvgAcc=1.00000]100%|██████████| 5/5 [00:00<00:00, 16.77it/s, Acc=1.00000, AvgAcc=1.00000]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:47<00:00, 527.95s/it]100%|██████████| 1/1 [08:47<00:00, 527.95s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]1/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run1.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run1.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126438
+EVENTS AFTER PRESELECTION:  126438
+Total 126438 events, selected 126438 events, finally loaded 552 events.
+Preparing to train on 552 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.76it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.76it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.76it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.76it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.76it/s, Acc=1.00000, AvgAcc=1.00000]100%|██████████| 5/5 [00:00<00:00, 18.11it/s, Acc=1.00000, AvgAcc=1.00000]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:57<00:00, 537.60s/it]100%|██████████| 1/1 [08:57<00:00, 537.60s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]2/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run10.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run10.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126540
+EVENTS AFTER PRESELECTION:  126540
+Total 126540 events, selected 126540 events, finally loaded 527 events.
+Preparing to train on 527 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  5.58it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  5.58it/s, Acc=0.97656, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  5.58it/s, Acc=1.00000, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:00,  5.58it/s, Acc=0.99219, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:00,  5.58it/s, Acc=1.00000, AvgAcc=0.99051]100%|██████████| 5/5 [00:00<00:00, 14.43it/s, Acc=1.00000, AvgAcc=0.99051]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:53<00:00, 533.36s/it]100%|██████████| 1/1 [08:53<00:00, 533.36s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]3/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run100.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run100.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126582
+EVENTS AFTER PRESELECTION:  126582
+Total 126582 events, selected 126582 events, finally loaded 583 events.
+Preparing to train on 583 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  5.95it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  5.95it/s, Acc=0.97656, AvgAcc=0.98047] 20%|██        | 1/5 [00:00<00:00,  5.95it/s, Acc=1.00000, AvgAcc=0.98698] 20%|██        | 1/5 [00:00<00:00,  5.95it/s, Acc=0.99219, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:00,  5.95it/s, Acc=0.95775, AvgAcc=0.98456]100%|██████████| 5/5 [00:00<00:00, 17.75it/s, Acc=0.95775, AvgAcc=0.98456]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:57<00:00, 537.46s/it]100%|██████████| 1/1 [08:57<00:00, 537.46s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]4/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run101.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run101.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126562
+EVENTS AFTER PRESELECTION:  126562
+Total 126562 events, selected 126562 events, finally loaded 556 events.
+Preparing to train on 556 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  5.85it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  5.85it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  5.85it/s, Acc=1.00000, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:00,  5.85it/s, Acc=0.99219, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:00,  5.85it/s, Acc=1.00000, AvgAcc=0.99101]100%|██████████| 5/5 [00:00<00:00, 17.70it/s, Acc=1.00000, AvgAcc=0.99101]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:53<00:00, 533.19s/it]100%|██████████| 1/1 [08:53<00:00, 533.19s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]5/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run102.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run102.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126783
+EVENTS AFTER PRESELECTION:  126783
+Total 126783 events, selected 126783 events, finally loaded 585 events.
+Preparing to train on 585 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.69it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.69it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  5.69it/s, Acc=1.00000, AvgAcc=0.99740] 20%|██        | 1/5 [00:00<00:00,  5.69it/s, Acc=0.98438, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:00,  5.69it/s, Acc=0.97260, AvgAcc=0.99145]100%|██████████| 5/5 [00:00<00:00, 17.43it/s, Acc=0.97260, AvgAcc=0.99145]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:58<00:00, 538.14s/it]100%|██████████| 1/1 [08:58<00:00, 538.14s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]6/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run103.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run103.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126592
+EVENTS AFTER PRESELECTION:  126592
+Total 126592 events, selected 126592 events, finally loaded 570 events.
+Preparing to train on 570 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.85it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.85it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.85it/s, Acc=0.99219, AvgAcc=0.99740] 20%|██        | 1/5 [00:00<00:00,  5.85it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  5.85it/s, Acc=1.00000, AvgAcc=0.99649]100%|██████████| 5/5 [00:00<00:00, 17.18it/s, Acc=1.00000, AvgAcc=0.99649]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:45<00:00, 525.17s/it]100%|██████████| 1/1 [08:45<00:00, 525.17s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]7/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run104.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run104.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126422
+EVENTS AFTER PRESELECTION:  126422
+Total 126422 events, selected 126422 events, finally loaded 595 events.
+Preparing to train on 595 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:00,  5.70it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:00,  5.70it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:00,  5.70it/s, Acc=0.99219, AvgAcc=0.98177] 20%|██        | 1/5 [00:00<00:00,  5.70it/s, Acc=0.98438, AvgAcc=0.98242] 20%|██        | 1/5 [00:00<00:00,  5.70it/s, Acc=0.98795, AvgAcc=0.98319]100%|██████████| 5/5 [00:00<00:00, 17.00it/s, Acc=0.98795, AvgAcc=0.98319]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:37<00:00, 517.69s/it]100%|██████████| 1/1 [08:37<00:00, 517.69s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]8/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run105.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run105.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126866
+EVENTS AFTER PRESELECTION:  126866
+Total 126866 events, selected 126866 events, finally loaded 543 events.
+Preparing to train on 543 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.46it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.46it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  5.46it/s, Acc=0.98438, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  5.46it/s, Acc=1.00000, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:00,  5.46it/s, Acc=1.00000, AvgAcc=0.99448]100%|██████████| 5/5 [00:00<00:00, 16.80it/s, Acc=1.00000, AvgAcc=0.99448]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [09:06<00:00, 546.09s/it]100%|██████████| 1/1 [09:06<00:00, 546.09s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]9/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run106.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run106.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126786
+EVENTS AFTER PRESELECTION:  126786
+Total 126786 events, selected 126786 events, finally loaded 560 events.
+Preparing to train on 560 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  5.43it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  5.43it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  5.43it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:00,  5.43it/s, Acc=0.99219, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:00,  5.43it/s, Acc=1.00000, AvgAcc=0.99464]100%|██████████| 5/5 [00:00<00:00, 16.50it/s, Acc=1.00000, AvgAcc=0.99464]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:56<00:00, 536.90s/it]100%|██████████| 1/1 [08:56<00:00, 536.90s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]10/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run107.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run107.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126610
+EVENTS AFTER PRESELECTION:  126610
+Total 126610 events, selected 126610 events, finally loaded 534 events.
+Preparing to train on 534 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:00,  5.48it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:00,  5.48it/s, Acc=0.99219, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  5.48it/s, Acc=1.00000, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:00,  5.48it/s, Acc=0.96094, AvgAcc=0.98242] 20%|██        | 1/5 [00:00<00:00,  5.48it/s, Acc=1.00000, AvgAcc=0.98315]100%|██████████| 5/5 [00:00<00:00, 16.47it/s, Acc=1.00000, AvgAcc=0.98315]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:46<00:00, 526.09s/it]100%|██████████| 1/1 [08:46<00:00, 526.09s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]11/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run108.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run108.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126476
+EVENTS AFTER PRESELECTION:  126476
+Total 126476 events, selected 126476 events, finally loaded 548 events.
+Preparing to train on 548 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.39it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.39it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.39it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.39it/s, Acc=0.99219, AvgAcc=0.99805] 20%|██        | 1/5 [00:00<00:00,  5.39it/s, Acc=1.00000, AvgAcc=0.99818]100%|██████████| 5/5 [00:00<00:00, 15.93it/s, Acc=1.00000, AvgAcc=0.99818]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:42<00:00, 522.55s/it]100%|██████████| 1/1 [08:42<00:00, 522.55s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]12/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run109.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run109.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126559
+EVENTS AFTER PRESELECTION:  126559
+Total 126559 events, selected 126559 events, finally loaded 544 events.
+Preparing to train on 544 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  5.21it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  5.21it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  5.21it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  5.21it/s, Acc=0.98438, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:00,  5.21it/s, Acc=1.00000, AvgAcc=0.99081]100%|██████████| 5/5 [00:00<00:00, 15.66it/s, Acc=1.00000, AvgAcc=0.99081]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:40<00:00, 520.30s/it]100%|██████████| 1/1 [08:40<00:00, 520.30s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]13/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run11.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run11.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126617
+EVENTS AFTER PRESELECTION:  126617
+Total 126617 events, selected 126617 events, finally loaded 609 events.
+Preparing to train on 609 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.11it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.11it/s, Acc=0.98438, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  5.11it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  5.11it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  5.11it/s, Acc=1.00000, AvgAcc=0.99343]100%|██████████| 5/5 [00:00<00:00, 15.04it/s, Acc=1.00000, AvgAcc=0.99343]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:46<00:00, 526.50s/it]100%|██████████| 1/1 [08:46<00:00, 526.50s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]14/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run110.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run110.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126640
+EVENTS AFTER PRESELECTION:  126640
+Total 126640 events, selected 126640 events, finally loaded 532 events.
+Preparing to train on 532 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.94it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.94it/s, Acc=0.96875, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  4.94it/s, Acc=1.00000, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:00,  4.94it/s, Acc=0.96875, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  4.94it/s, Acc=1.00000, AvgAcc=0.98496]100%|██████████| 5/5 [00:00<00:00, 14.87it/s, Acc=1.00000, AvgAcc=0.98496]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [09:01<00:00, 541.79s/it]100%|██████████| 1/1 [09:01<00:00, 541.79s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]15/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run111.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run111.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126558
+EVENTS AFTER PRESELECTION:  126558
+Total 126558 events, selected 126558 events, finally loaded 561 events.
+Preparing to train on 561 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.09it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.09it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  5.09it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:00,  5.09it/s, Acc=0.99219, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:00,  5.09it/s, Acc=1.00000, AvgAcc=0.99465]100%|██████████| 5/5 [00:00<00:00, 14.86it/s, Acc=1.00000, AvgAcc=0.99465]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [09:08<00:00, 548.78s/it]100%|██████████| 1/1 [09:08<00:00, 548.78s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]16/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run112.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run112.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126632
+EVENTS AFTER PRESELECTION:  126632
+Total 126632 events, selected 126632 events, finally loaded 557 events.
+Preparing to train on 557 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:00,  5.01it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:00,  5.01it/s, Acc=1.00000, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:00,  5.01it/s, Acc=1.00000, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  5.01it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  5.01it/s, Acc=1.00000, AvgAcc=0.99282]100%|██████████| 5/5 [00:00<00:00, 12.97it/s, Acc=1.00000, AvgAcc=0.99282]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:46<00:00, 526.07s/it]100%|██████████| 1/1 [08:46<00:00, 526.07s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]17/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run113.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run113.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126385
+EVENTS AFTER PRESELECTION:  126385
+Total 126385 events, selected 126385 events, finally loaded 558 events.
+Preparing to train on 558 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.01it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  5.01it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  5.01it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:00,  5.01it/s, Acc=0.97656, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:00,  5.01it/s, Acc=0.97826, AvgAcc=0.98925]100%|██████████| 5/5 [00:00<00:00, 14.77it/s, Acc=0.97826, AvgAcc=0.98925]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:57<00:00, 537.05s/it]100%|██████████| 1/1 [08:57<00:00, 537.05s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]18/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run114.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run114.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126982
+EVENTS AFTER PRESELECTION:  126982
+Total 126982 events, selected 126982 events, finally loaded 537 events.
+Preparing to train on 537 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:00,  4.74it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:00,  4.74it/s, Acc=0.99219, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  4.74it/s, Acc=0.96094, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:00,  4.74it/s, Acc=1.00000, AvgAcc=0.98242] 20%|██        | 1/5 [00:00<00:00,  4.74it/s, Acc=1.00000, AvgAcc=0.98324]100%|██████████| 5/5 [00:00<00:00, 14.30it/s, Acc=1.00000, AvgAcc=0.98324]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:51<00:00, 531.91s/it]100%|██████████| 1/1 [08:51<00:00, 531.91s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]19/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run115.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run115.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126222
+EVENTS AFTER PRESELECTION:  126222
+Total 126222 events, selected 126222 events, finally loaded 564 events.
+Preparing to train on 564 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.93it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.93it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  4.93it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:00,  4.93it/s, Acc=0.99219, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:00,  4.93it/s, Acc=1.00000, AvgAcc=0.99468]100%|██████████| 5/5 [00:00<00:00, 14.20it/s, Acc=1.00000, AvgAcc=0.99468]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:59<00:00, 539.19s/it]100%|██████████| 1/1 [08:59<00:00, 539.19s/it]
+  0%|          | 0/4 [00:00<?, ?it/s]20/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run116.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run116.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126905
+EVENTS AFTER PRESELECTION:  126905
+Total 126905 events, selected 126905 events, finally loaded 512 events.
+Preparing to train on 512 background events, 0 (total) signal events
+  0%|          | 0/4 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 25%|██▌       | 1/4 [00:00<00:00,  5.09it/s, Acc=0.98438, AvgAcc=0.98438] 25%|██▌       | 1/4 [00:00<00:00,  5.09it/s, Acc=0.98438, AvgAcc=0.98438] 25%|██▌       | 1/4 [00:00<00:00,  5.09it/s, Acc=1.00000, AvgAcc=0.98958] 25%|██▌       | 1/4 [00:00<00:00,  5.09it/s, Acc=0.99219, AvgAcc=0.99023]100%|██████████| 4/4 [00:00<00:00, 11.98it/s, Acc=0.99219, AvgAcc=0.99023]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:46<00:00, 526.70s/it]100%|██████████| 1/1 [08:46<00:00, 526.70s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]21/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run117.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run117.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  125985
+EVENTS AFTER PRESELECTION:  125985
+Total 125985 events, selected 125985 events, finally loaded 517 events.
+Preparing to train on 517 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:00,  4.97it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:00,  4.97it/s, Acc=1.00000, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:00,  4.97it/s, Acc=1.00000, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.97it/s, Acc=1.00000, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:00,  4.97it/s, Acc=1.00000, AvgAcc=0.99420]100%|██████████| 5/5 [00:00<00:00, 14.46it/s, Acc=1.00000, AvgAcc=0.99420]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:55<00:00, 535.69s/it]100%|██████████| 1/1 [08:55<00:00, 535.69s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]22/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run118.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run118.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126883
+EVENTS AFTER PRESELECTION:  126883
+Total 126883 events, selected 126883 events, finally loaded 546 events.
+Preparing to train on 546 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.81it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.81it/s, Acc=0.98438, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.81it/s, Acc=0.97656, AvgAcc=0.98698] 20%|██        | 1/5 [00:00<00:00,  4.81it/s, Acc=1.00000, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:00,  4.81it/s, Acc=1.00000, AvgAcc=0.99084]100%|██████████| 5/5 [00:00<00:00, 13.97it/s, Acc=1.00000, AvgAcc=0.99084]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:42<00:00, 522.49s/it]100%|██████████| 1/1 [08:42<00:00, 522.49s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]23/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run119.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run119.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127015
+EVENTS AFTER PRESELECTION:  127015
+Total 127015 events, selected 127015 events, finally loaded 561 events.
+Preparing to train on 561 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.76it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.76it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.76it/s, Acc=0.99219, AvgAcc=0.99740] 20%|██        | 1/5 [00:00<00:00,  4.76it/s, Acc=0.98438, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:00,  4.76it/s, Acc=1.00000, AvgAcc=0.99465]100%|██████████| 5/5 [00:00<00:00, 13.93it/s, Acc=1.00000, AvgAcc=0.99465]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:47<00:00, 527.79s/it]100%|██████████| 1/1 [08:47<00:00, 527.79s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]24/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run12.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run12.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126620
+EVENTS AFTER PRESELECTION:  126620
+Total 126620 events, selected 126620 events, finally loaded 587 events.
+Preparing to train on 587 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  4.77it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  4.77it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  4.77it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  4.77it/s, Acc=0.99219, AvgAcc=0.98633] 20%|██        | 1/5 [00:00<00:00,  4.77it/s, Acc=0.98667, AvgAcc=0.98637]100%|██████████| 5/5 [00:00<00:00, 13.52it/s, Acc=0.98667, AvgAcc=0.98637]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:54<00:00, 534.25s/it]100%|██████████| 1/1 [08:54<00:00, 534.25s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]25/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run13.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run13.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127535
+EVENTS AFTER PRESELECTION:  127535
+Total 127535 events, selected 127535 events, finally loaded 552 events.
+Preparing to train on 552 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:00,  4.71it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:00,  4.71it/s, Acc=0.99219, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  4.71it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  4.71it/s, Acc=1.00000, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:00,  4.71it/s, Acc=1.00000, AvgAcc=0.98913]100%|██████████| 5/5 [00:00<00:00, 13.62it/s, Acc=1.00000, AvgAcc=0.98913]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:56<00:00, 536.94s/it]100%|██████████| 1/1 [08:56<00:00, 536.94s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]26/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run14.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run14.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127094
+EVENTS AFTER PRESELECTION:  127094
+Total 127094 events, selected 127094 events, finally loaded 533 events.
+Preparing to train on 533 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.77it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.77it/s, Acc=0.98438, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.77it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.77it/s, Acc=1.00000, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:00,  4.77it/s, Acc=0.95238, AvgAcc=0.99250]100%|██████████| 5/5 [00:00<00:00, 13.79it/s, Acc=0.95238, AvgAcc=0.99250]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:49<00:00, 529.62s/it]100%|██████████| 1/1 [08:49<00:00, 529.62s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]27/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run15.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run15.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126208
+EVENTS AFTER PRESELECTION:  126208
+Total 126208 events, selected 126208 events, finally loaded 574 events.
+Preparing to train on 574 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.55it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.55it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.55it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.55it/s, Acc=0.99219, AvgAcc=0.99805] 20%|██        | 1/5 [00:00<00:00,  4.55it/s, Acc=1.00000, AvgAcc=0.99826]100%|██████████| 5/5 [00:00<00:00, 11.57it/s, Acc=1.00000, AvgAcc=0.99826]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:34<00:00, 514.90s/it]100%|██████████| 1/1 [08:34<00:00, 514.90s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]28/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run16.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run16.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126384
+EVENTS AFTER PRESELECTION:  126384
+Total 126384 events, selected 126384 events, finally loaded 515 events.
+Preparing to train on 515 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.58it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.58it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  4.58it/s, Acc=0.98438, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.58it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.58it/s, Acc=1.00000, AvgAcc=0.99223]100%|██████████| 5/5 [00:00<00:00, 12.99it/s, Acc=1.00000, AvgAcc=0.99223]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [09:09<00:00, 549.21s/it]100%|██████████| 1/1 [09:09<00:00, 549.21s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]29/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run160.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run160.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126895
+EVENTS AFTER PRESELECTION:  126895
+Total 126895 events, selected 126895 events, finally loaded 540 events.
+Preparing to train on 540 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.54it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.54it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  4.54it/s, Acc=0.96875, AvgAcc=0.98698] 20%|██        | 1/5 [00:00<00:00,  4.54it/s, Acc=1.00000, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:00,  4.54it/s, Acc=1.00000, AvgAcc=0.99074]100%|██████████| 5/5 [00:00<00:00, 13.21it/s, Acc=1.00000, AvgAcc=0.99074]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [09:11<00:00, 551.45s/it]100%|██████████| 1/1 [09:11<00:00, 551.45s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]30/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run161.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run161.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126304
+EVENTS AFTER PRESELECTION:  126304
+Total 126304 events, selected 126304 events, finally loaded 585 events.
+Preparing to train on 585 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.52it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.52it/s, Acc=0.98438, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.52it/s, Acc=0.98438, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:00,  4.52it/s, Acc=0.99219, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:00,  4.52it/s, Acc=0.98630, AvgAcc=0.98974]100%|██████████| 5/5 [00:00<00:00, 12.71it/s, Acc=0.98630, AvgAcc=0.98974]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [09:05<00:00, 545.05s/it]100%|██████████| 1/1 [09:05<00:00, 545.05s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]31/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run162.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run162.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127000
+EVENTS AFTER PRESELECTION:  127000
+Total 127000 events, selected 127000 events, finally loaded 544 events.
+Preparing to train on 544 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.58it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.58it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.58it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.58it/s, Acc=0.99219, AvgAcc=0.99805] 20%|██        | 1/5 [00:00<00:00,  4.58it/s, Acc=1.00000, AvgAcc=0.99816]100%|██████████| 5/5 [00:00<00:00, 12.86it/s, Acc=1.00000, AvgAcc=0.99816]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:45<00:00, 525.94s/it]100%|██████████| 1/1 [08:45<00:00, 525.94s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]32/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run163.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run163.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126383
+EVENTS AFTER PRESELECTION:  126383
+Total 126383 events, selected 126383 events, finally loaded 543 events.
+Preparing to train on 543 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.59it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.59it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  4.59it/s, Acc=1.00000, AvgAcc=0.99740] 20%|██        | 1/5 [00:00<00:00,  4.59it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  4.59it/s, Acc=1.00000, AvgAcc=0.99632]100%|██████████| 5/5 [00:00<00:00, 12.71it/s, Acc=1.00000, AvgAcc=0.99632]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:49<00:00, 529.90s/it]100%|██████████| 1/1 [08:49<00:00, 529.90s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]33/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run164.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run164.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127108
+EVENTS AFTER PRESELECTION:  127108
+Total 127108 events, selected 127108 events, finally loaded 520 events.
+Preparing to train on 520 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.55it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.55it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.55it/s, Acc=1.00000, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:00,  4.55it/s, Acc=0.98438, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.55it/s, Acc=1.00000, AvgAcc=0.99231]100%|██████████| 5/5 [00:00<00:00, 12.66it/s, Acc=1.00000, AvgAcc=0.99231]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:57<00:00, 537.76s/it]100%|██████████| 1/1 [08:57<00:00, 537.76s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]34/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run165.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run165.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127035
+EVENTS AFTER PRESELECTION:  127035
+Total 127035 events, selected 127035 events, finally loaded 616 events.
+Preparing to train on 616 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.49it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.49it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  4.49it/s, Acc=0.97656, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:00,  4.49it/s, Acc=0.99219, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:00,  4.49it/s, Acc=0.99038, AvgAcc=0.99026]100%|██████████| 5/5 [00:00<00:00, 12.27it/s, Acc=0.99038, AvgAcc=0.99026]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [09:03<00:00, 543.23s/it]100%|██████████| 1/1 [09:03<00:00, 543.23s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]35/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run166.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run166.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126981
+EVENTS AFTER PRESELECTION:  126981
+Total 126981 events, selected 126981 events, finally loaded 561 events.
+Preparing to train on 561 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.04it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.04it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  4.04it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:00,  4.04it/s, Acc=0.98438, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.04it/s, Acc=1.00000, AvgAcc=0.99287]100%|██████████| 5/5 [00:00<00:00, 11.70it/s, Acc=1.00000, AvgAcc=0.99287]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:58<00:00, 538.36s/it]100%|██████████| 1/1 [08:58<00:00, 538.36s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]36/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run167.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run167.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126358
+EVENTS AFTER PRESELECTION:  126358
+Total 126358 events, selected 126358 events, finally loaded 580 events.
+Preparing to train on 580 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.20it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.20it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  4.20it/s, Acc=0.96875, AvgAcc=0.98698] 20%|██        | 1/5 [00:00<00:00,  4.20it/s, Acc=0.98438, AvgAcc=0.98633] 20%|██        | 1/5 [00:00<00:00,  4.20it/s, Acc=1.00000, AvgAcc=0.98793]100%|██████████| 5/5 [00:00<00:00, 11.81it/s, Acc=1.00000, AvgAcc=0.98793]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [09:11<00:00, 551.48s/it]100%|██████████| 1/1 [09:11<00:00, 551.48s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]37/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run168.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run168.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126878
+EVENTS AFTER PRESELECTION:  126878
+Total 126878 events, selected 126878 events, finally loaded 595 events.
+Preparing to train on 595 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.24it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.24it/s, Acc=0.98438, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:00,  4.24it/s, Acc=0.99219, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:00,  4.24it/s, Acc=1.00000, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.24it/s, Acc=0.98795, AvgAcc=0.99160]100%|██████████| 5/5 [00:00<00:00, 11.79it/s, Acc=0.98795, AvgAcc=0.99160]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:43<00:00, 523.07s/it]100%|██████████| 1/1 [08:43<00:00, 523.07s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]38/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run169.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run169.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126628
+EVENTS AFTER PRESELECTION:  126628
+Total 126628 events, selected 126628 events, finally loaded 547 events.
+Preparing to train on 547 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.23it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.23it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.23it/s, Acc=1.00000, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:00,  4.23it/s, Acc=0.99219, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:00,  4.23it/s, Acc=1.00000, AvgAcc=0.99452]100%|██████████| 5/5 [00:00<00:00, 11.95it/s, Acc=1.00000, AvgAcc=0.99452]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:48<00:00, 528.56s/it]100%|██████████| 1/1 [08:48<00:00, 528.56s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]39/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run17.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run17.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126522
+EVENTS AFTER PRESELECTION:  126522
+Total 126522 events, selected 126522 events, finally loaded 605 events.
+Preparing to train on 605 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.44it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.44it/s, Acc=0.95312, AvgAcc=0.97266] 20%|██        | 1/5 [00:00<00:00,  4.44it/s, Acc=1.00000, AvgAcc=0.98177] 20%|██        | 1/5 [00:00<00:00,  4.44it/s, Acc=0.97656, AvgAcc=0.98047] 20%|██        | 1/5 [00:00<00:00,  4.44it/s, Acc=1.00000, AvgAcc=0.98347]100%|██████████| 5/5 [00:00<00:00, 11.64it/s, Acc=1.00000, AvgAcc=0.98347]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [09:01<00:00, 541.28s/it]100%|██████████| 1/1 [09:01<00:00, 541.28s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]40/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run170.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run170.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126722
+EVENTS AFTER PRESELECTION:  126722
+Total 126722 events, selected 126722 events, finally loaded 580 events.
+Preparing to train on 580 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.14it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.14it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  4.14it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:00,  4.14it/s, Acc=0.98438, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.14it/s, Acc=1.00000, AvgAcc=0.99310]100%|██████████| 5/5 [00:00<00:00, 11.56it/s, Acc=1.00000, AvgAcc=0.99310]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:50<00:00, 530.60s/it]100%|██████████| 1/1 [08:50<00:00, 530.60s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]41/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run171.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run171.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126779
+EVENTS AFTER PRESELECTION:  126779
+Total 126779 events, selected 126779 events, finally loaded 599 events.
+Preparing to train on 599 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  4.04it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:00,  4.04it/s, Acc=1.00000, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  4.04it/s, Acc=1.00000, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:00,  4.04it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  4.04it/s, Acc=0.98851, AvgAcc=0.99499]100%|██████████| 5/5 [00:00<00:00, 11.27it/s, Acc=0.98851, AvgAcc=0.99499]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [09:07<00:00, 547.02s/it]100%|██████████| 1/1 [09:07<00:00, 547.02s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]42/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run172.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run172.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126424
+EVENTS AFTER PRESELECTION:  126424
+Total 126424 events, selected 126424 events, finally loaded 597 events.
+Preparing to train on 597 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.87it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.87it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.87it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  3.87it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.87it/s, Acc=0.98824, AvgAcc=0.99497]100%|██████████| 5/5 [00:00<00:00, 10.92it/s, Acc=0.98824, AvgAcc=0.99497]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:57<00:00, 537.43s/it]100%|██████████| 1/1 [08:57<00:00, 537.43s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]43/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run173.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run173.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126721
+EVENTS AFTER PRESELECTION:  126721
+Total 126721 events, selected 126721 events, finally loaded 590 events.
+Preparing to train on 590 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.99it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.99it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.99it/s, Acc=1.00000, AvgAcc=0.99740] 20%|██        | 1/5 [00:00<00:01,  3.99it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.99it/s, Acc=0.98718, AvgAcc=0.99492]100%|██████████| 5/5 [00:00<00:00, 10.74it/s, Acc=0.98718, AvgAcc=0.99492]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:19<00:00, 499.98s/it]100%|██████████| 1/1 [08:19<00:00, 499.98s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]44/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run174.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run174.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126683
+EVENTS AFTER PRESELECTION:  126683
+Total 126683 events, selected 126683 events, finally loaded 541 events.
+Preparing to train on 541 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.12it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  4.12it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  4.12it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:00,  4.12it/s, Acc=0.97656, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:00,  4.12it/s, Acc=1.00000, AvgAcc=0.99076]100%|██████████| 5/5 [00:00<00:00, 11.09it/s, Acc=1.00000, AvgAcc=0.99076]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:28<00:00, 508.68s/it]100%|██████████| 1/1 [08:28<00:00, 508.68s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]45/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run175.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run175.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126956
+EVENTS AFTER PRESELECTION:  126956
+Total 126956 events, selected 126956 events, finally loaded 564 events.
+Preparing to train on 564 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.94it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.94it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.94it/s, Acc=1.00000, AvgAcc=0.99740] 20%|██        | 1/5 [00:00<00:01,  3.94it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.94it/s, Acc=1.00000, AvgAcc=0.99645]100%|██████████| 5/5 [00:00<00:00, 11.02it/s, Acc=1.00000, AvgAcc=0.99645]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:29<00:00, 509.25s/it]100%|██████████| 1/1 [08:29<00:00, 509.25s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]46/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run176.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run176.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126188
+EVENTS AFTER PRESELECTION:  126188
+Total 126188 events, selected 126188 events, finally loaded 597 events.
+Preparing to train on 597 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.86it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.86it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.86it/s, Acc=1.00000, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:01,  3.86it/s, Acc=0.99219, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:01,  3.86it/s, Acc=0.97647, AvgAcc=0.98827]100%|██████████| 5/5 [00:00<00:00, 10.66it/s, Acc=0.97647, AvgAcc=0.98827]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:22<00:00, 502.45s/it]100%|██████████| 1/1 [08:22<00:00, 502.45s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]47/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run177.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run177.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126861
+EVENTS AFTER PRESELECTION:  126861
+Total 126861 events, selected 126861 events, finally loaded 552 events.
+Preparing to train on 552 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.91it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.91it/s, Acc=1.00000, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.91it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.91it/s, Acc=0.98438, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:01,  3.91it/s, Acc=1.00000, AvgAcc=0.99094]100%|██████████| 5/5 [00:00<00:00, 10.79it/s, Acc=1.00000, AvgAcc=0.99094]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:24<00:00, 504.99s/it]100%|██████████| 1/1 [08:24<00:00, 504.99s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]48/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run178.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run178.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127390
+EVENTS AFTER PRESELECTION:  127390
+Total 127390 events, selected 127390 events, finally loaded 566 events.
+Preparing to train on 566 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.79it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.79it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.79it/s, Acc=0.98438, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.79it/s, Acc=1.00000, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:01,  3.79it/s, Acc=1.00000, AvgAcc=0.99470]100%|██████████| 5/5 [00:00<00:00, 10.55it/s, Acc=1.00000, AvgAcc=0.99470]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:30<00:00, 510.55s/it]100%|██████████| 1/1 [08:30<00:00, 510.55s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]49/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run179.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run179.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  125944
+EVENTS AFTER PRESELECTION:  125944
+Total 125944 events, selected 125944 events, finally loaded 579 events.
+Preparing to train on 579 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:01,  3.79it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:01,  3.79it/s, Acc=1.00000, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  3.79it/s, Acc=0.98438, AvgAcc=0.98698] 20%|██        | 1/5 [00:00<00:01,  3.79it/s, Acc=1.00000, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:01,  3.79it/s, Acc=1.00000, AvgAcc=0.99136]100%|██████████| 5/5 [00:00<00:00, 10.34it/s, Acc=1.00000, AvgAcc=0.99136]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:33<00:00, 513.78s/it]100%|██████████| 1/1 [08:33<00:00, 513.78s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]50/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run18.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run18.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127264
+EVENTS AFTER PRESELECTION:  127264
+Total 127264 events, selected 127264 events, finally loaded 593 events.
+Preparing to train on 593 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.74it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.74it/s, Acc=0.98438, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.74it/s, Acc=0.97656, AvgAcc=0.98698] 20%|██        | 1/5 [00:00<00:01,  3.74it/s, Acc=0.99219, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  3.74it/s, Acc=0.98765, AvgAcc=0.98820]100%|██████████| 5/5 [00:00<00:00, 10.12it/s, Acc=0.98765, AvgAcc=0.98820]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:21<00:00, 501.75s/it]100%|██████████| 1/1 [08:21<00:00, 501.75s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]51/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run19.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run19.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127221
+EVENTS AFTER PRESELECTION:  127221
+Total 127221 events, selected 127221 events, finally loaded 579 events.
+Preparing to train on 579 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.71it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.71it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.71it/s, Acc=0.97656, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:01,  3.71it/s, Acc=0.97656, AvgAcc=0.98633] 20%|██        | 1/5 [00:00<00:01,  3.71it/s, Acc=0.97015, AvgAcc=0.98446]100%|██████████| 5/5 [00:00<00:00, 10.22it/s, Acc=0.97015, AvgAcc=0.98446]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:29<00:00, 509.48s/it]100%|██████████| 1/1 [08:29<00:00, 509.48s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]52/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run2.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run2.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126479
+EVENTS AFTER PRESELECTION:  126479
+Total 126479 events, selected 126479 events, finally loaded 590 events.
+Preparing to train on 590 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.66it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.66it/s, Acc=0.99219, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  3.66it/s, Acc=0.97656, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.66it/s, Acc=1.00000, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  3.66it/s, Acc=0.97436, AvgAcc=0.98644]100%|██████████| 5/5 [00:00<00:00, 10.23it/s, Acc=0.97436, AvgAcc=0.98644]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:20<00:00, 500.66s/it]100%|██████████| 1/1 [08:20<00:00, 500.66s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]53/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run20.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run20.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126749
+EVENTS AFTER PRESELECTION:  126749
+Total 126749 events, selected 126749 events, finally loaded 583 events.
+Preparing to train on 583 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.60it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.60it/s, Acc=0.97656, AvgAcc=0.98047] 20%|██        | 1/5 [00:00<00:01,  3.60it/s, Acc=0.98438, AvgAcc=0.98177] 20%|██        | 1/5 [00:00<00:01,  3.60it/s, Acc=0.99219, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.60it/s, Acc=0.98592, AvgAcc=0.98456]100%|██████████| 5/5 [00:00<00:00, 10.09it/s, Acc=0.98592, AvgAcc=0.98456]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:22<00:00, 502.48s/it]100%|██████████| 1/1 [08:22<00:00, 502.48s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]54/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run21.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run21.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126700
+EVENTS AFTER PRESELECTION:  126700
+Total 126700 events, selected 126700 events, finally loaded 559 events.
+Preparing to train on 559 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.62it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.62it/s, Acc=0.99219, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  3.62it/s, Acc=1.00000, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.62it/s, Acc=0.98438, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:01,  3.62it/s, Acc=1.00000, AvgAcc=0.99106]100%|██████████| 5/5 [00:00<00:00, 10.13it/s, Acc=1.00000, AvgAcc=0.99106]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:28<00:00, 508.60s/it]100%|██████████| 1/1 [08:28<00:00, 508.60s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]55/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run22.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run22.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127011
+EVENTS AFTER PRESELECTION:  127011
+Total 127011 events, selected 127011 events, finally loaded 552 events.
+Preparing to train on 552 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.96094, AvgAcc=0.96094] 20%|██        | 1/5 [00:00<00:01,  3.68it/s, Acc=0.96094, AvgAcc=0.96094] 20%|██        | 1/5 [00:00<00:01,  3.68it/s, Acc=1.00000, AvgAcc=0.98047] 20%|██        | 1/5 [00:00<00:01,  3.68it/s, Acc=0.99219, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.68it/s, Acc=0.99219, AvgAcc=0.98633] 20%|██        | 1/5 [00:00<00:01,  3.68it/s, Acc=1.00000, AvgAcc=0.98732]100%|██████████| 5/5 [00:00<00:00, 10.24it/s, Acc=1.00000, AvgAcc=0.98732]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:37<00:00, 517.32s/it]100%|██████████| 1/1 [08:37<00:00, 517.32s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]56/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run23.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run23.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126859
+EVENTS AFTER PRESELECTION:  126859
+Total 126859 events, selected 126859 events, finally loaded 527 events.
+Preparing to train on 527 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.55it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.55it/s, Acc=1.00000, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.55it/s, Acc=1.00000, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  3.55it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.55it/s, Acc=1.00000, AvgAcc=0.99620]100%|██████████| 5/5 [00:00<00:00,  9.97it/s, Acc=1.00000, AvgAcc=0.99620]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:41<00:00, 521.85s/it]100%|██████████| 1/1 [08:41<00:00, 521.85s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]57/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run24.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run24.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126539
+EVENTS AFTER PRESELECTION:  126539
+Total 126539 events, selected 126539 events, finally loaded 543 events.
+Preparing to train on 543 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.57it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.57it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.57it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.57it/s, Acc=0.99219, AvgAcc=0.99805] 20%|██        | 1/5 [00:00<00:01,  3.57it/s, Acc=1.00000, AvgAcc=0.99816]100%|██████████| 5/5 [00:00<00:00,  9.98it/s, Acc=1.00000, AvgAcc=0.99816]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:42<00:00, 522.10s/it]100%|██████████| 1/1 [08:42<00:00, 522.10s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]58/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run25.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run25.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126519
+EVENTS AFTER PRESELECTION:  126519
+Total 126519 events, selected 126519 events, finally loaded 574 events.
+Preparing to train on 574 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.80it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.80it/s, Acc=1.00000, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.80it/s, Acc=0.98438, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:01,  3.80it/s, Acc=1.00000, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.80it/s, Acc=1.00000, AvgAcc=0.99303]100%|██████████| 5/5 [00:00<00:00,  9.97it/s, Acc=1.00000, AvgAcc=0.99303]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:37<00:00, 517.22s/it]100%|██████████| 1/1 [08:37<00:00, 517.22s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]59/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run26.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run26.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126475
+EVENTS AFTER PRESELECTION:  126475
+Total 126475 events, selected 126475 events, finally loaded 590 events.
+Preparing to train on 590 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.49it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.49it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.49it/s, Acc=0.98438, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.49it/s, Acc=1.00000, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:01,  3.49it/s, Acc=0.97436, AvgAcc=0.99153]100%|██████████| 5/5 [00:00<00:00,  9.56it/s, Acc=0.97436, AvgAcc=0.99153]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:24<00:00, 504.61s/it]100%|██████████| 1/1 [08:24<00:00, 504.61s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]60/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run28.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run28.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  125947
+EVENTS AFTER PRESELECTION:  125947
+Total 125947 events, selected 125947 events, finally loaded 546 events.
+Preparing to train on 546 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.34it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.34it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.34it/s, Acc=0.99219, AvgAcc=0.99740] 20%|██        | 1/5 [00:00<00:01,  3.34it/s, Acc=1.00000, AvgAcc=0.99805] 20%|██        | 1/5 [00:00<00:01,  3.34it/s, Acc=1.00000, AvgAcc=0.99817]100%|██████████| 5/5 [00:00<00:00,  9.36it/s, Acc=1.00000, AvgAcc=0.99817]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:18<00:00, 498.79s/it]100%|██████████| 1/1 [08:18<00:00, 498.79s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]61/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run29.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run29.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126302
+EVENTS AFTER PRESELECTION:  126302
+Total 126302 events, selected 126302 events, finally loaded 551 events.
+Preparing to train on 551 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.47it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.47it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.47it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.47it/s, Acc=0.99219, AvgAcc=0.99805] 20%|██        | 1/5 [00:00<00:01,  3.47it/s, Acc=1.00000, AvgAcc=0.99819]100%|██████████| 5/5 [00:00<00:00,  9.62it/s, Acc=1.00000, AvgAcc=0.99819]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:21<00:00, 501.02s/it]100%|██████████| 1/1 [08:21<00:00, 501.02s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]62/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run3.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run3.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127156
+EVENTS AFTER PRESELECTION:  127156
+Total 127156 events, selected 127156 events, finally loaded 556 events.
+Preparing to train on 556 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.42it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.42it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.42it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.42it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.42it/s, Acc=1.00000, AvgAcc=0.99281]100%|██████████| 5/5 [00:00<00:00,  9.34it/s, Acc=1.00000, AvgAcc=0.99281]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:50<00:00, 530.83s/it]100%|██████████| 1/1 [08:50<00:00, 530.83s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]63/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run30.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run30.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126271
+EVENTS AFTER PRESELECTION:  126271
+Total 126271 events, selected 126271 events, finally loaded 534 events.
+Preparing to train on 534 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=1.00000, AvgAcc=0.99625]100%|██████████| 5/5 [00:00<00:00,  9.49it/s, Acc=1.00000, AvgAcc=0.99625]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:20<00:00, 500.57s/it]100%|██████████| 1/1 [08:20<00:00, 500.57s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]64/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run31.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run31.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126167
+EVENTS AFTER PRESELECTION:  126167
+Total 126167 events, selected 126167 events, finally loaded 561 events.
+Preparing to train on 561 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=1.00000, AvgAcc=0.99740] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=1.00000, AvgAcc=0.99805] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=1.00000, AvgAcc=0.99822]100%|██████████| 5/5 [00:00<00:00,  9.06it/s, Acc=1.00000, AvgAcc=0.99822]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:25<00:00, 505.55s/it]100%|██████████| 1/1 [08:25<00:00, 505.55s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]65/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run32.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run32.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126503
+EVENTS AFTER PRESELECTION:  126503
+Total 126503 events, selected 126503 events, finally loaded 591 events.
+Preparing to train on 591 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=0.99219, AvgAcc=0.99740] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=1.00000, AvgAcc=0.99805] 20%|██        | 1/5 [00:00<00:01,  3.33it/s, Acc=1.00000, AvgAcc=0.99831]100%|██████████| 5/5 [00:00<00:00,  9.01it/s, Acc=1.00000, AvgAcc=0.99831]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:47<00:00, 527.32s/it]100%|██████████| 1/1 [08:47<00:00, 527.32s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]66/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run33.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run33.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126786
+EVENTS AFTER PRESELECTION:  126786
+Total 126786 events, selected 126786 events, finally loaded 573 events.
+Preparing to train on 573 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.26it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.26it/s, Acc=0.99219, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  3.26it/s, Acc=0.99219, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:01,  3.26it/s, Acc=0.98438, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  3.26it/s, Acc=1.00000, AvgAcc=0.98953]100%|██████████| 5/5 [00:00<00:00,  9.14it/s, Acc=1.00000, AvgAcc=0.98953]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:33<00:00, 513.87s/it]100%|██████████| 1/1 [08:33<00:00, 513.87s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]67/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run34.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run34.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126506
+EVENTS AFTER PRESELECTION:  126506
+Total 126506 events, selected 126506 events, finally loaded 547 events.
+Preparing to train on 547 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.21it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.21it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.21it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.21it/s, Acc=1.00000, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:01,  3.21it/s, Acc=1.00000, AvgAcc=0.99452]100%|██████████| 5/5 [00:00<00:00,  8.90it/s, Acc=1.00000, AvgAcc=0.99452]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:27<00:00, 507.65s/it]100%|██████████| 1/1 [08:27<00:00, 507.65s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]68/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run35.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run35.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126972
+EVENTS AFTER PRESELECTION:  126972
+Total 126972 events, selected 126972 events, finally loaded 525 events.
+Preparing to train on 525 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.25it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.25it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.25it/s, Acc=0.98438, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  3.25it/s, Acc=0.99219, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:01,  3.25it/s, Acc=1.00000, AvgAcc=0.99429]100%|██████████| 5/5 [00:00<00:00,  8.97it/s, Acc=1.00000, AvgAcc=0.99429]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:27<00:00, 507.86s/it]100%|██████████| 1/1 [08:27<00:00, 507.86s/it]
+  0%|          | 0/4 [00:00<?, ?it/s]69/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run36.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run36.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126070
+EVENTS AFTER PRESELECTION:  126070
+Total 126070 events, selected 126070 events, finally loaded 505 events.
+Preparing to train on 505 background events, 0 (total) signal events
+  0%|          | 0/4 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  3.19it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  3.19it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  3.19it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  3.19it/s, Acc=1.00000, AvgAcc=1.00000]100%|██████████| 4/4 [00:00<00:00,  7.20it/s, Acc=1.00000, AvgAcc=1.00000]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:31<00:00, 511.04s/it]100%|██████████| 1/1 [08:31<00:00, 511.04s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]70/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run37.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run37.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126723
+EVENTS AFTER PRESELECTION:  126723
+Total 126723 events, selected 126723 events, finally loaded 581 events.
+Preparing to train on 581 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.21it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.21it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.21it/s, Acc=1.00000, AvgAcc=0.99740] 20%|██        | 1/5 [00:00<00:01,  3.21it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.21it/s, Acc=0.98551, AvgAcc=0.99484]100%|██████████| 5/5 [00:00<00:00,  8.93it/s, Acc=0.98551, AvgAcc=0.99484]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:53<00:00, 533.61s/it]100%|██████████| 1/1 [08:53<00:00, 533.61s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]71/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run38.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run38.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  125926
+EVENTS AFTER PRESELECTION:  125926
+Total 125926 events, selected 125926 events, finally loaded 542 events.
+Preparing to train on 542 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.16it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.16it/s, Acc=1.00000, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.16it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.16it/s, Acc=1.00000, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:01,  3.16it/s, Acc=1.00000, AvgAcc=0.99446]100%|██████████| 5/5 [00:00<00:00,  8.69it/s, Acc=1.00000, AvgAcc=0.99446]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:32<00:00, 512.75s/it]100%|██████████| 1/1 [08:32<00:00, 512.76s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]72/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run39.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run39.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127140
+EVENTS AFTER PRESELECTION:  127140
+Total 127140 events, selected 127140 events, finally loaded 572 events.
+Preparing to train on 572 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:01,  3.12it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:01,  3.12it/s, Acc=1.00000, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  3.12it/s, Acc=0.98438, AvgAcc=0.98698] 20%|██        | 1/5 [00:00<00:01,  3.12it/s, Acc=1.00000, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:01,  3.12it/s, Acc=0.96667, AvgAcc=0.98776]100%|██████████| 5/5 [00:00<00:00,  8.59it/s, Acc=0.96667, AvgAcc=0.98776]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:30<00:00, 510.59s/it]100%|██████████| 1/1 [08:30<00:00, 510.59s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]73/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run4.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run4.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126046
+EVENTS AFTER PRESELECTION:  126046
+Total 126046 events, selected 126046 events, finally loaded 580 events.
+Preparing to train on 580 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.23it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.23it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.23it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  3.23it/s, Acc=0.99219, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:01,  3.23it/s, Acc=0.98529, AvgAcc=0.99310]100%|██████████| 5/5 [00:00<00:00,  8.62it/s, Acc=0.98529, AvgAcc=0.99310]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:25<00:00, 505.21s/it]100%|██████████| 1/1 [08:25<00:00, 505.21s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]74/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run5.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run5.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126835
+EVENTS AFTER PRESELECTION:  126835
+Total 126835 events, selected 126835 events, finally loaded 548 events.
+Preparing to train on 548 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.08it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.08it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.08it/s, Acc=1.00000, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  3.08it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.08it/s, Acc=0.97222, AvgAcc=0.99453]100%|██████████| 5/5 [00:00<00:00,  8.68it/s, Acc=0.97222, AvgAcc=0.99453]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:27<00:00, 507.94s/it]100%|██████████| 1/1 [08:27<00:00, 507.94s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]75/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run6.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run6.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126715
+EVENTS AFTER PRESELECTION:  126715
+Total 126715 events, selected 126715 events, finally loaded 603 events.
+Preparing to train on 603 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.04it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.04it/s, Acc=0.98438, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  3.04it/s, Acc=0.99219, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:01,  3.04it/s, Acc=1.00000, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.04it/s, Acc=0.97802, AvgAcc=0.99005]100%|██████████| 5/5 [00:00<00:00,  8.27it/s, Acc=0.97802, AvgAcc=0.99005]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:58<00:00, 538.57s/it]100%|██████████| 1/1 [08:58<00:00, 538.58s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]76/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run7.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run7.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127424
+EVENTS AFTER PRESELECTION:  127424
+Total 127424 events, selected 127424 events, finally loaded 592 events.
+Preparing to train on 592 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.10it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.10it/s, Acc=0.99219, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  3.10it/s, Acc=0.97656, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.10it/s, Acc=0.99219, AvgAcc=0.98633] 20%|██        | 1/5 [00:00<00:01,  3.10it/s, Acc=1.00000, AvgAcc=0.98818]100%|██████████| 5/5 [00:00<00:00,  8.38it/s, Acc=1.00000, AvgAcc=0.98818]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [09:21<00:00, 561.45s/it]100%|██████████| 1/1 [09:21<00:00, 561.45s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]77/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run8.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run8.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127296
+EVENTS AFTER PRESELECTION:  127296
+Total 127296 events, selected 127296 events, finally loaded 585 events.
+Preparing to train on 585 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.08it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.08it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.08it/s, Acc=1.00000, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  3.08it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  3.08it/s, Acc=1.00000, AvgAcc=0.99658]100%|██████████| 5/5 [00:00<00:00,  8.21it/s, Acc=1.00000, AvgAcc=0.99658]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:38<00:00, 518.56s/it]100%|██████████| 1/1 [08:38<00:00, 518.56s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]78/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run80.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run80.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  125775
+EVENTS AFTER PRESELECTION:  125775
+Total 125775 events, selected 125775 events, finally loaded 545 events.
+Preparing to train on 545 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.07it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.07it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.07it/s, Acc=1.00000, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:01,  3.07it/s, Acc=0.98438, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  3.07it/s, Acc=1.00000, AvgAcc=0.98899]100%|██████████| 5/5 [00:00<00:00,  8.36it/s, Acc=1.00000, AvgAcc=0.98899]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:44<00:00, 524.85s/it]100%|██████████| 1/1 [08:44<00:00, 524.85s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]79/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run81.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run81.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127187
+EVENTS AFTER PRESELECTION:  127187
+Total 127187 events, selected 127187 events, finally loaded 578 events.
+Preparing to train on 578 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.04it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.04it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  3.04it/s, Acc=1.00000, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:01,  3.04it/s, Acc=0.98438, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  3.04it/s, Acc=0.98485, AvgAcc=0.98789]100%|██████████| 5/5 [00:00<00:00,  8.19it/s, Acc=0.98485, AvgAcc=0.98789]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:22<00:00, 502.90s/it]100%|██████████| 1/1 [08:22<00:00, 502.90s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]80/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run82.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run82.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126539
+EVENTS AFTER PRESELECTION:  126539
+Total 126539 events, selected 126539 events, finally loaded 567 events.
+Preparing to train on 567 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  2.99it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  2.99it/s, Acc=0.97656, AvgAcc=0.98047] 20%|██        | 1/5 [00:00<00:01,  2.99it/s, Acc=0.97656, AvgAcc=0.97917] 20%|██        | 1/5 [00:00<00:01,  2.99it/s, Acc=0.99219, AvgAcc=0.98242] 20%|██        | 1/5 [00:00<00:01,  2.99it/s, Acc=1.00000, AvgAcc=0.98413]100%|██████████| 5/5 [00:00<00:00,  8.22it/s, Acc=1.00000, AvgAcc=0.98413]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:33<00:00, 513.97s/it]100%|██████████| 1/1 [08:33<00:00, 513.97s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]81/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run83.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run83.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126393
+EVENTS AFTER PRESELECTION:  126393
+Total 126393 events, selected 126393 events, finally loaded 542 events.
+Preparing to train on 542 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.00it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.00it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  3.00it/s, Acc=0.97656, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  3.00it/s, Acc=1.00000, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:01,  3.00it/s, Acc=1.00000, AvgAcc=0.99446]100%|██████████| 5/5 [00:00<00:00,  8.23it/s, Acc=1.00000, AvgAcc=0.99446]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:21<00:00, 501.77s/it]100%|██████████| 1/1 [08:21<00:00, 501.77s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]82/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run84.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run84.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126801
+EVENTS AFTER PRESELECTION:  126801
+Total 126801 events, selected 126801 events, finally loaded 548 events.
+Preparing to train on 548 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:01,  2.92it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:01,  2.92it/s, Acc=0.99219, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  2.92it/s, Acc=0.96094, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:01,  2.92it/s, Acc=1.00000, AvgAcc=0.98242] 20%|██        | 1/5 [00:00<00:01,  2.92it/s, Acc=1.00000, AvgAcc=0.98358]100%|██████████| 5/5 [00:00<00:00,  8.10it/s, Acc=1.00000, AvgAcc=0.98358]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:22<00:00, 502.61s/it]100%|██████████| 1/1 [08:22<00:00, 502.61s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]83/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run85.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run85.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127055
+EVENTS AFTER PRESELECTION:  127055
+Total 127055 events, selected 127055 events, finally loaded 574 events.
+Preparing to train on 574 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  2.99it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  2.99it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  2.99it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  2.99it/s, Acc=1.00000, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  2.99it/s, Acc=0.98387, AvgAcc=0.98780]100%|██████████| 5/5 [00:00<00:00,  7.92it/s, Acc=0.98387, AvgAcc=0.98780]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:30<00:00, 510.78s/it]100%|██████████| 1/1 [08:30<00:00, 510.78s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]84/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run86.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run86.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126543
+EVENTS AFTER PRESELECTION:  126543
+Total 126543 events, selected 126543 events, finally loaded 527 events.
+Preparing to train on 527 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.90it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.90it/s, Acc=0.98438, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  2.90it/s, Acc=0.99219, AvgAcc=0.98958] 20%|██        | 1/5 [00:00<00:01,  2.90it/s, Acc=0.98438, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  2.90it/s, Acc=1.00000, AvgAcc=0.98861]100%|██████████| 5/5 [00:00<00:00,  8.08it/s, Acc=1.00000, AvgAcc=0.98861]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:24<00:00, 504.36s/it]100%|██████████| 1/1 [08:24<00:00, 504.36s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]85/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run88.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run88.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127227
+EVENTS AFTER PRESELECTION:  127227
+Total 127227 events, selected 127227 events, finally loaded 583 events.
+Preparing to train on 583 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  2.91it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  2.91it/s, Acc=1.00000, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.91it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.91it/s, Acc=1.00000, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:01,  2.91it/s, Acc=1.00000, AvgAcc=0.99485]100%|██████████| 5/5 [00:00<00:00,  7.80it/s, Acc=1.00000, AvgAcc=0.99485]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:30<00:00, 510.23s/it]100%|██████████| 1/1 [08:30<00:00, 510.23s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]86/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run89.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run89.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126546
+EVENTS AFTER PRESELECTION:  126546
+Total 126546 events, selected 126546 events, finally loaded 597 events.
+Preparing to train on 597 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=1.00000, AvgAcc=0.99740] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=1.00000, AvgAcc=0.99805] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=0.97647, AvgAcc=0.99497]100%|██████████| 5/5 [00:00<00:00,  7.68it/s, Acc=0.97647, AvgAcc=0.99497]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:28<00:00, 508.71s/it]100%|██████████| 1/1 [08:28<00:00, 508.71s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]87/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run9.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run9.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126710
+EVENTS AFTER PRESELECTION:  126710
+Total 126710 events, selected 126710 events, finally loaded 602 events.
+Preparing to train on 602 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=0.99219, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=1.00000, AvgAcc=0.99502]100%|██████████| 5/5 [00:00<00:00,  7.81it/s, Acc=1.00000, AvgAcc=0.99502]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:21<00:00, 501.78s/it]100%|██████████| 1/1 [08:21<00:00, 501.78s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]88/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run90.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run90.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126661
+EVENTS AFTER PRESELECTION:  126661
+Total 126661 events, selected 126661 events, finally loaded 601 events.
+Preparing to train on 601 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=0.98438, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=1.00000, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=1.00000, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:01,  2.89it/s, Acc=0.98876, AvgAcc=0.99334]100%|██████████| 5/5 [00:00<00:00,  7.74it/s, Acc=0.98876, AvgAcc=0.99334]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:20<00:00, 500.06s/it]100%|██████████| 1/1 [08:20<00:00, 500.06s/it]
+  0%|          | 0/4 [00:00<?, ?it/s]89/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run91.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run91.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126891
+EVENTS AFTER PRESELECTION:  126891
+Total 126891 events, selected 126891 events, finally loaded 512 events.
+Preparing to train on 512 background events, 0 (total) signal events
+  0%|          | 0/4 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 25%|██▌       | 1/4 [00:00<00:01,  2.83it/s, Acc=0.98438, AvgAcc=0.98438] 25%|██▌       | 1/4 [00:00<00:01,  2.83it/s, Acc=0.99219, AvgAcc=0.98828] 25%|██▌       | 1/4 [00:00<00:01,  2.83it/s, Acc=0.99219, AvgAcc=0.98958] 25%|██▌       | 1/4 [00:00<00:01,  2.83it/s, Acc=0.99219, AvgAcc=0.99023]100%|██████████| 4/4 [00:00<00:00,  6.19it/s, Acc=0.99219, AvgAcc=0.99023]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:15<00:00, 495.71s/it]100%|██████████| 1/1 [08:15<00:00, 495.71s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]90/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run92.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run92.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126691
+EVENTS AFTER PRESELECTION:  126691
+Total 126691 events, selected 126691 events, finally loaded 578 events.
+Preparing to train on 578 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.82it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.82it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  2.82it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  2.82it/s, Acc=0.97656, AvgAcc=0.99023] 20%|██        | 1/5 [00:00<00:01,  2.82it/s, Acc=1.00000, AvgAcc=0.99135]100%|██████████| 5/5 [00:00<00:00,  7.57it/s, Acc=1.00000, AvgAcc=0.99135]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:27<00:00, 507.92s/it]100%|██████████| 1/1 [08:27<00:00, 507.92s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]91/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run93.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run93.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126838
+EVENTS AFTER PRESELECTION:  126838
+Total 126838 events, selected 126838 events, finally loaded 577 events.
+Preparing to train on 577 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:01,  2.81it/s, Acc=0.97656, AvgAcc=0.97656] 20%|██        | 1/5 [00:00<00:01,  2.81it/s, Acc=0.98438, AvgAcc=0.98047] 20%|██        | 1/5 [00:00<00:01,  2.81it/s, Acc=1.00000, AvgAcc=0.98698] 20%|██        | 1/5 [00:00<00:01,  2.81it/s, Acc=0.99219, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  2.81it/s, Acc=1.00000, AvgAcc=0.98960]100%|██████████| 5/5 [00:00<00:00,  7.59it/s, Acc=1.00000, AvgAcc=0.98960]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:28<00:00, 508.38s/it]100%|██████████| 1/1 [08:28<00:00, 508.38s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]92/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run94.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run94.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126727
+EVENTS AFTER PRESELECTION:  126727
+Total 126727 events, selected 126727 events, finally loaded 591 events.
+Preparing to train on 591 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.79it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.79it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.79it/s, Acc=1.00000, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  2.79it/s, Acc=0.98438, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.79it/s, Acc=1.00000, AvgAcc=0.99323]100%|██████████| 5/5 [00:00<00:00,  7.56it/s, Acc=1.00000, AvgAcc=0.99323]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:18<00:00, 498.37s/it]100%|██████████| 1/1 [08:18<00:00, 498.37s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]93/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run95.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run95.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  125720
+EVENTS AFTER PRESELECTION:  125720
+Total 125720 events, selected 125720 events, finally loaded 533 events.
+Preparing to train on 533 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  2.75it/s, Acc=0.98438, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  2.75it/s, Acc=1.00000, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.75it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.75it/s, Acc=1.00000, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:01,  2.75it/s, Acc=1.00000, AvgAcc=0.99437]100%|██████████| 5/5 [00:00<00:00,  7.58it/s, Acc=1.00000, AvgAcc=0.99437]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:27<00:00, 507.79s/it]100%|██████████| 1/1 [08:27<00:00, 507.79s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]94/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run96.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run96.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127004
+EVENTS AFTER PRESELECTION:  127004
+Total 127004 events, selected 127004 events, finally loaded 529 events.
+Preparing to train on 529 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  2.76it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  2.76it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  2.76it/s, Acc=0.98438, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  2.76it/s, Acc=0.99219, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:01,  2.76it/s, Acc=1.00000, AvgAcc=0.99433]100%|██████████| 5/5 [00:00<00:00,  7.54it/s, Acc=1.00000, AvgAcc=0.99433]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:29<00:00, 509.98s/it]100%|██████████| 1/1 [08:29<00:00, 509.98s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]95/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run97.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run97.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127116
+EVENTS AFTER PRESELECTION:  127116
+Total 127116 events, selected 127116 events, finally loaded 559 events.
+Preparing to train on 559 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  2.71it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:01,  2.71it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  2.71it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  2.71it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  2.71it/s, Acc=0.97872, AvgAcc=0.99463]100%|██████████| 5/5 [00:00<00:00,  7.34it/s, Acc=0.97872, AvgAcc=0.99463]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:34<00:00, 514.28s/it]100%|██████████| 1/1 [08:34<00:00, 514.28s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]96/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run98.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run98.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126582
+EVENTS AFTER PRESELECTION:  126582
+Total 126582 events, selected 126582 events, finally loaded 581 events.
+Preparing to train on 581 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.72it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.72it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  2.72it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  2.72it/s, Acc=0.99219, AvgAcc=0.99414] 20%|██        | 1/5 [00:00<00:01,  2.72it/s, Acc=0.98551, AvgAcc=0.99312]100%|██████████| 5/5 [00:00<00:00,  7.41it/s, Acc=0.98551, AvgAcc=0.99312]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:27<00:00, 507.71s/it]100%|██████████| 1/1 [08:27<00:00, 507.71s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]97/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run99.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run99.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  126654
+EVENTS AFTER PRESELECTION:  126654
+Total 126654 events, selected 126654 events, finally loaded 560 events.
+Preparing to train on 560 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.74it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.74it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  2.74it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  2.74it/s, Acc=0.98438, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.74it/s, Acc=1.00000, AvgAcc=0.99286]100%|██████████| 5/5 [00:00<00:00,  7.38it/s, Acc=1.00000, AvgAcc=0.99286]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:42<00:00, 522.40s/it]100%|██████████| 1/1 [08:42<00:00, 522.40s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]98/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_redone_upkaons_v12_ldmx-det-v12_run27.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_redone_upkaons_v12_ldmx-det-v12_run27.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127065
+EVENTS AFTER PRESELECTION:  127065
+Total 127065 events, selected 127065 events, finally loaded 523 events.
+Preparing to train on 523 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.96875, AvgAcc=0.96875] 20%|██        | 1/5 [00:00<00:01,  2.68it/s, Acc=0.96875, AvgAcc=0.96875] 20%|██        | 1/5 [00:00<00:01,  2.68it/s, Acc=0.99219, AvgAcc=0.98047] 20%|██        | 1/5 [00:00<00:01,  2.68it/s, Acc=0.99219, AvgAcc=0.98438] 20%|██        | 1/5 [00:00<00:01,  2.68it/s, Acc=0.99219, AvgAcc=0.98633] 20%|██        | 1/5 [00:00<00:01,  2.68it/s, Acc=1.00000, AvgAcc=0.98662]100%|██████████| 5/5 [00:00<00:00,  7.35it/s, Acc=1.00000, AvgAcc=0.98662]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:22<00:00, 502.77s/it]100%|██████████| 1/1 [08:22<00:00, 502.77s/it]
+  0%|          | 0/5 [00:00<?, ?it/s]99/100
+Running file /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_redone_upkaons_v12_ldmx-det-v12_run87.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/aminali/production/kaon_prod/v2.3.0_upkaons/0run100jobs/4gev_1e_redone_upkaons_v12_ldmx-det-v12_run87.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  127009
+EVENTS AFTER PRESELECTION:  127009
+Total 127009 events, selected 127009 events, finally loaded 582 events.
+Preparing to train on 582 background events, 0 (total) signal events
+  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.72it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.72it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.72it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.72it/s, Acc=0.97656, AvgAcc=0.98828] 20%|██        | 1/5 [00:00<00:01,  2.72it/s, Acc=0.98571, AvgAcc=0.98797]100%|██████████| 5/5 [00:00<00:00,  7.30it/s, Acc=0.98571, AvgAcc=0.98797]
+PROGRAM FINISHED

@@ -1,0 +1,128 @@
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [01:21<00:00, 81.83s/it]100%|██████████| 1/1 [01:21<00:00, 81.83s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]***SAVING EXTRA
+conv_params: [(7, (32, 32, 32)), (7, (64, 64, 64))]
+fc_params: [(128, 0.1)]
+Initializing model
+INITIALIZING SPLITNET
+INITIALIZED PARTICLENET
+FINISHED INIT
+Loading model models/v12_training_2/model_state_epoch-19_acc-0.9961.pt for eval
+bkg /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/*.root
+sig 
+0/9
+Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_101_ldmx-det-v12_run1_seeds_2_3_None.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_101_ldmx-det-v12_run1_seeds_2_3_None.root (bkg)
+First few hit sums:  [123, 107, 88, 111, 137, 113, 107, 92, 146, 98]
+EVENTS BEFORE PRESELECTION (in _read_file):  119669
+EVENTS AFTER PRESELECTION:  6895
+N_SELECTED:   6895
+TOTAL SELECTED:   6895
+Total 119669 events, selected 6895 events, finally loaded 107 events.
+  0%|          | 0/1 [00:01<?, ?it/s, Acc=0.96262, AvgAcc=0.96262]100%|██████████| 1/1 [00:01<00:00,  1.21s/it, Acc=0.96262, AvgAcc=0.96262]100%|██████████| 1/1 [00:01<00:00,  1.27s/it, Acc=0.96262, AvgAcc=0.96262]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [01:21<00:00, 81.23s/it]100%|██████████| 1/1 [01:21<00:00, 81.23s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]1/9
+Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_102_ldmx-det-v12_run2_seeds_4_5_None.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_102_ldmx-det-v12_run2_seeds_4_5_None.root (bkg)
+First few hit sums:  [117, 105, 90, 92, 78, 91, 103, 89, 103, 68]
+EVENTS BEFORE PRESELECTION (in _read_file):  119001
+EVENTS AFTER PRESELECTION:  6933
+N_SELECTED:   6933
+TOTAL SELECTED:   6933
+Total 119001 events, selected 6933 events, finally loaded 86 events.
+  0%|          | 0/1 [00:00<?, ?it/s, Acc=0.96512, AvgAcc=0.96512]100%|██████████| 1/1 [00:00<00:00,  8.80it/s, Acc=0.96512, AvgAcc=0.96512]100%|██████████| 1/1 [00:00<00:00,  5.92it/s, Acc=0.96512, AvgAcc=0.96512]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [01:16<00:00, 76.81s/it]100%|██████████| 1/1 [01:16<00:00, 76.81s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]2/9
+Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_103_ldmx-det-v12_run3_seeds_6_7_None.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_103_ldmx-det-v12_run3_seeds_6_7_None.root (bkg)
+First few hit sums:  [121, 86, 116, 121, 113, 117, 102, 134, 115, 137]
+EVENTS BEFORE PRESELECTION (in _read_file):  118901
+EVENTS AFTER PRESELECTION:  6808
+N_SELECTED:   6808
+TOTAL SELECTED:   6808
+Total 118901 events, selected 6808 events, finally loaded 109 events.
+  0%|          | 0/1 [00:00<?, ?it/s, Acc=0.99083, AvgAcc=0.99083]100%|██████████| 1/1 [00:00<00:00,  8.82it/s, Acc=0.99083, AvgAcc=0.99083]100%|██████████| 1/1 [00:00<00:00,  5.99it/s, Acc=0.99083, AvgAcc=0.99083]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [01:19<00:00, 79.19s/it]100%|██████████| 1/1 [01:19<00:00, 79.19s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]3/9
+Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_104_ldmx-det-v12_run4_seeds_8_9_None.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_104_ldmx-det-v12_run4_seeds_8_9_None.root (bkg)
+First few hit sums:  [78, 92, 85, 127, 94, 124, 104, 113, 102, 109]
+EVENTS BEFORE PRESELECTION (in _read_file):  119196
+EVENTS AFTER PRESELECTION:  6848
+N_SELECTED:   6848
+TOTAL SELECTED:   6848
+Total 119196 events, selected 6848 events, finally loaded 94 events.
+  0%|          | 0/1 [00:00<?, ?it/s, Acc=0.97872, AvgAcc=0.97872]100%|██████████| 1/1 [00:00<00:00,  9.17it/s, Acc=0.97872, AvgAcc=0.97872]100%|██████████| 1/1 [00:00<00:00,  5.94it/s, Acc=0.97872, AvgAcc=0.97872]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [01:29<00:00, 89.49s/it]100%|██████████| 1/1 [01:29<00:00, 89.49s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]4/9
+Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_105_ldmx-det-v12_run5_seeds_10_11_None.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_105_ldmx-det-v12_run5_seeds_10_11_None.root (bkg)
+First few hit sums:  [112, 109, 106, 104, 112, 86, 93, 123, 90, 102]
+EVENTS BEFORE PRESELECTION (in _read_file):  119011
+EVENTS AFTER PRESELECTION:  6808
+N_SELECTED:   6808
+TOTAL SELECTED:   6808
+Total 119011 events, selected 6808 events, finally loaded 95 events.
+  0%|          | 0/1 [00:00<?, ?it/s, Acc=0.98947, AvgAcc=0.98947]100%|██████████| 1/1 [00:00<00:00,  9.03it/s, Acc=0.98947, AvgAcc=0.98947]100%|██████████| 1/1 [00:00<00:00,  6.02it/s, Acc=0.98947, AvgAcc=0.98947]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [01:29<00:00, 89.58s/it]100%|██████████| 1/1 [01:29<00:00, 89.58s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]5/9
+Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_106_ldmx-det-v12_run6_seeds_12_13_None.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_106_ldmx-det-v12_run6_seeds_12_13_None.root (bkg)
+First few hit sums:  [110, 124, 94, 104, 103, 118, 107, 101, 82, 73]
+EVENTS BEFORE PRESELECTION (in _read_file):  118997
+EVENTS AFTER PRESELECTION:  6869
+N_SELECTED:   6869
+TOTAL SELECTED:   6869
+Total 118997 events, selected 6869 events, finally loaded 98 events.
+  0%|          | 0/1 [00:00<?, ?it/s, Acc=0.94898, AvgAcc=0.94898]100%|██████████| 1/1 [00:00<00:00,  9.78it/s, Acc=0.94898, AvgAcc=0.94898]100%|██████████| 1/1 [00:00<00:00,  6.24it/s, Acc=0.94898, AvgAcc=0.94898]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [01:18<00:00, 78.56s/it]100%|██████████| 1/1 [01:18<00:00, 78.56s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]6/9
+Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_107_ldmx-det-v12_run7_seeds_14_15_None.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_107_ldmx-det-v12_run7_seeds_14_15_None.root (bkg)
+First few hit sums:  [81, 122, 114, 92, 113, 114, 66, 83, 117, 103]
+EVENTS BEFORE PRESELECTION (in _read_file):  120005
+EVENTS AFTER PRESELECTION:  6991
+N_SELECTED:   6991
+TOTAL SELECTED:   6991
+Total 120005 events, selected 6991 events, finally loaded 99 events.
+  0%|          | 0/1 [00:00<?, ?it/s, Acc=0.96970, AvgAcc=0.96970]100%|██████████| 1/1 [00:00<00:00,  8.95it/s, Acc=0.96970, AvgAcc=0.96970]100%|██████████| 1/1 [00:00<00:00,  6.03it/s, Acc=0.96970, AvgAcc=0.96970]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [01:30<00:00, 90.61s/it]100%|██████████| 1/1 [01:30<00:00, 90.61s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]7/9
+Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_108_ldmx-det-v12_run8_seeds_16_17_None.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_108_ldmx-det-v12_run8_seeds_16_17_None.root (bkg)
+First few hit sums:  [106, 128, 131, 102, 126, 107, 119, 139, 96, 122]
+EVENTS BEFORE PRESELECTION (in _read_file):  119290
+EVENTS AFTER PRESELECTION:  6757
+N_SELECTED:   6757
+TOTAL SELECTED:   6757
+Total 119290 events, selected 6757 events, finally loaded 108 events.
+  0%|          | 0/1 [00:00<?, ?it/s, Acc=0.97222, AvgAcc=0.97222]100%|██████████| 1/1 [00:00<00:00,  9.94it/s, Acc=0.97222, AvgAcc=0.97222]100%|██████████| 1/1 [00:00<00:00,  6.29it/s, Acc=0.97222, AvgAcc=0.97222]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [01:19<00:00, 79.84s/it]100%|██████████| 1/1 [01:19<00:00, 79.84s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]8/9
+Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_109_ldmx-det-v12_run9_seeds_18_19_None.root
+Loaded detector info
+Using coord_ref=ecal_sp
+Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_109_ldmx-det-v12_run9_seeds_18_19_None.root (bkg)
+First few hit sums:  [103, 59, 79, 131, 96, 101, 76, 101, 97, 121]
+EVENTS BEFORE PRESELECTION (in _read_file):  118909
+EVENTS AFTER PRESELECTION:  6775
+N_SELECTED:   6775
+TOTAL SELECTED:   6775
+Total 118909 events, selected 6775 events, finally loaded 73 events.
+  0%|          | 0/1 [00:00<?, ?it/s, Acc=0.95890, AvgAcc=0.95890]100%|██████████| 1/1 [00:00<00:00,  9.39it/s, Acc=0.95890, AvgAcc=0.95890]100%|██████████| 1/1 [00:00<00:00,  5.88it/s, Acc=0.95890, AvgAcc=0.95890]
+PROGRAM FINISHED

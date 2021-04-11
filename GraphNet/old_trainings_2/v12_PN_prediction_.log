@@ -1,0 +1,308 @@
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:23<03:34, 23.79s/it] 20%|██        | 2/10 [00:43<03:01, 22.66s/it] 30%|███       | 3/10 [00:58<02:21, 20.18s/it] 40%|████      | 4/10 [01:24<02:12, 22.16s/it] 50%|█████     | 5/10 [01:43<01:44, 20.96s/it] 60%|██████    | 6/10 [02:02<01:22, 20.51s/it] 70%|███████   | 7/10 [02:16<00:55, 18.64s/it] 80%|████████  | 8/10 [02:36<00:37, 18.90s/it] 90%|█████████ | 9/10 [02:55<00:19, 19.11s/it]100%|██████████| 10/10 [03:11<00:00, 18.13s/it]100%|██████████| 10/10 [03:11<00:00, 19.18s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:15<02:19, 15.53s/it] 20%|██        | 2/10 [00:20<01:38, 12.32s/it] 30%|███       | 3/10 [00:31<01:24, 12.05s/it] 40%|████      | 4/10 [00:43<01:12, 12.01s/it] 50%|█████     | 5/10 [00:55<01:00, 12.02s/it] 60%|██████    | 6/10 [01:09<00:50, 12.63s/it] 70%|███████   | 7/10 [01:18<00:34, 11.53s/it] 80%|████████  | 8/10 [01:30<00:22, 11.48s/it] 90%|█████████ | 9/10 [01:41<00:11, 11.38s/it]100%|██████████| 10/10 [02:00<00:00, 13.59s/it]100%|██████████| 10/10 [02:00<00:00, 12.00s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:04<00:41,  4.62s/it] 20%|██        | 2/10 [00:12<00:45,  5.68s/it] 30%|███       | 3/10 [00:21<00:45,  6.46s/it] 40%|████      | 4/10 [00:29<00:43,  7.17s/it] 50%|█████     | 5/10 [00:33<00:30,  6.11s/it] 60%|██████    | 6/10 [00:40<00:24,  6.23s/it] 70%|███████   | 7/10 [00:48<00:20,  6.88s/it] 80%|████████  | 8/10 [00:53<00:12,  6.21s/it] 90%|█████████ | 9/10 [00:59<00:06,  6.25s/it]100%|██████████| 10/10 [01:05<00:00,  6.24s/it]100%|██████████| 10/10 [01:05<00:00,  6.56s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:16<02:26, 16.24s/it] 20%|██        | 2/10 [00:27<01:59, 14.89s/it] 30%|███       | 3/10 [00:46<01:52, 16.11s/it] 40%|████      | 4/10 [01:03<01:36, 16.14s/it] 50%|█████     | 5/10 [01:16<01:16, 15.22s/it] 60%|██████    | 6/10 [01:33<01:03, 15.97s/it] 70%|███████   | 7/10 [01:50<00:48, 16.15s/it] 80%|████████  | 8/10 [02:03<00:30, 15.30s/it] 90%|█████████ | 9/10 [02:22<00:16, 16.16s/it]100%|██████████| 10/10 [02:45<00:00, 18.25s/it]100%|██████████| 10/10 [02:45<00:00, 16.51s/it]
+  0%|          | 0/88 [00:00<?, ?it/s]  1%|          | 1/88 [01:47<2:35:49, 107.47s/it]  2%|▏         | 2/88 [03:31<2:32:32, 106.42s/it]  3%|▎         | 3/88 [05:14<2:29:16, 105.37s/it]  5%|▍         | 4/88 [06:59<2:27:14, 105.18s/it]  6%|▌         | 5/88 [08:52<2:28:46, 107.54s/it]  7%|▋         | 6/88 [10:35<2:25:25, 106.41s/it]  8%|▊         | 7/88 [12:25<2:25:04, 107.47s/it]  9%|▉         | 8/88 [14:12<2:22:46, 107.08s/it] 10%|█         | 9/88 [16:00<2:21:43, 107.63s/it] 11%|█▏        | 10/88 [17:48<2:19:42, 107.46s/it] 12%|█▎        | 11/88 [19:26<2:14:19, 104.67s/it] 14%|█▎        | 12/88 [21:07<2:11:25, 103.75s/it] 15%|█▍        | 13/88 [22:49<2:08:46, 103.02s/it] 16%|█▌        | 14/88 [24:32<2:07:14, 103.17s/it] 17%|█▋        | 15/88 [26:12<2:04:18, 102.18s/it] 18%|█▊        | 16/88 [27:54<2:02:34, 102.15s/it] 19%|█▉        | 17/88 [29:34<2:00:00, 101.41s/it] 20%|██        | 18/88 [31:15<1:58:18, 101.40s/it] 22%|██▏       | 19/88 [32:56<1:56:15, 101.09s/it] 23%|██▎       | 20/88 [34:36<1:54:15, 100.81s/it] 24%|██▍       | 21/88 [36:17<1:52:50, 101.05s/it] 25%|██▌       | 22/88 [37:59<1:51:14, 101.14s/it] 26%|██▌       | 23/88 [39:40<1:49:39, 101.22s/it] 27%|██▋       | 24/88 [41:23<1:48:25, 101.65s/it] 28%|██▊       | 25/88 [43:06<1:47:24, 102.29s/it] 30%|██▉       | 26/88 [44:49<1:45:55, 102.51s/it] 31%|███       | 27/88 [46:33<1:44:25, 102.71s/it] 32%|███▏      | 28/88 [46:49<1:16:43, 76.72s/it]  33%|███▎      | 29/88 [48:29<1:22:16, 83.66s/it] 34%|███▍      | 30/88 [50:10<1:25:58, 88.93s/it] 35%|███▌      | 31/88 [51:51<1:27:57, 92.58s/it] 36%|███▋      | 32/88 [53:32<1:28:52, 95.22s/it] 38%|███▊      | 33/88 [55:13<1:28:40, 96.73s/it] 39%|███▊      | 34/88 [56:52<1:27:49, 97.58s/it] 40%|███▉      | 35/88 [58:32<1:26:48, 98.28s/it] 41%|████      | 36/88 [1:00:12<1:25:39, 98.84s/it] 42%|████▏     | 37/88 [1:01:50<1:23:44, 98.53s/it] 43%|████▎     | 38/88 [1:03:29<1:22:12, 98.64s/it] 44%|████▍     | 39/88 [1:05:11<1:21:20, 99.61s/it] 45%|████▌     | 40/88 [1:06:49<1:19:28, 99.34s/it] 47%|████▋     | 41/88 [1:08:29<1:17:54, 99.46s/it] 48%|████▊     | 42/88 [1:10:09<1:16:23, 99.64s/it] 49%|████▉     | 43/88 [1:11:49<1:14:51, 99.81s/it] 50%|█████     | 44/88 [1:13:33<1:13:58, 100.88s/it] 51%|█████     | 45/88 [1:15:10<1:11:31, 99.80s/it]  52%|█████▏    | 46/88 [1:16:50<1:09:53, 99.85s/it] 53%|█████▎    | 47/88 [1:18:36<1:09:29, 101.70s/it] 55%|█████▍    | 48/88 [1:20:26<1:09:25, 104.15s/it] 56%|█████▌    | 49/88 [1:22:14<1:08:28, 105.34s/it] 57%|█████▋    | 50/88 [1:24:00<1:06:47, 105.47s/it] 58%|█████▊    | 51/88 [1:25:43<1:04:41, 104.91s/it] 59%|█████▉    | 52/88 [1:27:29<1:03:08, 105.23s/it] 60%|██████    | 53/88 [1:29:16<1:01:34, 105.55s/it] 61%|██████▏   | 54/88 [1:31:02<59:54, 105.73s/it]   62%|██████▎   | 55/88 [1:32:47<58:04, 105.59s/it] 64%|██████▎   | 56/88 [1:34:33<56:20, 105.63s/it] 65%|██████▍   | 57/88 [1:36:16<54:08, 104.79s/it] 66%|██████▌   | 58/88 [1:37:58<51:57, 103.91s/it] 67%|██████▋   | 59/88 [1:39:42<50:15, 103.97s/it] 68%|██████▊   | 60/88 [1:41:26<48:34, 104.10s/it] 69%|██████▉   | 61/88 [1:43:06<46:18, 102.90s/it] 70%|███████   | 62/88 [1:44:52<44:57, 103.75s/it] 72%|███████▏  | 63/88 [1:46:35<43:09, 103.59s/it] 73%|███████▎  | 64/88 [1:48:24<42:01, 105.06s/it] 74%|███████▍  | 65/88 [1:50:06<40:00, 104.39s/it] 75%|███████▌  | 66/88 [1:51:45<37:35, 102.52s/it] 76%|███████▌  | 67/88 [1:53:24<35:33, 101.61s/it] 77%|███████▋  | 68/88 [1:55:03<33:38, 100.91s/it] 78%|███████▊  | 69/88 [1:56:47<32:12, 101.72s/it] 80%|███████▉  | 70/88 [1:58:30<30:40, 102.23s/it] 81%|████████  | 71/88 [2:00:11<28:47, 101.62s/it] 82%|████████▏ | 72/88 [2:01:53<27:08, 101.80s/it] 83%|████████▎ | 73/88 [2:03:35<25:28, 101.90s/it] 84%|████████▍ | 74/88 [2:05:16<23:42, 101.63s/it] 85%|████████▌ | 75/88 [2:07:00<22:11, 102.41s/it] 86%|████████▋ | 76/88 [2:08:43<20:30, 102.57s/it] 88%|████████▊ | 77/88 [2:10:29<18:59, 103.59s/it] 89%|████████▊ | 78/88 [2:12:17<17:27, 104.80s/it] 90%|████████▉ | 79/88 [2:14:01<15:40, 104.52s/it] 91%|█████████ | 80/88 [2:15:38<13:38, 102.33s/it] 92%|█████████▏| 81/88 [2:17:21<11:57, 102.53s/it] 93%|█████████▎| 82/88 [2:19:04<10:15, 102.58s/it] 94%|█████████▍| 83/88 [2:20:41<08:24, 100.93s/it] 95%|█████████▌| 84/88 [2:22:21<06:42, 100.75s/it] 97%|█████████▋| 85/88 [2:24:03<05:03, 101.06s/it] 98%|█████████▊| 86/88 [2:25:41<03:20, 100.24s/it] 99%|█████████▉| 87/88 [2:27:19<01:39, 99.42s/it] 100%|██████████| 88/88 [2:28:57<00:00, 99.14s/it]100%|██████████| 88/88 [2:28:57<00:00, 101.56s/it]
+  0%|          | 0/99 [00:00<?, ?it/s]conv_params: [(7, (32, 32, 32)), (7, (64, 64, 64))]
+fc_params: [(128, 0.1)]
+Loaded detector info
+Using coord_ref=none
+Start loading dataset /home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.001*.root (sig)
+EVENTS BEFORE PRESELECTION (in _read_file):  6598
+EVENTS AFTER PRESELECTION:  6598
+EVENTS BEFORE PRESELECTION (in _read_file):  5648
+EVENTS AFTER PRESELECTION:  5648
+EVENTS BEFORE PRESELECTION (in _read_file):  4117
+EVENTS AFTER PRESELECTION:  4117
+EVENTS BEFORE PRESELECTION (in _read_file):  7642
+EVENTS AFTER PRESELECTION:  7642
+EVENTS BEFORE PRESELECTION (in _read_file):  5385
+EVENTS AFTER PRESELECTION:  5385
+EVENTS BEFORE PRESELECTION (in _read_file):  5657
+EVENTS AFTER PRESELECTION:  5657
+EVENTS BEFORE PRESELECTION (in _read_file):  4130
+EVENTS AFTER PRESELECTION:  4130
+EVENTS BEFORE PRESELECTION (in _read_file):  5612
+EVENTS AFTER PRESELECTION:  5612
+EVENTS BEFORE PRESELECTION (in _read_file):  5654
+EVENTS AFTER PRESELECTION:  5654
+EVENTS BEFORE PRESELECTION (in _read_file):  4148
+EVENTS AFTER PRESELECTION:  4148
+Total 54591 events, selected 54591 events, finally loaded 215 events.
+Start loading dataset /home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.01*.root (sig)
+EVENTS BEFORE PRESELECTION (in _read_file):  3932
+EVENTS AFTER PRESELECTION:  3932
+EVENTS BEFORE PRESELECTION (in _read_file):  1178
+EVENTS AFTER PRESELECTION:  1178
+EVENTS BEFORE PRESELECTION (in _read_file):  2887
+EVENTS AFTER PRESELECTION:  2887
+EVENTS BEFORE PRESELECTION (in _read_file):  3020
+EVENTS AFTER PRESELECTION:  3020
+EVENTS BEFORE PRESELECTION (in _read_file):  3019
+EVENTS AFTER PRESELECTION:  3019
+EVENTS BEFORE PRESELECTION (in _read_file):  3558
+EVENTS AFTER PRESELECTION:  3558
+EVENTS BEFORE PRESELECTION (in _read_file):  2207
+EVENTS AFTER PRESELECTION:  2207
+EVENTS BEFORE PRESELECTION (in _read_file):  3028
+EVENTS AFTER PRESELECTION:  3028
+EVENTS BEFORE PRESELECTION (in _read_file):  2957
+EVENTS AFTER PRESELECTION:  2957
+EVENTS BEFORE PRESELECTION (in _read_file):  4833
+EVENTS AFTER PRESELECTION:  4833
+Total 30619 events, selected 30619 events, finally loaded 602 events.
+Start loading dataset /home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.1*.root (sig)
+EVENTS BEFORE PRESELECTION (in _read_file):  1172
+EVENTS AFTER PRESELECTION:  1172
+EVENTS BEFORE PRESELECTION (in _read_file):  2099
+EVENTS AFTER PRESELECTION:  2099
+EVENTS BEFORE PRESELECTION (in _read_file):  2213
+EVENTS AFTER PRESELECTION:  2213
+EVENTS BEFORE PRESELECTION (in _read_file):  2199
+EVENTS AFTER PRESELECTION:  2199
+EVENTS BEFORE PRESELECTION (in _read_file):  852
+EVENTS AFTER PRESELECTION:  852
+EVENTS BEFORE PRESELECTION (in _read_file):  1617
+EVENTS AFTER PRESELECTION:  1617
+EVENTS BEFORE PRESELECTION (in _read_file):  2203
+EVENTS AFTER PRESELECTION:  2203
+EVENTS BEFORE PRESELECTION (in _read_file):  1188
+EVENTS AFTER PRESELECTION:  1188
+EVENTS BEFORE PRESELECTION (in _read_file):  1616
+EVENTS AFTER PRESELECTION:  1616
+EVENTS BEFORE PRESELECTION (in _read_file):  1617
+EVENTS AFTER PRESELECTION:  1617
+Total 16776 events, selected 16776 events, finally loaded 355 events.
+Start loading dataset /home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*1.0*.root (sig)
+EVENTS BEFORE PRESELECTION (in _read_file):  4133
+EVENTS AFTER PRESELECTION:  4133
+EVENTS BEFORE PRESELECTION (in _read_file):  3022
+EVENTS AFTER PRESELECTION:  3022
+EVENTS BEFORE PRESELECTION (in _read_file):  4611
+EVENTS AFTER PRESELECTION:  4611
+EVENTS BEFORE PRESELECTION (in _read_file):  4156
+EVENTS AFTER PRESELECTION:  4156
+EVENTS BEFORE PRESELECTION (in _read_file):  2977
+EVENTS AFTER PRESELECTION:  2977
+EVENTS BEFORE PRESELECTION (in _read_file):  4156
+EVENTS AFTER PRESELECTION:  4156
+EVENTS BEFORE PRESELECTION (in _read_file):  4140
+EVENTS AFTER PRESELECTION:  4140
+EVENTS BEFORE PRESELECTION (in _read_file):  3018
+EVENTS AFTER PRESELECTION:  3018
+EVENTS BEFORE PRESELECTION (in _read_file):  4153
+EVENTS AFTER PRESELECTION:  4153
+EVENTS BEFORE PRESELECTION (in _read_file):  5634
+EVENTS AFTER PRESELECTION:  5634
+Total 40000 events, selected 40000 events, finally loaded 2187 events.
+Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/*.root (bkg)
+EVENTS BEFORE PRESELECTION (in _read_file):  23775
+EVENTS AFTER PRESELECTION:  23775
+EVENTS BEFORE PRESELECTION (in _read_file):  23787
+EVENTS AFTER PRESELECTION:  23787
+EVENTS BEFORE PRESELECTION (in _read_file):  23862
+EVENTS AFTER PRESELECTION:  23862
+EVENTS BEFORE PRESELECTION (in _read_file):  23775
+EVENTS AFTER PRESELECTION:  23775
+EVENTS BEFORE PRESELECTION (in _read_file):  23839
+EVENTS AFTER PRESELECTION:  23839
+EVENTS BEFORE PRESELECTION (in _read_file):  23763
+EVENTS AFTER PRESELECTION:  23763
+EVENTS BEFORE PRESELECTION (in _read_file):  23787
+EVENTS AFTER PRESELECTION:  23787
+EVENTS BEFORE PRESELECTION (in _read_file):  23899
+EVENTS AFTER PRESELECTION:  23899
+EVENTS BEFORE PRESELECTION (in _read_file):  23733
+EVENTS AFTER PRESELECTION:  23733
+EVENTS BEFORE PRESELECTION (in _read_file):  23939
+EVENTS AFTER PRESELECTION:  23939
+EVENTS BEFORE PRESELECTION (in _read_file):  23787
+EVENTS AFTER PRESELECTION:  23787
+EVENTS BEFORE PRESELECTION (in _read_file):  23927
+EVENTS AFTER PRESELECTION:  23927
+EVENTS BEFORE PRESELECTION (in _read_file):  23907
+EVENTS AFTER PRESELECTION:  23907
+EVENTS BEFORE PRESELECTION (in _read_file):  23933
+EVENTS AFTER PRESELECTION:  23933
+EVENTS BEFORE PRESELECTION (in _read_file):  23951
+EVENTS AFTER PRESELECTION:  23951
+EVENTS BEFORE PRESELECTION (in _read_file):  23770
+EVENTS AFTER PRESELECTION:  23770
+EVENTS BEFORE PRESELECTION (in _read_file):  23696
+EVENTS AFTER PRESELECTION:  23696
+EVENTS BEFORE PRESELECTION (in _read_file):  23793
+EVENTS AFTER PRESELECTION:  23793
+EVENTS BEFORE PRESELECTION (in _read_file):  23848
+EVENTS AFTER PRESELECTION:  23848
+EVENTS BEFORE PRESELECTION (in _read_file):  23775
+EVENTS AFTER PRESELECTION:  23775
+EVENTS BEFORE PRESELECTION (in _read_file):  24012
+EVENTS AFTER PRESELECTION:  24012
+EVENTS BEFORE PRESELECTION (in _read_file):  23702
+EVENTS AFTER PRESELECTION:  23702
+EVENTS BEFORE PRESELECTION (in _read_file):  23784
+EVENTS AFTER PRESELECTION:  23784
+EVENTS BEFORE PRESELECTION (in _read_file):  24012
+EVENTS AFTER PRESELECTION:  24012
+EVENTS BEFORE PRESELECTION (in _read_file):  23748
+EVENTS AFTER PRESELECTION:  23748
+EVENTS BEFORE PRESELECTION (in _read_file):  23922
+EVENTS AFTER PRESELECTION:  23922
+EVENTS BEFORE PRESELECTION (in _read_file):  23717
+EVENTS AFTER PRESELECTION:  23717
+EVENTS BEFORE PRESELECTION (in _read_file):  3578
+EVENTS AFTER PRESELECTION:  3578
+EVENTS BEFORE PRESELECTION (in _read_file):  23853
+EVENTS AFTER PRESELECTION:  23853
+EVENTS BEFORE PRESELECTION (in _read_file):  23849
+EVENTS AFTER PRESELECTION:  23849
+EVENTS BEFORE PRESELECTION (in _read_file):  23897
+EVENTS AFTER PRESELECTION:  23897
+EVENTS BEFORE PRESELECTION (in _read_file):  23843
+EVENTS AFTER PRESELECTION:  23843
+EVENTS BEFORE PRESELECTION (in _read_file):  23863
+EVENTS AFTER PRESELECTION:  23863
+EVENTS BEFORE PRESELECTION (in _read_file):  23761
+EVENTS AFTER PRESELECTION:  23761
+EVENTS BEFORE PRESELECTION (in _read_file):  23898
+EVENTS AFTER PRESELECTION:  23898
+EVENTS BEFORE PRESELECTION (in _read_file):  23831
+EVENTS AFTER PRESELECTION:  23831
+EVENTS BEFORE PRESELECTION (in _read_file):  23817
+EVENTS AFTER PRESELECTION:  23817
+EVENTS BEFORE PRESELECTION (in _read_file):  23806
+EVENTS AFTER PRESELECTION:  23806
+EVENTS BEFORE PRESELECTION (in _read_file):  23908
+EVENTS AFTER PRESELECTION:  23908
+EVENTS BEFORE PRESELECTION (in _read_file):  23794
+EVENTS AFTER PRESELECTION:  23794
+EVENTS BEFORE PRESELECTION (in _read_file):  23864
+EVENTS AFTER PRESELECTION:  23864
+EVENTS BEFORE PRESELECTION (in _read_file):  23784
+EVENTS AFTER PRESELECTION:  23784
+EVENTS BEFORE PRESELECTION (in _read_file):  23847
+EVENTS AFTER PRESELECTION:  23847
+EVENTS BEFORE PRESELECTION (in _read_file):  23852
+EVENTS AFTER PRESELECTION:  23852
+EVENTS BEFORE PRESELECTION (in _read_file):  23719
+EVENTS AFTER PRESELECTION:  23719
+EVENTS BEFORE PRESELECTION (in _read_file):  23926
+EVENTS AFTER PRESELECTION:  23926
+EVENTS BEFORE PRESELECTION (in _read_file):  23800
+EVENTS AFTER PRESELECTION:  23800
+EVENTS BEFORE PRESELECTION (in _read_file):  23869
+EVENTS AFTER PRESELECTION:  23869
+EVENTS BEFORE PRESELECTION (in _read_file):  23779
+EVENTS AFTER PRESELECTION:  23779
+EVENTS BEFORE PRESELECTION (in _read_file):  23896
+EVENTS AFTER PRESELECTION:  23896
+EVENTS BEFORE PRESELECTION (in _read_file):  23832
+EVENTS AFTER PRESELECTION:  23832
+EVENTS BEFORE PRESELECTION (in _read_file):  23824
+EVENTS AFTER PRESELECTION:  23824
+EVENTS BEFORE PRESELECTION (in _read_file):  23821
+EVENTS AFTER PRESELECTION:  23821
+EVENTS BEFORE PRESELECTION (in _read_file):  23946
+EVENTS AFTER PRESELECTION:  23946
+EVENTS BEFORE PRESELECTION (in _read_file):  23930
+EVENTS AFTER PRESELECTION:  23930
+EVENTS BEFORE PRESELECTION (in _read_file):  23812
+EVENTS AFTER PRESELECTION:  23812
+EVENTS BEFORE PRESELECTION (in _read_file):  23761
+EVENTS AFTER PRESELECTION:  23761
+EVENTS BEFORE PRESELECTION (in _read_file):  23816
+EVENTS AFTER PRESELECTION:  23816
+EVENTS BEFORE PRESELECTION (in _read_file):  23778
+EVENTS AFTER PRESELECTION:  23778
+EVENTS BEFORE PRESELECTION (in _read_file):  23676
+EVENTS AFTER PRESELECTION:  23676
+EVENTS BEFORE PRESELECTION (in _read_file):  23910
+EVENTS AFTER PRESELECTION:  23910
+EVENTS BEFORE PRESELECTION (in _read_file):  23837
+EVENTS AFTER PRESELECTION:  23837
+EVENTS BEFORE PRESELECTION (in _read_file):  23842
+EVENTS AFTER PRESELECTION:  23842
+EVENTS BEFORE PRESELECTION (in _read_file):  23794
+EVENTS AFTER PRESELECTION:  23794
+EVENTS BEFORE PRESELECTION (in _read_file):  23833
+EVENTS AFTER PRESELECTION:  23833
+EVENTS BEFORE PRESELECTION (in _read_file):  23890
+EVENTS AFTER PRESELECTION:  23890
+EVENTS BEFORE PRESELECTION (in _read_file):  23738
+EVENTS AFTER PRESELECTION:  23738
+EVENTS BEFORE PRESELECTION (in _read_file):  23737
+EVENTS AFTER PRESELECTION:  23737
+EVENTS BEFORE PRESELECTION (in _read_file):  23851
+EVENTS AFTER PRESELECTION:  23851
+EVENTS BEFORE PRESELECTION (in _read_file):  23774
+EVENTS AFTER PRESELECTION:  23774
+EVENTS BEFORE PRESELECTION (in _read_file):  23781
+EVENTS AFTER PRESELECTION:  23781
+EVENTS BEFORE PRESELECTION (in _read_file):  23855
+EVENTS AFTER PRESELECTION:  23855
+EVENTS BEFORE PRESELECTION (in _read_file):  23942
+EVENTS AFTER PRESELECTION:  23942
+EVENTS BEFORE PRESELECTION (in _read_file):  23806
+EVENTS AFTER PRESELECTION:  23806
+EVENTS BEFORE PRESELECTION (in _read_file):  23764
+EVENTS AFTER PRESELECTION:  23764
+EVENTS BEFORE PRESELECTION (in _read_file):  23964
+EVENTS AFTER PRESELECTION:  23964
+EVENTS BEFORE PRESELECTION (in _read_file):  23914
+EVENTS AFTER PRESELECTION:  23914
+EVENTS BEFORE PRESELECTION (in _read_file):  23909
+EVENTS AFTER PRESELECTION:  23909
+EVENTS BEFORE PRESELECTION (in _read_file):  23846
+EVENTS AFTER PRESELECTION:  23846
+EVENTS BEFORE PRESELECTION (in _read_file):  23772
+EVENTS AFTER PRESELECTION:  23772
+EVENTS BEFORE PRESELECTION (in _read_file):  23871
+EVENTS AFTER PRESELECTION:  23871
+EVENTS BEFORE PRESELECTION (in _read_file):  23802
+EVENTS AFTER PRESELECTION:  23802
+EVENTS BEFORE PRESELECTION (in _read_file):  23810
+EVENTS AFTER PRESELECTION:  23810
+EVENTS BEFORE PRESELECTION (in _read_file):  23806
+EVENTS AFTER PRESELECTION:  23806
+EVENTS BEFORE PRESELECTION (in _read_file):  23789
+EVENTS AFTER PRESELECTION:  23789
+EVENTS BEFORE PRESELECTION (in _read_file):  23748
+EVENTS AFTER PRESELECTION:  23748
+EVENTS BEFORE PRESELECTION (in _read_file):  23831
+EVENTS AFTER PRESELECTION:  23831
+EVENTS BEFORE PRESELECTION (in _read_file):  23776
+EVENTS AFTER PRESELECTION:  23776
+Total 2076865 events, selected 2076865 events, finally loaded 9300 events.
+Preparing to train on 9300 background events, 3359 (total) signal events
+Initializing model
+Usage: 7.1
+INITIALIZING SPLITNET
+INITIALIZED PARTICLENET
+FINISHED INIT
+Loading model models/v12_PN_training/model_state_epoch-19_acc-0.9971.pt for eval
+  0%|          | 0/99 [00:00<?, ?it/s, Acc=0.92969, AvgAcc=0.92969]  1%|          | 1/99 [00:00<00:59,  1.65it/s, Acc=0.92969, AvgAcc=0.92969]  1%|          | 1/99 [00:00<00:59,  1.65it/s, Acc=0.96094, AvgAcc=0.94531]  1%|          | 1/99 [00:00<00:59,  1.65it/s, Acc=1.00000, AvgAcc=0.96354]  1%|          | 1/99 [00:00<00:59,  1.65it/s, Acc=1.00000, AvgAcc=0.97266]  1%|          | 1/99 [00:00<00:59,  1.65it/s, Acc=0.99219, AvgAcc=0.97656]  1%|          | 1/99 [00:00<00:59,  1.65it/s, Acc=1.00000, AvgAcc=0.98047]  1%|          | 1/99 [00:00<00:59,  1.65it/s, Acc=0.98438, AvgAcc=0.98103]  1%|          | 1/99 [00:00<00:59,  1.65it/s, Acc=1.00000, AvgAcc=0.98340]  8%|▊         | 8/99 [00:00<00:38,  2.34it/s, Acc=1.00000, AvgAcc=0.98340]  8%|▊         | 8/99 [00:00<00:38,  2.34it/s, Acc=1.00000, AvgAcc=0.98524]  8%|▊         | 8/99 [00:00<00:38,  2.34it/s, Acc=1.00000, AvgAcc=0.98672]  8%|▊         | 8/99 [00:00<00:38,  2.34it/s, Acc=1.00000, AvgAcc=0.98793]  8%|▊         | 8/99 [00:00<00:38,  2.34it/s, Acc=1.00000, AvgAcc=0.98893]  8%|▊         | 8/99 [00:00<00:38,  2.34it/s, Acc=0.99219, AvgAcc=0.98918]  8%|▊         | 8/99 [00:00<00:38,  2.34it/s, Acc=1.00000, AvgAcc=0.98996]  8%|▊         | 8/99 [00:00<00:38,  2.34it/s, Acc=0.99219, AvgAcc=0.99010] 15%|█▌        | 15/99 [00:00<00:25,  3.29it/s, Acc=0.99219, AvgAcc=0.99010] 15%|█▌        | 15/99 [00:00<00:25,  3.29it/s, Acc=1.00000, AvgAcc=0.99072] 15%|█▌        | 15/99 [00:00<00:25,  3.29it/s, Acc=1.00000, AvgAcc=0.99127] 15%|█▌        | 15/99 [00:00<00:25,  3.29it/s, Acc=1.00000, AvgAcc=0.99175] 15%|█▌        | 15/99 [00:00<00:25,  3.29it/s, Acc=1.00000, AvgAcc=0.99219] 15%|█▌        | 15/99 [00:00<00:25,  3.29it/s, Acc=1.00000, AvgAcc=0.99258] 15%|█▌        | 15/99 [00:00<00:25,  3.29it/s, Acc=0.99219, AvgAcc=0.99256] 15%|█▌        | 15/99 [00:00<00:25,  3.29it/s, Acc=1.00000, AvgAcc=0.99290] 15%|█▌        | 15/99 [00:00<00:25,  3.29it/s, Acc=1.00000, AvgAcc=0.99321] 23%|██▎       | 23/99 [00:00<00:16,  4.61it/s, Acc=1.00000, AvgAcc=0.99321] 23%|██▎       | 23/99 [00:00<00:16,  4.61it/s, Acc=1.00000, AvgAcc=0.99349] 23%|██▎       | 23/99 [00:00<00:16,  4.61it/s, Acc=1.00000, AvgAcc=0.99375] 23%|██▎       | 23/99 [00:00<00:16,  4.61it/s, Acc=1.00000, AvgAcc=0.99399] 23%|██▎       | 23/99 [00:00<00:16,  4.61it/s, Acc=1.00000, AvgAcc=0.99421] 23%|██▎       | 23/99 [00:00<00:16,  4.61it/s, Acc=1.00000, AvgAcc=0.99442] 23%|██▎       | 23/99 [00:01<00:16,  4.61it/s, Acc=1.00000, AvgAcc=0.99461] 23%|██▎       | 23/99 [00:01<00:16,  4.61it/s, Acc=0.99219, AvgAcc=0.99453] 23%|██▎       | 23/99 [00:01<00:16,  4.61it/s, Acc=1.00000, AvgAcc=0.99471] 31%|███▏      | 31/99 [00:01<00:10,  6.39it/s, Acc=1.00000, AvgAcc=0.99471] 31%|███▏      | 31/99 [00:01<00:10,  6.39it/s, Acc=0.98438, AvgAcc=0.99438] 31%|███▏      | 31/99 [00:01<00:10,  6.39it/s, Acc=1.00000, AvgAcc=0.99455] 31%|███▏      | 31/99 [00:01<00:10,  6.39it/s, Acc=0.99219, AvgAcc=0.99449] 31%|███▏      | 31/99 [00:01<00:10,  6.39it/s, Acc=0.99219, AvgAcc=0.99442] 31%|███▏      | 31/99 [00:01<00:10,  6.39it/s, Acc=1.00000, AvgAcc=0.99457] 31%|███▏      | 31/99 [00:01<00:10,  6.39it/s, Acc=0.99219, AvgAcc=0.99451] 37%|███▋      | 37/99 [00:01<00:07,  8.70it/s, Acc=0.99219, AvgAcc=0.99451] 37%|███▋      | 37/99 [00:01<00:07,  8.70it/s, Acc=1.00000, AvgAcc=0.99465] 37%|███▋      | 37/99 [00:01<00:07,  8.70it/s, Acc=1.00000, AvgAcc=0.99479] 37%|███▋      | 37/99 [00:01<00:07,  8.70it/s, Acc=0.99219, AvgAcc=0.99473] 37%|███▋      | 37/99 [00:01<00:07,  8.70it/s, Acc=1.00000, AvgAcc=0.99486] 37%|███▋      | 37/99 [00:01<00:07,  8.70it/s, Acc=1.00000, AvgAcc=0.99498] 37%|███▋      | 37/99 [00:01<00:07,  8.70it/s, Acc=1.00000, AvgAcc=0.99509] 37%|███▋      | 37/99 [00:01<00:07,  8.70it/s, Acc=1.00000, AvgAcc=0.99521] 44%|████▍     | 44/99 [00:01<00:04, 11.78it/s, Acc=1.00000, AvgAcc=0.99521] 44%|████▍     | 44/99 [00:01<00:04, 11.78it/s, Acc=1.00000, AvgAcc=0.99531] 44%|████▍     | 44/99 [00:01<00:04, 11.78it/s, Acc=0.99219, AvgAcc=0.99524] 44%|████▍     | 44/99 [00:01<00:04, 11.78it/s, Acc=0.98438, AvgAcc=0.99501] 44%|████▍     | 44/99 [00:01<00:04, 11.78it/s, Acc=1.00000, AvgAcc=0.99512] 44%|████▍     | 44/99 [00:01<00:04, 11.78it/s, Acc=1.00000, AvgAcc=0.99522] 44%|████▍     | 44/99 [00:01<00:04, 11.78it/s, Acc=1.00000, AvgAcc=0.99531] 44%|████▍     | 44/99 [00:01<00:04, 11.78it/s, Acc=1.00000, AvgAcc=0.99540] 52%|█████▏    | 51/99 [00:01<00:03, 15.60it/s, Acc=1.00000, AvgAcc=0.99540] 52%|█████▏    | 51/99 [00:01<00:03, 15.60it/s, Acc=1.00000, AvgAcc=0.99549] 52%|█████▏    | 51/99 [00:01<00:03, 15.60it/s, Acc=1.00000, AvgAcc=0.99558] 52%|█████▏    | 51/99 [00:01<00:03, 15.60it/s, Acc=1.00000, AvgAcc=0.99566] 52%|█████▏    | 51/99 [00:01<00:03, 15.60it/s, Acc=1.00000, AvgAcc=0.99574] 52%|█████▏    | 51/99 [00:01<00:03, 15.60it/s, Acc=0.99219, AvgAcc=0.99568] 52%|█████▏    | 51/99 [00:01<00:03, 15.60it/s, Acc=1.00000, AvgAcc=0.99575] 52%|█████▏    | 51/99 [00:01<00:03, 15.60it/s, Acc=0.99219, AvgAcc=0.99569] 52%|█████▏    | 51/99 [00:01<00:03, 15.60it/s, Acc=1.00000, AvgAcc=0.99576] 60%|█████▉    | 59/99 [00:01<00:01, 20.42it/s, Acc=1.00000, AvgAcc=0.99576] 60%|█████▉    | 59/99 [00:01<00:01, 20.42it/s, Acc=1.00000, AvgAcc=0.99583] 60%|█████▉    | 59/99 [00:01<00:01, 20.42it/s, Acc=1.00000, AvgAcc=0.99590] 60%|█████▉    | 59/99 [00:01<00:01, 20.42it/s, Acc=1.00000, AvgAcc=0.99597] 60%|█████▉    | 59/99 [00:01<00:01, 20.42it/s, Acc=1.00000, AvgAcc=0.99603] 60%|█████▉    | 59/99 [00:01<00:01, 20.42it/s, Acc=1.00000, AvgAcc=0.99609] 60%|█████▉    | 59/99 [00:01<00:01, 20.42it/s, Acc=1.00000, AvgAcc=0.99615] 60%|█████▉    | 59/99 [00:01<00:01, 20.42it/s, Acc=1.00000, AvgAcc=0.99621] 60%|█████▉    | 59/99 [00:01<00:01, 20.42it/s, Acc=1.00000, AvgAcc=0.99627] 68%|██████▊   | 67/99 [00:01<00:01, 26.21it/s, Acc=1.00000, AvgAcc=0.99627] 68%|██████▊   | 67/99 [00:01<00:01, 26.21it/s, Acc=1.00000, AvgAcc=0.99632] 68%|██████▊   | 67/99 [00:01<00:01, 26.21it/s, Acc=1.00000, AvgAcc=0.99638] 68%|██████▊   | 67/99 [00:01<00:01, 26.21it/s, Acc=1.00000, AvgAcc=0.99643] 68%|██████▊   | 67/99 [00:01<00:01, 26.21it/s, Acc=1.00000, AvgAcc=0.99648] 68%|██████▊   | 67/99 [00:01<00:01, 26.21it/s, Acc=1.00000, AvgAcc=0.99653] 68%|██████▊   | 67/99 [00:01<00:01, 26.21it/s, Acc=0.99219, AvgAcc=0.99647] 68%|██████▊   | 67/99 [00:01<00:01, 26.21it/s, Acc=1.00000, AvgAcc=0.99652] 68%|██████▊   | 67/99 [00:01<00:01, 26.21it/s, Acc=0.99219, AvgAcc=0.99646] 68%|██████▊   | 67/99 [00:01<00:01, 26.21it/s, Acc=1.00000, AvgAcc=0.99650] 77%|███████▋  | 76/99 [00:01<00:00, 32.97it/s, Acc=1.00000, AvgAcc=0.99650] 77%|███████▋  | 76/99 [00:01<00:00, 32.97it/s, Acc=1.00000, AvgAcc=0.99655] 77%|███████▋  | 76/99 [00:01<00:00, 32.97it/s, Acc=1.00000, AvgAcc=0.99659] 77%|███████▋  | 76/99 [00:01<00:00, 32.97it/s, Acc=1.00000, AvgAcc=0.99664] 77%|███████▋  | 76/99 [00:01<00:00, 32.97it/s, Acc=1.00000, AvgAcc=0.99668] 77%|███████▋  | 76/99 [00:01<00:00, 32.97it/s, Acc=1.00000, AvgAcc=0.99672] 77%|███████▋  | 76/99 [00:01<00:00, 32.97it/s, Acc=1.00000, AvgAcc=0.99676] 77%|███████▋  | 76/99 [00:01<00:00, 32.97it/s, Acc=1.00000, AvgAcc=0.99680] 77%|███████▋  | 76/99 [00:01<00:00, 32.97it/s, Acc=1.00000, AvgAcc=0.99684] 77%|███████▋  | 76/99 [00:01<00:00, 32.97it/s, Acc=1.00000, AvgAcc=0.99687] 86%|████████▌ | 85/99 [00:01<00:00, 40.01it/s, Acc=1.00000, AvgAcc=0.99687] 86%|████████▌ | 85/99 [00:01<00:00, 40.01it/s, Acc=1.00000, AvgAcc=0.99691] 86%|████████▌ | 85/99 [00:01<00:00, 40.01it/s, Acc=1.00000, AvgAcc=0.99695] 86%|████████▌ | 85/99 [00:01<00:00, 40.01it/s, Acc=1.00000, AvgAcc=0.99698] 86%|████████▌ | 85/99 [00:01<00:00, 40.01it/s, Acc=1.00000, AvgAcc=0.99702] 86%|████████▌ | 85/99 [00:01<00:00, 40.01it/s, Acc=0.99219, AvgAcc=0.99696] 86%|████████▌ | 85/99 [00:01<00:00, 40.01it/s, Acc=1.00000, AvgAcc=0.99700] 86%|████████▌ | 85/99 [00:01<00:00, 40.01it/s, Acc=0.99219, AvgAcc=0.99694] 86%|████████▌ | 85/99 [00:01<00:00, 40.01it/s, Acc=1.00000, AvgAcc=0.99698] 86%|████████▌ | 85/99 [00:01<00:00, 40.01it/s, Acc=1.00000, AvgAcc=0.99701] 95%|█████████▍| 94/99 [00:01<00:00, 47.74it/s, Acc=1.00000, AvgAcc=0.99701] 95%|█████████▍| 94/99 [00:01<00:00, 47.74it/s, Acc=0.99219, AvgAcc=0.99696] 95%|█████████▍| 94/99 [00:01<00:00, 47.74it/s, Acc=1.00000, AvgAcc=0.99699] 95%|█████████▍| 94/99 [00:01<00:00, 47.74it/s, Acc=1.00000, AvgAcc=0.99702] 95%|█████████▍| 94/99 [00:01<00:00, 47.74it/s, Acc=1.00000, AvgAcc=0.99705] 95%|█████████▍| 94/99 [00:01<00:00, 47.74it/s, Acc=1.00000, AvgAcc=0.99708]100%|██████████| 99/99 [00:02<00:00, 47.92it/s, Acc=1.00000, AvgAcc=0.99708]1 MeV (auc* = 0.996863)
+10 MeV (auc* = 0.999937)
+100 MeV (auc* = 0.999972)
+1000 MeV (auc* = 0.999988)
+ === Summary ===
+model_name: particle-net-lite
+model_params: {'conv_params': [(7, (32, 32, 32)), (7, (64, 64, 64))], 'fc_params': [(128, 0.1)]}
+coord_ref: none
+date: 2021-03-22
+model_path: models/v12_PN_training/model_state_epoch-19_acc-0.9971.pt
+siglist: {1: ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.001*.root', 200000), 10: ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.01*.root', 200000), 100: ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.1*.root', 200000), 1000: ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*1.0*.root', 200000)}
+bkglist: {0: ('/home/pmasterson/GraphNet_input/v12/bkg_12M/*.root', -1)}
+presel_eff: {1: 1.0, 10: 1.0, 100: 1.0, 1000: 1.0, 0: 1.0}
+1 MeV: {'auc-presel': 0.996863215803951, 'acc-presel': 0.9968470835522859, 'effs': [(0.0011827956989247312, 0.9162790697674419), (0.00010752688172043011, 0.827906976744186), (0.00010752688172043011, 0.827906976744186), (0.00010752688172043011, 0.827906976744186)]}
+10 MeV: {'auc-presel': 0.99993730575501, 'acc-presel': 0.9979802060189861, 'effs': [(0.0011827956989247312, 0.9900332225913622), (0.00010752688172043011, 0.9601328903654485), (0.00010752688172043011, 0.9601328903654485), (0.00010752688172043011, 0.9601328903654485)]}
+100 MeV: {'auc-presel': 0.9999724367711647, 'acc-presel': 0.9981356809943035, 'effs': [(0.0011827956989247312, 0.9943661971830986), (0.00010752688172043011, 0.9633802816901409), (0.00010752688172043011, 0.9633802816901409), (0.00010752688172043011, 0.9633802816901409)]}
+1000 MeV: {'auc-presel': 0.9999875117384742, 'acc-presel': 0.9982589013667624, 'effs': [(0.0011827956989247312, 0.9977137631458619), (0.00010752688172043011, 0.9858253315043438), (0.00010752688172043011, 0.9858253315043438), (0.00010752688172043011, 0.9858253315043438)]}
+Exporting ONNX model to plot_data/v12_PN_training/model_state_epoch-19_acc-0.9971.onnx
+INITIALIZING SPLITNET
+INITIALIZED PARTICLENET
+FINISHED INIT
+
+/home/dgj1118/miniconda3/envs/pytorch/lib/python3.7/site-packages/torch/onnx/utils.py:1190: UserWarning: No names were found for specified dynamic axes of provided input.Automatically generated names will be applied to each dynamic axes of input coordinates
+  'Automatically generated names will be applied to each dynamic axes of input {}'.format(key))
+/home/dgj1118/miniconda3/envs/pytorch/lib/python3.7/site-packages/torch/onnx/utils.py:1190: UserWarning: No names were found for specified dynamic axes of provided input.Automatically generated names will be applied to each dynamic axes of input features
+  'Automatically generated names will be applied to each dynamic axes of input {}'.format(key))
