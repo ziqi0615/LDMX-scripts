@@ -235,12 +235,29 @@ class ECalHitsDataset(Dataset):
                 arr = awkward.pad_none(arr, 1, clip=True)
                 arr = awkward.fill_none(arr, 0)
                 return awkward.flatten(arr)
+            
+            
+           
+            ### Get the max Pz value ###
+            '''                
+            maxPz = 0
 
+            for hit in range(len(t['EcalScoringPlaneHits_v12.pz_'].array())):
+ 
+                if (np.all((t['EcalScoringPlaneHits_v12.pdgID_'].array() == 11)) and \
+                     (np.all(t['EcalScoringPlaneHits_v12.z_'].array() > 240)) and \
+                     (np.all(t['EcalScoringPlaneHits_v12.z_'].array() < 241)) and \
+                     (np.all(t['EcalScoringPlaneHits_v12.pz_'].array() > maxPz))):
+	          	
+                    maxPz = t['EcalScoringPlaneHits_v12.pz_'].array()
+	   '''   								
+                               
+              
             el = (t['EcalScoringPlaneHits_v12.pdgID_'].array() == 11) * \
                  (t['EcalScoringPlaneHits_v12.z_'].array() > 240) * \
                  (t['EcalScoringPlaneHits_v12.z_'].array() < 241) * \
                  (t['EcalScoringPlaneHits_v12.pz_'].array() > 0)
-
+            
             recoilX = _pad_array(t['EcalScoringPlaneHits_v12.x_'].array()[el])[start:stop]#[pos_pass_presel]
             recoilY = _pad_array(t['EcalScoringPlaneHits_v12.y_'].array()[el])[start:stop]#[pos_pass_presel]
             recoilPx = _pad_array(t['EcalScoringPlaneHits_v12.px_'].array()[el])[start:stop]#[pos_pass_presel]
@@ -257,9 +274,6 @@ class ECalHitsDataset(Dataset):
                 recoilfX = CallX(ecalFaceZ, recoilX[i], recoilY[i], scoringPlaneZ, recoilPx[i], recoilPy[i], recoilPz[i])
                 recoilfY = CallY(ecalFaceZ, recoilX[i], recoilY[i], scoringPlaneZ, recoilPx[i], recoilPy[i], recoilPz[i])
                 
-                fX[i] = recoilfX
-                fY[i] = recoilfY
-
                 # FIDUCIAL OR NOT #
 
                 nonFiducial = True

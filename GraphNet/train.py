@@ -68,8 +68,8 @@ args = parser.parse_args()
 #####i# location of the signal and background files ######
 bkglist = {
     # (filepath, num_events_for_training)
-    #0: ('/home/pmasterson/GraphNet_input/v12/bkg_12M/*.root', -1)
-    0: ('/home/pmasterson/GraphNet_input/v12/kaon_training/*.root', -1)
+    0: ('/home/pmasterson/GraphNet_input/v12/bkg_12M/*.root', -1)
+    #0: ('/home/pmasterson/GraphNet_input/v12/kaon_training/*.root', -1)
     }
 
 siglist = {

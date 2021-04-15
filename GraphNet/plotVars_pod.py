@@ -8,7 +8,7 @@ executor = concurrent.futures.ThreadPoolExecutor(12)
 
 sig_base = '/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/'
 bkg_base = '/home/pmasterson/GraphNet_input/v12/bkg_12M/'
-bkg_files = glob.glob(bkg_base+'*.root')[:1]
+bkg_files = glob.glob(bkg_base+'*.root')
 sig_1    = glob.glob(sig_base+'*0.001*.root')[:2]
 sig_10   = glob.glob(sig_base+'*0.01*.root')[:2]
 sig_100  = glob.glob(sig_base+'*0.1*.root')[:2]
@@ -116,8 +116,11 @@ fX_bkg, fY_bkg = get_fX_fY(bkg_files)
 print("Done.  Plotting...")
 
 # plotting the 2d histograms for background and signal
+plt.figure()
 
-plt.hist2d(fX_bkg, fY_bkg, label='Background')
+
+plt.hist2d(fX_bkg, fY_bkg, bins=200, range=([-300,300],[-300,300]))
+
 
 #plt.hist2d(fX_sig1, fY_sig1, label='1 MeV')
 
@@ -127,7 +130,8 @@ plt.hist2d(fX_bkg, fY_bkg, label='Background')
 
 #plt.hist2d(fX_sig1000, fY_sig1000, label='1000 MeV')
 
-plt.xlabel('recoilfX')
-plt.ylabel('recoilfY')
-plt.show()
+plt.xlabel('X (mm)')
+plt.ylabel('Y (mm)')
+plt.savefig('/home/dgj1118/LDMX-scripts/GraphNet/XYHits.png')
+#plt.show()
 
