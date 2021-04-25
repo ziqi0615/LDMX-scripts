@@ -76,7 +76,7 @@ print('Done. Plotting...')
 
 plt.figure()
 
-plt.hist2d(X, Y, bins=200, range=([-300,300], [-300,300]))
+plt.hist2d(X, Y, bins=200, range=([-300,300], [-300,300]), cmap = jet, cmin = 1, vmin = 1)
 
 plt.xlabel('X (mm)')
 plt.ylabel('Y (mm)')
