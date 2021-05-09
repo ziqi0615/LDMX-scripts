@@ -236,33 +236,56 @@ class ECalHitsDataset(Dataset):
                 arr = awkward.fill_none(arr, 0)
                 return awkward.flatten(arr)
             
-            
-           
-            ### Get the max Pz value ###
-            '''                
-            maxPz = 0
-
-            for hit in range(len(t['EcalScoringPlaneHits_v12.pz_'].array())):
- 
-                if (np.all((t['EcalScoringPlaneHits_v12.pdgID_'].array() == 11)) and \
-                     (np.all(t['EcalScoringPlaneHits_v12.z_'].array() > 240)) and \
-                     (np.all(t['EcalScoringPlaneHits_v12.z_'].array() < 241)) and \
-                     (np.all(t['EcalScoringPlaneHits_v12.pz_'].array() > maxPz))):
-	          	
-                    maxPz = t['EcalScoringPlaneHits_v12.pz_'].array()
-	   '''   								
-                               
+            #1. Make maxPz array with elements like [[maxPz0, maxPz0, ...], [maxPz1, maxPz1, ...], ...]                
+            maxPz = []
               
+            for event in range(len(t['EcalScoringPlaneHits_v12.pz_'].array())):
+               
+                pZs = [] 
+                maxPZs = []
+       
+                for hit in range(len(t['EcalScoringPlaneHits_v12.pz_'].array()[event])):
+                    if ((t['EcalScoringPlaneHits_v12.pdgID_'].array()[event][hit] == 11) and \
+                     (t['EcalScoringPlaneHits_v12.z_'].array()[event][hit] > 240) and \
+                     (t['EcalScoringPlaneHits_v12.z_'].array()[event][hit] < 241):
+                        
+                        pZs[hit] = t['EcalScoringPlaneHits_v12.pz_'].array()[event][hit]
+                
+                for hit in range(len(pZs)):
+                    maxPZs.append(max(pZs))
+
+                maxPz.append(maxPZs) 
+
+            #2. Make the boolean array pZbool that checks if it is the electron with the max Pz
+            pZbool = []
+
+            for event in range(len(t['EcalScoringPlaneHits_v12.pz_'].array())):    
+                
+                pZboolhit = []
+                  
+                for hit in range(len(t['EcalScoringPlaneHits_v12.pz_'].array()[event])):
+                    if ((t['EcalScoringPlaneHits_v12.pdgID_'].array()[event][hit] == 11) and \
+                     (t['EcalScoringPlaneHits_v12.z_'].array()[event][hit] > 240) and \
+                     (t['EcalScoringPlaneHits_v12.z_'].array()[event][hit] < 241):
+                  
+                        if(t['EcalScoringPlaneHits_v12.pz_'].array()[event][hit] ==  maxPz[event][hit])):
+                            pZboolhit[hit] = 1 # MARK AS TRUE
+                        else:
+                            pZboolhit[hit] = 0 # MARK AS FALSE
+	      								
+                pZbool.append(pZboolhit)
+                
+            #3. Make the el boolean array that checks if its an electron and if it is in the Ecal Scoring Plane  
             el = (t['EcalScoringPlaneHits_v12.pdgID_'].array() == 11) * \
                  (t['EcalScoringPlaneHits_v12.z_'].array() > 240) * \
-                 (t['EcalScoringPlaneHits_v12.z_'].array() < 241) * \
-                 (t['EcalScoringPlaneHits_v12.pz_'].array() > 0)
-            
-            recoilX = _pad_array(t['EcalScoringPlaneHits_v12.x_'].array()[el])[start:stop]#[pos_pass_presel]
-            recoilY = _pad_array(t['EcalScoringPlaneHits_v12.y_'].array()[el])[start:stop]#[pos_pass_presel]
-            recoilPx = _pad_array(t['EcalScoringPlaneHits_v12.px_'].array()[el])[start:stop]#[pos_pass_presel]
-            recoilPy = _pad_array(t['EcalScoringPlaneHits_v12.py_'].array()[el])[start:stop]#[pos_pass_presel]
-            recoilPz = _pad_array(t['EcalScoringPlaneHits_v12.pz_'].array()[el])[start:stop]#[pos_pass_presel]
+                 (t['EcalScoringPlaneHits_v12.z_'].array() < 241)
+           
+            #4. Take the particles that are electrons, at the scoringplane, with the max Pz
+            recoilX = _pad_array(t['EcalScoringPlaneHits_v12.x_'].array()[el*pZbool])[start:stop]#[pos_pass_presel]
+            recoilY = _pad_array(t['EcalScoringPlaneHits_v12.y_'].array()[el*pZbool])[start:stop]#[pos_pass_presel]
+            recoilPx = _pad_array(t['EcalScoringPlaneHits_v12.px_'].array()[el*pZbool])[start:stop]#[pos_pass_presel]
+            recoilPy = _pad_array(t['EcalScoringPlaneHits_v12.py_'].array()[el*pZbool])[start:stop]#[pos_pass_presel]
+            recoilPz = _pad_array(t['EcalScoringPlaneHits_v12.pz_'].array()[el*pZbool])[start:stop]#[pos_pass_presel]
 
             ### LOOPING THROUGH EACH EVENT AND MAKE A BOOLEAN ARRAY FOR THE EVENTS ###
             N = len(recoilPx)
