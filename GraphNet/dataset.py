@@ -12,10 +12,8 @@ import concurrent.futures
 import matplotlib.pyplot as plt
 import psutil
 import gc  # May reduce RAM usage
-
 executor = concurrent.futures.ThreadPoolExecutor(12)
 import time
-
 torch.set_default_dtype(torch.float64)
 
 #ecalBranches = [  # EcalVeto data to save.  Could add more, but probably unnecessary.
@@ -247,10 +245,12 @@ class ECalHitsDataset(Dataset):
                 for hit in range(len(t['EcalScoringPlaneHits_v12.pz_'].array()[event])):
                     if ((t['EcalScoringPlaneHits_v12.pdgID_'].array()[event][hit] == 11) and \
                      (t['EcalScoringPlaneHits_v12.z_'].array()[event][hit] > 240) and \
-                     (t['EcalScoringPlaneHits_v12.z_'].array()[event][hit] < 241):
+                     (t['EcalScoringPlaneHits_v12.z_'].array()[event][hit] < 241)):
                         
-                        pZs[hit] = t['EcalScoringPlaneHits_v12.pz_'].array()[event][hit]
-                
+                        pZs.append(t['EcalScoringPlaneHits_v12.pz_'].array()[event][hit])
+                    else:
+                        pZs.append(0) #FILLER SPOT FOR NON-ELECTRONS        
+               
                 for hit in range(len(pZs)):
                     maxPZs.append(max(pZs))
 
@@ -266,12 +266,12 @@ class ECalHitsDataset(Dataset):
                 for hit in range(len(t['EcalScoringPlaneHits_v12.pz_'].array()[event])):
                     if ((t['EcalScoringPlaneHits_v12.pdgID_'].array()[event][hit] == 11) and \
                      (t['EcalScoringPlaneHits_v12.z_'].array()[event][hit] > 240) and \
-                     (t['EcalScoringPlaneHits_v12.z_'].array()[event][hit] < 241):
+                     (t['EcalScoringPlaneHits_v12.z_'].array()[event][hit] < 241)):
                   
-                        if(t['EcalScoringPlaneHits_v12.pz_'].array()[event][hit] ==  maxPz[event][hit])):
-                            pZboolhit[hit] = 1 # MARK AS TRUE
+                        if(t['EcalScoringPlaneHits_v12.pz_'].array()[event][hit] ==  maxPz[event][hit]):
+                            pZboolhit.append(1) # MARK AS TRUE
                         else:
-                            pZboolhit[hit] = 0 # MARK AS FALSE
+                            pZboolhit.append(0) # MARK AS FALSE
 	      								
                 pZbool.append(pZboolhit)
                 
@@ -279,13 +279,17 @@ class ECalHitsDataset(Dataset):
             el = (t['EcalScoringPlaneHits_v12.pdgID_'].array() == 11) * \
                  (t['EcalScoringPlaneHits_v12.z_'].array() > 240) * \
                  (t['EcalScoringPlaneHits_v12.z_'].array() < 241)
-           
+            
+            el1 = awkward.from_iter(el) 
+            pZbool1 = awkward.from_iter(pZbool)
+            print('el1*pZbool1 is type:' + str(type(el1*pZbool1)))
+            
             #4. Take the particles that are electrons, at the scoringplane, with the max Pz
-            recoilX = _pad_array(t['EcalScoringPlaneHits_v12.x_'].array()[el*pZbool])[start:stop]#[pos_pass_presel]
-            recoilY = _pad_array(t['EcalScoringPlaneHits_v12.y_'].array()[el*pZbool])[start:stop]#[pos_pass_presel]
-            recoilPx = _pad_array(t['EcalScoringPlaneHits_v12.px_'].array()[el*pZbool])[start:stop]#[pos_pass_presel]
-            recoilPy = _pad_array(t['EcalScoringPlaneHits_v12.py_'].array()[el*pZbool])[start:stop]#[pos_pass_presel]
-            recoilPz = _pad_array(t['EcalScoringPlaneHits_v12.pz_'].array()[el*pZbool])[start:stop]#[pos_pass_presel]
+            recoilX = _pad_array(t['EcalScoringPlaneHits_v12.x_'].array()[el1*pZbool1])[start:stop]#[pos_pass_presel]
+            recoilY = _pad_array(t['EcalScoringPlaneHits_v12.y_'].array()[el1*pZbool1])[start:stop]#[pos_pass_presel]
+            recoilPx = _pad_array(t['EcalScoringPlaneHits_v12.px_'].array()[el1*pZbool1])[start:stop]#[pos_pass_presel]
+            recoilPy = _pad_array(t['EcalScoringPlaneHits_v12.py_'].array()[el1*pZbool1])[start:stop]#[pos_pass_presel]
+            recoilPz = _pad_array(t['EcalScoringPlaneHits_v12.pz_'].array()[el1*pZbool1])[start:stop]#[pos_pass_presel]
 
             ### LOOPING THROUGH EACH EVENT AND MAKE A BOOLEAN ARRAY FOR THE EVENTS ###
             N = len(recoilPx)

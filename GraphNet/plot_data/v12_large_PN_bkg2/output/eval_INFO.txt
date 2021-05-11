@@ -1,6 +1,0 @@
-model_name: particle-net-lite
-model_params: {'conv_params': [(7, (32, 32, 32)), (7, (64, 64, 64))], 'fc_params': [(128, 0.1)]}
-date: 2021-04-15
-model_path: models/v12_PN_training1/model_state_epoch-19_acc-0.9971.pt
-siglist: 
-bkglist: /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/*.root

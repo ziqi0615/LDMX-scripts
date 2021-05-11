@@ -7,11 +7,12 @@ import concurrent.futures
 executor = concurrent.futures.ThreadPoolExecutor(12)
 
 bkg = '/home/aechavez/flattrees_for_david/bkg_tree.root'
+bkg_files = glob.glob(bkg)
 
-load_branches = ['recoilX', 'recoilY']
+load_branches = ['recoilX','recoilY','recoilPx','recoilPy','recoilPz']
 
-scoringPlaneZ = 220
-ecalFaceZ = 223.8000030517578
+scoringPlaneZ = 240.5015
+ecalFaceZ = 248.35
 cell_radius = 5
 
 def CallX(Hitz, Recoilx, Recoily, Recoilz, RPx, RPy, RPz):
@@ -38,7 +39,7 @@ def CallY(Hitz, Recoilx, Recoily, Recoilz, RPx, RPy, RPz):
 
 def getXY(filelist):
     
-    print('Start Process')
+    print('STARTING PROCESS')
     
     fX = []
     fY = []
@@ -49,35 +50,35 @@ def getXY(filelist):
          if len(t.keys()) == 0:
             print("    File empty, skipping")
         
-        table_temp = t.arrays(expressions=load_branches, interpretation_executor=executor)
-        table = {}
-        for k in load_branches:
-            table[k] = table_temp[k]
+         table_temp = t.arrays(expressions=load_branches, interpretation_executor=executor)
+         table = {}
+         for k in load_branches:
+             table[k] = table_temp[k]
             
-        for i in range(len(table['RecoilX'])):
+         for i in range(len(table['recoilX'])):
+        
+              recoilX  = table['recoilX'][i]
+              recoilY  = table['recoilY'][i]
+              recoilPx = table['recoilPx'][i]
+              recoilPy = table['recoilPy'][i]
+              recoilPz = table['recoilPz'][i]
+          
+              recoilfX = CallX(ecalFaceZ, recoilX, recoilY, scoringPlaneZ, recoilPx, recoilPy, recoilPz)
+              recoilfY = CallY(ecalFaceZ, recoilX, recoilY, scoringPlaneZ, recoilPx, recoilPy, recoilPz)
+         
+              fX.append(recoilfX)
+              fY.append(recoilfY)
+         
+    return fX, fY
 
-            recoilX  = table['recoilX'][i]
-            recoilY  = table['recoilY'][i]
-            recoilPx = table['recoilPx'][i]
-            recoilPy = table['recoilPy'][i]
-            recoilPz = table['recoilPz'][i]
-    
-            recoilfX = CallX(ecalFaceZ, recoilX, recoilY, scoringPlaneZ, recoilPx, recoilPy, recoilPz)
-            recoilfY = CallY(ecalFaceZ, recoilX, recoilY, scoringPlaneZ, recoilPx, recoilPy, recoilPz)
-
-        fX.append(recoilfX)
-        fY.append(recoilfY)
-
-return fX, fY
-
-X, Y =  getXY(bkg)
+X, Y =  getXY(bkg_files)
 
 print('Done. Plotting...')
 
 plt.figure()
 
-plt.hist2d(X, Y, bins=200, range=([-300,300], [-300,300]), cmap = jet, cmin = 1, vmin = 1)
-
+plt.hist2d(X, Y, bins=200, range=([-300,300], [-300,300]), cmap = 'jet', cmin = 1, vmin = 1)
+plt.colorbar()
 plt.xlabel('X (mm)')
 plt.ylabel('Y (mm)')
 plt.savefig('/home/dgj1118/LDMX-scripts/GraphNet/XYHits_v9.png')
