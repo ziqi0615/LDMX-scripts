@@ -82,8 +82,8 @@ def get_fX_fY(filelist):
          
         for i in range(len(table["EcalVeto_v12.nReadoutHits_"])):
             
-            if (i > 5000):
-                break
+ #           if (i > 5000):
+  #              break
 
             for j in range(len(table["EcalScoringPlaneHits_v12.px_"][i])):
                 maxPz = 0
@@ -104,7 +104,7 @@ def get_fX_fY(filelist):
                     recoilfX = CallX(ecalFaceZ, recoilX, recoilY, scoringPlaneZ, recoilPx, recoilPy, recoilPz)
                     recoilfY = CallY(ecalFaceZ, recoilX, recoilY, scoringPlaneZ, recoilPx, recoilPy, recoilPz) 
 
-            print('For event ' + str(i+1) + ': RecoilX is ' + str(recoilX) + ' and RecoilY is ' + str(recoilY))
+#            print('For event ' + str(i+1) + ': RecoilX is ' + str(recoilX) + ' and RecoilY is ' + str(recoilY))
             #print('For event ' + str(i+1) + ': RecoilfX is ' + str(recoilfX) + ' and RecoilfY is ' + str(recoilfY))            
             sX.append(recoilX)
             sY.append(recoilY) 
