@@ -9,16 +9,16 @@ import matplotlib
 executor = concurrent.futures.ThreadPoolExecutor(12)
 
 sig_base = '/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/'
-bkg_base = '/home/pmasterson/GraphNet_input/v12/bkg_12M/'
-bkg_files = glob.glob(bkg_base+'*.root')[:1]
-sig_1    = glob.glob(sig_base+'*0.001*.root')[:2]
-sig_10   = glob.glob(sig_base+'*0.01*.root')[:2]
-sig_100  = glob.glob(sig_base+'*0.1*.root')[:2]
-sig_1000 = glob.glob(sig_base+'*1.0*.root')[:2]
-sig_dict = {1:sig_1, 10:sig_10, 100:sig_100, 1000:sig_1000}
+bkg_base = '/home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/'
+bkg_files = glob.glob(bkg_base+'4gev_v12_pn_101_ldmx-det-v12_run1_seeds_2_3_None.root')
+#sig_1    = glob.glob(sig_base+'*0.001*.root')[:2]
+#sig_10   = glob.glob(sig_base+'*0.01*.root')[:2]
+#sig_100  = glob.glob(sig_base+'*0.1*.root')[:2]
+#sig_1000 = glob.glob(sig_base+'*1.0*.root')[:2]
+#sig_dict = {1:sig_1, 10:sig_10, 100:sig_100, 1000:sig_1000}
 
 
-load_branches = ['EcalRecHits_v12.id_', 'EcalRecHits_v12.energy_', 'EcalScoringPlaneHits_v12.pdgID_', 'EcalScoringPlaneHits_v12.x_', 'EcalScoringPlaneHits_v12.y_', 'EcalScoringPlaneHits_v12.z_', 'EcalScoringPlaneHits_v12.px_', 'EcalScoringPlaneHits_v12.py_', 'EcalScoringPlaneHits_v12.pz_']
+load_branches = ['EcalRecHits_v12.id_', 'EcalRecHits_v12.energy_', 'EcalScoringPlaneHits_v12.pdgID_', 'EcalScoringPlaneHits_v12.trackID_', 'EcalScoringPlaneHits_v12.x_', 'EcalScoringPlaneHits_v12.y_', 'EcalScoringPlaneHits_v12.z_', 'EcalScoringPlaneHits_v12.px_', 'EcalScoringPlaneHits_v12.py_', 'EcalScoringPlaneHits_v12.pz_']
 
 
 veto_branches = ['nReadoutHits_', 'electronContainmentEnergy_', 'photonContainmentEnergy_', 'summedDet_', 'summedTightIso_']
@@ -48,7 +48,7 @@ def CallY(Hitz, Recoilx, Recoily, Recoilz, RPx, RPy, RPz):
 
 scoringPlaneZ = 240.5015
 ecalFaceZ = 248.35
-cell_radius = 5
+cell_radius = 5.0
 
 
 def get_fX_fY(filelist):
@@ -60,8 +60,6 @@ def get_fX_fY(filelist):
 
     print("Reading files")
     
-    sX = [] # x-values Ecal Scoring Plane
-    sY = [] # y-values Ecal Scoring Plane
     fX = [] # x-values Ecal Face
     fY = [] # y-values Ecal Face
 
@@ -79,46 +77,58 @@ def get_fX_fY(filelist):
         for k in veto_branches:
             table["EcalVeto_v12."+k] = EcalVeto[k].array(interpretation_executor=executor)
         nHitsArr = awkward.sum(table[load_branches[1]] > 0, axis=1)
-         
+        
+        print('Starting selection')
+
+        total_events = len(table["EcalVeto_v12.nReadoutHits_"])
+
         for i in range(len(table["EcalVeto_v12.nReadoutHits_"])):
+                
+            if (i % 1000 == 0):
+                print('Finished Event ' + str(i)) 
             
- #           if (i > 5000):
-  #              break
+           # if (i > 5000):
+           #     break
 
             for j in range(len(table["EcalScoringPlaneHits_v12.px_"][i])):
-                maxPz = 0
-
+            
                 if (table['EcalScoringPlaneHits_v12.pdgID_'][i][j] == 11) and \
                    (table['EcalScoringPlaneHits_v12.z_'][i][j] > 240) and \
                    (table['EcalScoringPlaneHits_v12.z_'][i][j] < 241) and \
-                   (table['EcalScoringPlaneHits_v12.pz_'][i][j] > maxPz):
+                   (table['EcalScoringPlaneHits_v12.trackID_'][i][j] == 1) and \
+                   (table['EcalScoringPlaneHits_v12.pz_'][i][j] > 0):
                     
-                    maxPz = table['EcalScoringPlaneHits_v12.pz_'][i][j]
-
+                   # maxPz = table['EcalScoringPlaneHits_v12.pz_'][i][j]
+            
                     recoilX  = table['EcalScoringPlaneHits_v12.x_'][i][j]
                     recoilY  = table['EcalScoringPlaneHits_v12.y_'][i][j]
                     recoilPx = table['EcalScoringPlaneHits_v12.px_'][i][j]
                     recoilPy = table['EcalScoringPlaneHits_v12.py_'][i][j]
                     recoilPz = table['EcalScoringPlaneHits_v12.pz_'][i][j]
-                     
+                   
                     recoilfX = CallX(ecalFaceZ, recoilX, recoilY, scoringPlaneZ, recoilPx, recoilPy, recoilPz)
                     recoilfY = CallY(ecalFaceZ, recoilX, recoilY, scoringPlaneZ, recoilPx, recoilPy, recoilPz) 
+           
+            inside = False
+            if not recoilX == -9999 and not recoilY == -9999 and not recoilPx == -9999 and not recoilPy == -9999 and not recoilPz == -9999:
+                for c_val in cellMap.values():
+                    xdis = recoilfY - c_val[1]
+                    ydis = recoilfX - c_val[0]
+                    celldis = np.sqrt(xdis**2 + ydis**2)
+                    if celldis <= cell_radius:
+                        inside = True 
 
-#            print('For event ' + str(i+1) + ': RecoilX is ' + str(recoilX) + ' and RecoilY is ' + str(recoilY))
-            #print('For event ' + str(i+1) + ': RecoilfX is ' + str(recoilfX) + ' and RecoilfY is ' + str(recoilfY))            
-            sX.append(recoilX)
-            sY.append(recoilY) 
-            fX.append(recoilfX)
-            fY.append(recoilfY)
-
-    return sX, sY, fX, fY
+            if inside == False:
+                fX.append(recoilfX)
+                fY.append(recoilfY)
+             
+    return fX, fY, total_events
 
 # photonuclear background x and y hits
-sX_bkg, sY_bkg, fX_bkg, fY_bkg = get_fX_fY(bkg_files)
-
-print('The length of fX is ' + str(len(fX_bkg)))
-print('The length of fY is ' + str(len(fY_bkg)))
-
+fX_bkg, fY_bkg, events = get_fX_fY(bkg_files)
+print("Total number of events: " + str(events))
+#print("Total number of fiducial events: " + str(len(fX_bkg)))
+print("Total number of non-fiducial events: " + str(len(fX_bkg)))
 print("Done.  Plotting ECAL Face Hits...")
 my_cmap = plt.cm.jet
 my_cmap.set_under('white', 1)
@@ -127,15 +137,4 @@ plt.hist2d(fX_bkg, fY_bkg, bins=500, range=([-300,300],[-300,300]), cmin = 1,  c
 plt.colorbar()
 plt.xlabel('X (mm)')
 plt.ylabel('Y (mm)')
-plt.savefig('/home/dgj1118/LDMX-scripts/GraphNet/EcalFaceHits(TEST).png')
-
-
-print("Done.  Plotting ECAL Scoring Plane Hits...")
-my_cmap = plt.cm.jet
-my_cmap.set_under('white', 1)
-plt.figure()
-plt.hist2d(sX_bkg, sY_bkg, bins=500, range=([-300,300],[-300,300]), cmin = 1,  cmap=my_cmap, norm=matplotlib.colors.LogNorm())
-plt.colorbar()
-plt.xlabel('X (mm)')
-plt.ylabel('Y (mm)')
-plt.savefig('/home/dgj1118/LDMX-scripts/GraphNet/EcalScoringPlaneHits(TEST).png')
+plt.savefig('/home/dgj1118/LDMX-scripts/GraphNet/EcalFaceHits_NonFiducial(FULL).png')
