@@ -80,26 +80,33 @@ def get_fX_fY(filelist):
         
         print('Starting selection')
 
-        total_events = len(table["EcalVeto_v12.nReadoutHits_"])
+        #total_events = len(table["EcalVeto_v12.nReadoutHits_"])
+        total_events = len(table["EcalScoringPlaneHits_v12.x_"])
 
         for i in range(len(table["EcalVeto_v12.nReadoutHits_"])):
                 
-            if (i % 1000 == 0):
+            if (i % 100 == 0):
                 print('Finished Event ' + str(i)) 
             
-           # if (i > 5000):
-           #     break
-
+            if (i > 10000):
+                break
+            
             for j in range(len(table["EcalScoringPlaneHits_v12.px_"][i])):
             
-                if (table['EcalScoringPlaneHits_v12.pdgID_'][i][j] == 11) and \
-                   (table['EcalScoringPlaneHits_v12.z_'][i][j] > 240) and \
-                   (table['EcalScoringPlaneHits_v12.z_'][i][j] < 241) and \
-                   (table['EcalScoringPlaneHits_v12.trackID_'][i][j] == 1) and \
-                   (table['EcalScoringPlaneHits_v12.pz_'][i][j] > 0):
+                maxP = 0
+                for k in range(len(table["EcalScoringPlaneHits_v12.px_"][i])):
+                    squared = (table['EcalScoringPlaneHits_v12.pz_'][i][j])**2 + \
+                    (table['EcalScoringPlaneHits_v12.px_'][i][j])**2 + \
+                    (table['EcalScoringPlaneHits_v12.py_'][i][j])**2 
                     
-                   # maxPz = table['EcalScoringPlaneHits_v12.pz_'][i][j]
-            
+                    if (table['EcalScoringPlaneHits_v12.pdgID_'][i][j] == 11) and \
+                    (table['EcalScoringPlaneHits_v12.z_'][i][j] > 240) and \
+                    (table['EcalScoringPlaneHits_v12.z_'][i][j] < 241) and \
+                    (table['EcalScoringPlaneHits_v12.trackID_'][i][j] == 1) and \
+                    (squared > (maxP)**2):
+                     
+                        maxP = np.sqrt(squared)
+
                     recoilX  = table['EcalScoringPlaneHits_v12.x_'][i][j]
                     recoilY  = table['EcalScoringPlaneHits_v12.y_'][i][j]
                     recoilPx = table['EcalScoringPlaneHits_v12.px_'][i][j]
@@ -108,17 +115,20 @@ def get_fX_fY(filelist):
                    
                     recoilfX = CallX(ecalFaceZ, recoilX, recoilY, scoringPlaneZ, recoilPx, recoilPy, recoilPz)
                     recoilfY = CallY(ecalFaceZ, recoilX, recoilY, scoringPlaneZ, recoilPx, recoilPy, recoilPz) 
-           
-            inside = False
+             
+#            fX.append(recoilfX)
+#            fY.append(recoilfY)
+            
+            fiducial = False
             if not recoilX == -9999 and not recoilY == -9999 and not recoilPx == -9999 and not recoilPy == -9999 and not recoilPz == -9999:
                 for c_val in cellMap.values():
                     xdis = recoilfY - c_val[1]
                     ydis = recoilfX - c_val[0]
                     celldis = np.sqrt(xdis**2 + ydis**2)
                     if celldis <= cell_radius:
-                        inside = True 
+                        fiducial = True 
 
-            if inside == False:
+            if fiducial == False:
                 fX.append(recoilfX)
                 fY.append(recoilfY)
              
@@ -127,8 +137,7 @@ def get_fX_fY(filelist):
 # photonuclear background x and y hits
 fX_bkg, fY_bkg, events = get_fX_fY(bkg_files)
 print("Total number of events: " + str(events))
-#print("Total number of fiducial events: " + str(len(fX_bkg)))
-print("Total number of non-fiducial events: " + str(len(fX_bkg)))
+print("Total number of selected events: " + str(len(fX_bkg)))
 print("Done.  Plotting ECAL Face Hits...")
 my_cmap = plt.cm.jet
 my_cmap.set_under('white', 1)
@@ -137,4 +146,4 @@ plt.hist2d(fX_bkg, fY_bkg, bins=500, range=([-300,300],[-300,300]), cmin = 1,  c
 plt.colorbar()
 plt.xlabel('X (mm)')
 plt.ylabel('Y (mm)')
-plt.savefig('/home/dgj1118/LDMX-scripts/GraphNet/EcalFaceHits_NonFiducial(FULL).png')
+plt.savefig('/home/dgj1118/LDMX-scripts/GraphNet/test2.png')
