@@ -234,62 +234,17 @@ class ECalHitsDataset(Dataset):
                 arr = awkward.fill_none(arr, 0)
                 return awkward.flatten(arr)
             
-            #1. Make maxPz array with elements like [[maxPz0, maxPz0, ...], [maxPz1, maxPz1, ...], ...]                
-            maxPz = []
-              
-            for event in range(len(t['EcalScoringPlaneHits_v12.pz_'].array())):
-               
-                pZs = [] 
-                maxPZs = []
-       
-                for hit in range(len(t['EcalScoringPlaneHits_v12.pz_'].array()[event])):
-                    if ((t['EcalScoringPlaneHits_v12.pdgID_'].array()[event][hit] == 11) and \
-                     (t['EcalScoringPlaneHits_v12.z_'].array()[event][hit] > 240) and \
-                     (t['EcalScoringPlaneHits_v12.z_'].array()[event][hit] < 241)):
-                        
-                        pZs.append(t['EcalScoringPlaneHits_v12.pz_'].array()[event][hit])
-                    else:
-                        pZs.append(0) #FILLER SPOT FOR NON-ELECTRONS        
-               
-                for hit in range(len(pZs)):
-                    maxPZs.append(max(pZs))
-
-                maxPz.append(maxPZs) 
-
-            #2. Make the boolean array pZbool that checks if it is the electron with the max Pz
-            pZbool = []
-
-            for event in range(len(t['EcalScoringPlaneHits_v12.pz_'].array())):    
-                
-                pZboolhit = []
-                  
-                for hit in range(len(t['EcalScoringPlaneHits_v12.pz_'].array()[event])):
-                    if ((t['EcalScoringPlaneHits_v12.pdgID_'].array()[event][hit] == 11) and \
-                     (t['EcalScoringPlaneHits_v12.z_'].array()[event][hit] > 240) and \
-                     (t['EcalScoringPlaneHits_v12.z_'].array()[event][hit] < 241)):
-                  
-                        if(t['EcalScoringPlaneHits_v12.pz_'].array()[event][hit] ==  maxPz[event][hit]):
-                            pZboolhit.append(1) # MARK AS TRUE
-                        else:
-                            pZboolhit.append(0) # MARK AS FALSE
-	      								
-                pZbool.append(pZboolhit)
-                
-            #3. Make the el boolean array that checks if its an electron and if it is in the Ecal Scoring Plane  
             el = (t['EcalScoringPlaneHits_v12.pdgID_'].array() == 11) * \
                  (t['EcalScoringPlaneHits_v12.z_'].array() > 240) * \
-                 (t['EcalScoringPlaneHits_v12.z_'].array() < 241)
+                 (t['EcalScoringPlaneHits_v12.z_'].array() < 241) * \
+                 (t['EcalScoringPlaneHits_v12.pz_'].array() > 0) * \
+                 (t['EcalScoringPlaneHits_v12.trackID_'].array() == 1)
             
-            el1 = awkward.from_iter(el) 
-            pZbool1 = awkward.from_iter(pZbool)
-            print('el1*pZbool1 is type:' + str(type(el1*pZbool1)))
-            
-            #4. Take the particles that are electrons, at the scoringplane, with the max Pz
-            recoilX = _pad_array(t['EcalScoringPlaneHits_v12.x_'].array()[el1*pZbool1])[start:stop]#[pos_pass_presel]
-            recoilY = _pad_array(t['EcalScoringPlaneHits_v12.y_'].array()[el1*pZbool1])[start:stop]#[pos_pass_presel]
-            recoilPx = _pad_array(t['EcalScoringPlaneHits_v12.px_'].array()[el1*pZbool1])[start:stop]#[pos_pass_presel]
-            recoilPy = _pad_array(t['EcalScoringPlaneHits_v12.py_'].array()[el1*pZbool1])[start:stop]#[pos_pass_presel]
-            recoilPz = _pad_array(t['EcalScoringPlaneHits_v12.pz_'].array()[el1*pZbool1])[start:stop]#[pos_pass_presel]
+            recoilX = _pad_array(t['EcalScoringPlaneHits_v12.x_'].array()[el])[start:stop]#[pos_pass_presel]
+            recoilY = _pad_array(t['EcalScoringPlaneHits_v12.y_'].array()[el])[start:stop]#[pos_pass_presel]
+            recoilPx = _pad_array(t['EcalScoringPlaneHits_v12.px_'].array()[el])[start:stop]#[pos_pass_presel]
+            recoilPy = _pad_array(t['EcalScoringPlaneHits_v12.py_'].array()[el])[start:stop]#[pos_pass_presel]
+            recoilPz = _pad_array(t['EcalScoringPlaneHits_v12.pz_'].array()[el])[start:stop]#[pos_pass_presel]
 
             ### LOOPING THROUGH EACH EVENT AND MAKE A BOOLEAN ARRAY FOR THE EVENTS ###
             N = len(recoilPx)
@@ -302,8 +257,6 @@ class ECalHitsDataset(Dataset):
                 recoilfY = CallY(ecalFaceZ, recoilX[i], recoilY[i], scoringPlaneZ, recoilPx[i], recoilPy[i], recoilPz[i])
                 
                 # FIDUCIAL OR NOT #
-
-                nonFiducial = True
 
                 if not recoilX[i] == -9999 and not recoilY[i] ==  -9999 and not recoilPx[i] == -9999 and not recoilPy[i] == -9999 and not recoilPz[i] == -9999:
                     for c_val in self._cellMap.values():
@@ -334,51 +287,6 @@ class ECalHitsDataset(Dataset):
             # Now, work with table['etraj_ref'] and table['ptraj_ref'].
             # Create lists:  x/y/z_e, p
             # For each event, look through all hits.
-            # - Determine whether hit falls inside either the e or p RoCs
-            # - If so, fill corresp xyzlayer, energy, eid lists...
-            x_e =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')  # In theory, can lower size of 2nd dimension...
-            y_e =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
-            z_e =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
-            # eid_e =         np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
-            log_energy_e =  np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
-            layer_id_e =    np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
-            #x_p =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
-            #y_p =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
-            #z_p =           np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
-            # eid_p =         np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
-            #log_energy_p =  np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
-            #layer_id_p =    np.zeros((len(x), MAX_NUM_ECAL_HITS), dtype='float64')
-            # Optional 3rd region:
-            #x_o =           np.zeros((len(x), MAX_NUM_ECAL_HITS))
-            #y_o =           np.zeros((len(x), MAX_NUM_ECAL_HITS))
-            #z_o =           np.zeros((len(x), MAX_NUM_ECAL_HITS))
-            # eid_o =         np.zeros((len(x), MAX_NUM_ECAL_HITS))
-            #log_energy_o =  np.zeros((len(x), MAX_NUM_ECAL_HITS))
-            #layer_id_o =    np.zeros((len(x), MAX_NUM_ECAL_HITS))
-            
-            for i in range(len(x)):  # For every event...
-                etraj_sp = table['etraj_ref'][i][0]  # e- location at scoring plane (approximate)
-                enorm_sp = table['etraj_ref'][i][1]  # normalized (dz=1) momentum = direction of trajectory
-                ptraj_sp = table['ptraj_ref'][i][0]
-                pnorm_sp = table['ptraj_ref'][i][1]
-                #print(str(i))
-                #print("1) x AXIS 0: " + str(np.size(x, axis=0)) + " x AXIS 1: " +  str(np.size(x, axis=0)))
-                #print("1) x_e AXIS 0: " + str(np.size(x_e, axis=0)) + " x_e AXIS 1: " + str(np.size(x_e, axis=1)))
-
-                for j in range(min(len(x[i]), MAX_NUM_ECAL_HITS)):  #range(MAX_NUM_ECAL_HITS):  # For every hit...
-                    layer_index = int(layer_id[i][j])
-                    # Calculate xy for projected trajectory in same layer
-                    delta_z = self._layerZs[layer_index] - etraj_sp[2]
-                    etraj_point = (etraj_sp[0] + enorm_sp[0]*delta_z, etraj_sp[1] + enorm_sp[1]*delta_z)
-                    ptraj_point = (ptraj_sp[0] + pnorm_sp[0]*delta_z, ptraj_sp[1] + pnorm_sp[1]*delta_z)
-                    # Additionally, calculate recoil angle (angle of pnorm_sp):
-                    recoilangle = enorm_sp[2] / np.sqrt(enorm_sp[0]**2 + enorm_sp[1]**2 + enorm_sp[2]**2)
-                    recoil_p = np.sqrt(enorm_sp[0]**2 + enorm_sp[1]**2 + enorm_sp[2]**2)
-                    ir = -1
-                    #if recoilangle==-1 or recoil_p==-1:  ir = 1  # Not used for now
-                    if recoilangle<10 and recoil_p<500:
-                        ir = 1
-                    elif recoilangle<10 and recoil_p >= 500:
                         ir = 2
                     elif recoilangle<=20:
                         ir = 3
@@ -596,6 +504,51 @@ class ECalHitsDataset(Dataset):
         self._layerZs = np.loadtxt('data/%s/layer.txt' % version)
         print("Loaded detector info")
 
+    def _parse_cid(self, cid):  # Retooled for v12
+        # For id details, see (?):  DetDescr/src/EcalID.cxx
+        # Flatten arrays to 1D numpy arrays so zip, map will work
+        cell   = (awkward.to_numpy(awkward.flatten(cid)) >> 0)  & 0xFFF
+        module = (awkward.to_numpy(awkward.flatten(cid)) >> 12) & 0x1F
+        layer  = (awkward.to_numpy(awkward.flatten(cid)) >> 17) & 0x3F
+        
+        mcid = 10 * cell + module
+        x, y = zip(*map(self._cellMap.__getitem__, mcid))
+        z = list(map(self._layerZs.__getitem__, layer))
+
+        def unflatten_array(x, base_array):
+            # x = 1D flattened np array, base_array has the desired shape
+            return awkward.Array(awkward.layout.ListOffsetArray64(
+                                    base_array.layout.offsets,
+                                    awkward.layout.NumpyArray(np.array(x, dtype='float64'))
+                                    )
+                                )
+        x        = unflatten_array(x, cid)
+        y        = unflatten_array(y, cid)
+        z        = unflatten_array(z, cid)
+        layer_id = unflatten_array(layer, cid)
+
+        return (x, y, z), layer_id
+
+    @property
+    def num_features(self):
+        #return self.features.shape[1]
+        return self.features.shape[2]  # Modified
+
+    def __len__(self):
+        return len(self.features)
+
+    def __getitem__(self, i):  # NOTE:  This now returns e/p data.  May need modification.
+        pts = self.coordinates[i]
+        fts = self.features[i]
+        y = self.label[i]
+        return pts, fts, y
+
+
+class _SimpleCustomBatch:
+
+    def __init__(self, data, min_nodes=None):
+        pts, fts, labels = list(zip(*data))
+        self.coordinates = torch.tensor(pts)
     def _parse_cid(self, cid):  # Retooled for v12
         # For id details, see (?):  DetDescr/src/EcalID.cxx
         # Flatten arrays to 1D numpy arrays so zip, map will work
