@@ -86,9 +86,9 @@ def get_fX_fY(filelist):
                     recoilPz = table["EcalScoringPlaneHits_v12.pz_"][event][hit]
                           
                     finalXY = projection(recoilX, recoilY, scoringPlaneZ, recoilPx, recoilPy, recoilPz, ecalFaceZ)                     
-                 
+                     
                     fiducial = False
-                    if not recoilX == -9999 and not recoilY == -9999 and not recoilPx == -9999 and not recoilPy == -9999 and not recoilPz == -9999:
+                    if not recoilX == -9999 and not recoilY == -9999 and not recoilPx == -9999 and not recoilPy == -9999:
                        
                         for cell in range(len(cells)):
                             celldis = dist(cells[cell], finalXY) 
@@ -98,8 +98,9 @@ def get_fX_fY(filelist):
 
                     if fiducial == False:
                         total_nonfiducial += 1
+
         print("Total number of events: " + str(total_events))
-        print("Total number of non-fiducial events: " + str(total_nonfiduical))
+        print("Total number of non-fiducial events: " + str(total_nonfiducial))
 
 get_fX_fY(sig_1)
 #get_fX_fY(sig_10)
