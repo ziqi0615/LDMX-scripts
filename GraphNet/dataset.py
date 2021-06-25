@@ -490,6 +490,7 @@ class ECalHitsDataset(Dataset):
                     max_event = -1
                 n_total_inclusive = 0
                 n_total_selected = 0
+                n_total_selected2 = 0
                 var_dict = {}
                 obs_dict = {k:[] for k in obs_branches + ecal_veto_branches}
                 # NEW:  Dictionary storing particle data for e/p trajectory
