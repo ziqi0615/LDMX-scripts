@@ -56,27 +56,13 @@ scoringPlaneZ = 240.5015
 ecalFaceZ = 248.35
 cell_radius = 5.0
 
-def CallX(Hitz, Recoilx, Recoily, Recoilz, RPx, RPy, RPz):
-    Point_xz = [Recoilx, Recoilz]
-    #Almost never happens
-    if RPx == 0:
-        slope_xz = 99999
-    else:
-        slope_xz = RPz / RPx
+def projection(Recoilx, Recoily, Recoilz, RPx, RPy, RPz, HitZ):
+    x_final = Recoilx + RPx/RPz*(HitZ - Recoilz)
+    y_final = Recoily + RPy/RPz*(HitZ - Recoilz)
+    return (x_final, y_final)
 
-    x_val = (float(Hitz - Point_xz[1]) / float(slope_xz)) + Point_xz[0]
-    return x_val
-
-def CallY(Hitz, Recoilx, Recoily, Recoilz, RPx, RPy, RPz):
-    Point_yz = [Recoily, Recoilz]
-    #Almost never happens
-    if RPy == 0:
-        slope_yz = 99999
-    else:
-        slope_yz = RPz / RPy
-
-    y_val = (float(Hitz - Point_yz[1]) / float(slope_yz)) + Point_yz[0]
-    return y_val
+def dist(p1, p2):
+    return math.sqrt(np.sum( ( np.array(p1) - np.array(p2) )**2 ))
 
 
 def _concat(arrays, axis=0):
@@ -277,9 +263,6 @@ class ECalHitsDataset(Dataset):
                 otmp = awkward.fill_none(tmp, -999)
                 table['TargetSPRecoilE_pt'] = awkward.flatten(tmp)
         
-        def dist(p1, p2):
-            return math.sqrt(np.sum( ( np.array(p1) - np.array(p2) )**2 ))
-
         def _read_file(t, table):
             #print("    Usage before read file: {}".format(psutil.virtual_memory().percent))
             # load data from one file
@@ -304,24 +287,6 @@ class ECalHitsDataset(Dataset):
             #if n_selected == 0:   #Ignore this file
             #    print("ERROR:  ParticleNet can't handle files with no events passing selection!")
 
-            ### Creating our recoilX, recoilY, recoilPx, recoilPy, recoilPz arrays ###          
-            def _pad_array(arr):
-                arr = awkward.pad_none(arr, 1, clip=True)
-                arr = awkward.fill_none(arr, 0)
-                return np.array(awkward.flatten(arr))  #NEW:  Include np conversion to allow stacking
-
-            el = (t['EcalScoringPlaneHits_v12.pdgID_'].array() == 11) * \
-                 (t['EcalScoringPlaneHits_v12.z_'].array() > 240.0) * \
-                 (t['EcalScoringPlaneHits_v12.z_'].array() < 241.001) * \
-                 (t['EcalScoringPlaneHits_v12.trackID_'].array() == 1) * \
-                 self.el_ 
-    
-            recoilX = _pad_array(t['EcalScoringPlaneHits_v12.x_'].array()[el])[start:stop]#[pos_pass_presel]
-            recoilY = _pad_array(t['EcalScoringPlaneHits_v12.y_'].array()[el])[start:stop]#[pos_pass_presel]
-            recoilPx = _pad_array(t['EcalScoringPlaneHits_v12.px_'].array()[el])[start:stop]#[pos_pass_presel]
-            recoilPy = _pad_array(t['EcalScoringPlaneHits_v12.py_'].array()[el])[start:stop]#[pos_pass_presel]
-            recoilPz = _pad_array(t['EcalScoringPlaneHits_v12.pz_'].array()[el])[start:stop]#[pos_pass_presel]
-
             # For calculating total events before and after trigger cut
             eid2 = table[self._id_branch]
             energy2 = table[self._energy_branch]
@@ -332,39 +297,52 @@ class ECalHitsDataset(Dataset):
             print("check: " + str(len(energy2)))
 
             ### LOOPING THROUGH EACH EVENT TO MAKE A BOOLEAN ARRAY THAT SELECTS ONLY NON-FIDUCIAL ELECTRONS ###
-            N = len(recoilPx)
-               
+            N = len(table["EcalScoringPlaneHits_v12.x_"])              
+ 
             simEvents = np.zeros(N, dtype=bool)
 	    
-            cellMap_values = np.array(list(self._cellMap.values())) 
-            for i in range(N):
-                
-                recoilfX = CallX(ecalFaceZ, recoilX[i], recoilY[i], scoringPlaneZ, recoilPx[i], recoilPy[i], recoilPz[i])
-                recoilfY = CallY(ecalFaceZ, recoilX[i], recoilY[i], scoringPlaneZ, recoilPx[i], recoilPy[i], recoilPz[i])
-                fXY = np.array([recoilfX, recoilfY])
-                
-                # FIDUCIAL CALCULATION #
-                Fiducial = False
+            cells = np.array(list(self._cellMap.values())) 
 
-                if not recoilX[i] == -9999 and not recoilY[i] == -9999 and not recoilPx[i] == -9999 and not recoilPy[i] == -9999 and not recoilPz[i] == -9999:
-                    for c_val in range(len(self._cellMap.values())):
-                        celldis = dist(cellMap_values[c_val], fXY)             
-                        if celldis <= cell_radius:
-                            Fiducial = True
-                            break
-                   
+            for event in range(N):
+
+                fiducial = False
+                
+                for hit in range(len(table["EcalScoringPlaneHits_v12.x_"][event])):
+                 
+                    if ((table["EcalScoringPlaneHits_v12.pdgID_"][event][hit] == 11) and \
+                        (table["EcalScoringPlaneHits_v12.z_"][event][hit] > 240) and \
+                        (table["EcalScoringPlaneHits_v12.z_"][event][hit] < 241.001) and \
+                        (table["EcalScoringPlaneHits_v12.pz_"][event][hit] > 0) and \
+                        (table["EcalScoringPlaneHits_v12.trackID_"][event][hit] == 1)):
+                      
+                        recoilX = table["EcalScoringPlaneHits_v12.x_"][event][hit]
+                        recoilY = table["EcalScoringPlaneHits_v12.y_"][event][hit]
+                        recoilPx = table["EcalScoringPlaneHits_v12.px_"][event][hit]
+                        recoilPy = table["EcalScoringPlaneHits_v12.py_"][event][hit]
+                        recoilPz = table["EcalScoringPlaneHits_v12.pz_"][event][hit]
+                    
+                        finalXY = projection(recoilX, recoilY, scoringPlaneZ, recoilPx, recoilPy, recoilPz, ecalFaceZ)
+                 
+                        if not recoilX == -9999 and not recoilY == -9999 and not recoilPx == -9999 and not recoilPy == -9999:
+                  
+                            for cell in range(len(cells)):
+                                celldis = dist(cells[cell], finalXY)
+                                if celldis <= cell_radius:
+                                    fiducial = True
+                                    break
+                
                 # If the i-th event is not in the Fiducial Region, mark the i-th index of the simEvents array with a 1 aka TRUE #
-                if Fiducial == False:
-                    simEvents[i] = 1
+                if fiducial == False:
+                    simEvents[event] = 1
 
-            print("The number of events before the fiducial cut: " + str(len(table[self._energy_branch])))
+            print("TOTAL EVENTS (pre-fiducial cut): " + str(len(table[self._energy_branch])))
             
             
             ### APPLYING simEvents TO THE SELECTION ###  
             for k in table:
                 table[k] = table[k][simEvents]
              
-            print("The number of events after fiducial cut: " + str(len(table[self._energy_branch])))
+            print("TOTAL EVENTS (post-fiducial cut): " + str(len(table[self._energy_branch])))
             
             #print("    Usage before array creation: {}".format(psutil.virtual_memory().percent))
             eid = table[self._id_branch]
@@ -377,7 +355,7 @@ class ECalHitsDataset(Dataset):
              
             ### APPLY THE TRIGGER CUT ###
             
-            print("The number of non-fiducial events before the trigger cut: "  + str(len(energy))) 
+            print("TOTAL NON-FIDUCIAL EVENTS (pre-trigger cut): "  + str(len(energy))) 
             
             t_cut = np.zeros(len(eid), dtype = bool) # Boolean array for trigger cut: ex -> [ 1, 0, 1, 1,  0 ... ]
 
@@ -398,9 +376,7 @@ class ECalHitsDataset(Dataset):
             z = z[t_cut]
             layer_id = layer_id[t_cut]
                                
-            print("The number of non-fiducial events after the trigger cut: "  + str(len(energy)))            
-
-            print("The total number of events before the trigger cut: "  + str(len(energy2)))
+            print("TOTAL NON-FIDUCIAL EVENTS (post-trigger cut): "  + str(len(energy)))            
 
             t_cut2 = np.zeros(len(eid2), dtype = bool) # Boolean array for trigger cut: ex -> [ 1, 0, 1, 1,  0 ... ]
 
@@ -421,10 +397,11 @@ class ECalHitsDataset(Dataset):
             z2 = z2[t_cut2]
             layer_id2 = layer_id2[t_cut2]
 
-            print("The total number of events after the trigger cut: "  + str(len(energy2)))
+            print("TOTAL EVENTS (post-trigger cut): "  + str(len(energy2)))
 
 
             n_selected = len(energy)
+            n_selected2 = len(energy2) # total number of events after trigger (no fiducial cut)            
 
             # Now, work with table['etraj_ref'] and table['ptraj_ref'].
             # Create lists:  x/y/z_e, p
@@ -496,9 +473,12 @@ class ECalHitsDataset(Dataset):
 
             obs_dict = {k: table[k] for k in obs_branches + ecal_veto_branches}
 
-            return (n_inclusive, n_selected), var_dict, obs_dict
+            return (n_inclusive, n_selected), var_dict, obs_dict, n_selected2
 
         def _load_dataset(filelist, name):
+
+            extra_branches = ['EcalScoringPlaneHits_v12.pdgID_', 'EcalScoringPlaneHits_v12.trackID_', 'EcalScoringPlaneHits_v12.x_', 'EcalScoringPlaneHits_v12.y_', 'EcalScoringPlaneHits_v12.z_', 'EcalScoringPlaneHits_v12.px_', 'EcalScoringPlaneHits_v12.py_', 'EcalScoringPlaneHits_v12.pz_']
+
             # load data from all files in the siglist or bkglist
             n_sum = 0
             for extra_label in filelist:
@@ -524,7 +504,10 @@ class ECalHitsDataset(Dataset):
                         if len(t.keys()) == 0:
 #                             print('... ignoring empty file %s' % fp)
                             continue
-                        load_branches = [k for k in self._branches + obs_branches if '.' in k and k[-1] == '_']
+                        load_branches = [k for k in self._branches + obs_branches if '.' in k and k[-1] == '_' ]
+                        for k in extra_branches:
+                            load_branches.append(k)
+                        #print('load_branches: ' + str(load_branches))
                         table_temp = t.arrays(expressions=load_branches, interpretation_executor=executor)  #, library="ak")
                         table = {}
                         for k in load_branches:
@@ -544,12 +527,14 @@ class ECalHitsDataset(Dataset):
                         _load_coord_ref(t, table)
                         _load_recoil_pt(t, table)
 
-                        (n_inc, n_sel), v_d, o_d = _read_file(t, table)
+                        (n_inc, n_sel), v_d, o_d, n_sel2 = _read_file(t, table)
 
                         n_total_inclusive += n_inc
                         n_total_selected += n_sel
+                        n_total_selected2 += n_sel2
                         print("N_SELECTED:  ", n_sel)
                         print("TOTAL SELECTED:  ", n_total_selected)
+                          
 
                         for k in v_d:
                             if k in var_dict: # If the key already exists, we add to that key's array
@@ -589,7 +574,7 @@ class ECalHitsDataset(Dataset):
                 for k in obs_dict:
                     obs_dict[k] = _concat(obs_dict[k])[:upper]
                #     assert(n_total_loaded == len(obs_dict[k]))
-                print('Total %d events, selected %d events, finally loaded %d events.' % (n_total_inclusive, n_total_selected, n_total_loaded))
+                print('Total %d events (% after trigger cut), selected %d events, finally loaded %d events.' % (n_total_inclusive, n_total_selected2, n_total_selected, n_total_loaded))
 
                 self.extra_labels.append(extra_label * np.ones(n_total_loaded, dtype='int32'))
                 for k in var_dict:
