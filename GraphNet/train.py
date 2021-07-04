@@ -69,8 +69,7 @@ args = parser.parse_args()
 bkglist = {
     # (filepath, num_events_for_training)
     # In 
-    0: ('/home/pmasterson/GraphNet_input/v12/bkg_12M/*.root', -1)
-    #0: ('/home/pmasterson/GraphNet_input/v12/kaon_training/*.root', -1)
+    0: ('/home/dgj1118/LDMX-scripts/GraphNet/background_230_trunk/*.root', -1)
     }
 
 siglist = {
@@ -85,7 +84,7 @@ siglist = {
 if args.demo:
     bkglist = {
         # (filepath, num_events_for_training)
-        0: ('/home/pmasterson/GraphNet_input/v12/bkg_12M/*.root', 800)
+        0: ('/home/pmasterson/GraphNet_input/v12/background_230_trunk/*.root', 800)
         }
 
     siglist = {
@@ -178,17 +177,17 @@ dev = torch.device(args.device)
 # load data
 if training_mode:
     # for training: we use the first 0-20% for testing, and 20-80% for training
-    print("Usage: {}".format(psutil.virtual_memory().percent))
+    #print("Usage: {}".format(psutil.virtual_memory().percent))
     train_data = ECalHitsDataset(siglist=siglist, bkglist=bkglist, load_range=(0.2, 1), coord_ref=args.coord_ref)
-    print("Usage: {}".format(psutil.virtual_memory().percent))
+    #print("Usage: {}".format(psutil.virtual_memory().percent))
     val_data = ECalHitsDataset(siglist=siglist, bkglist=bkglist, load_range=(0, 0.2), coord_ref=args.coord_ref)
-    print("Usage: {}".format(psutil.virtual_memory().percent))
+    #print("Usage: {}".format(psutil.virtual_memory().percent))
     train_loader = DataLoader(train_data, num_workers=args.num_workers, batch_size=args.batch_size,
                               collate_fn=collate_fn, shuffle=True, drop_last=True, pin_memory=True)
-    print("Usage: {}".format(psutil.virtual_memory().percent))
+    #print("Usage: {}".format(psutil.virtual_memory().percent))
     val_loader = DataLoader(val_data, num_workers=args.num_workers, batch_size=args.batch_size,
                             collate_fn=collate_fn, shuffle=False, drop_last=False, pin_memory=True)
-    print("Usage: {}".format(psutil.virtual_memory().percent))
+    #print("Usage: {}".format(psutil.virtual_memory().percent))
     print('Train: %d events, Val: %d events' % (len(train_data), len(val_data)))
     print('Using val sample for testing!')
     test_data = val_data

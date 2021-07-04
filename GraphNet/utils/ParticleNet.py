@@ -128,7 +128,7 @@ class ParticleNet(nn.Module):
                  **kwargs):
         super(ParticleNet, self).__init__(**kwargs)
 
-        self.bn_fts = nn.BatchNorm1d(input_dims)
+        self.bn_fts = nn.BatchNorm1d(input_dims) 
 
         self.edge_convs = nn.ModuleList()
         for idx, layer_param in enumerate(conv_params):

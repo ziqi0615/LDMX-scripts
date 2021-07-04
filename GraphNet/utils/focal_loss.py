@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-torch.set_default_dtype(torch.float64)
+torch.set_default_dtype(torch.float32)
 
 # https://github.com/kornia/kornia/blob/master/kornia/utils/one_hot.py
 def one_hot(labels: torch.Tensor,
