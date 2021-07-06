@@ -84,15 +84,15 @@ siglist = {
 if args.demo:
     bkglist = {
         # (filepath, num_events_for_training)
-        0: ('/home/pmasterson/GraphNet_input/v12/background_230_trunk/*.root', 800)
+        0: ('/home/dgj1118/LDMX-scripts/GraphNet/background_230_trunk/*.root', 800)
         }
 
     siglist = {
         # (filepath, num_events_for_training)
-        1:    ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.001*.root', 200),
-        10:   ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.01*.root',  200),
-        100:  ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.1*.root',   200),
-        1000: ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*1.0*.root',   200),
+        1:    ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.001.root', 200),
+        10:   ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.01.root',  200),
+        100:  ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.1.root',   200),
+        1000: ('/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*1.0.root',   200),
         }
 #########################################################
 

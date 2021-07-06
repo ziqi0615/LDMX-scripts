@@ -546,6 +546,7 @@ class ECalHitsDataset(Dataset):
         # training features
         # There may be a better way to do this syntactically, but it saves RAM
         # **WAS PREVIOUSLY** 3, 3; 3, 5
+        '''
         self.coordinates = np.zeros((len(self.var_data['x_e']), 1, 3, MAX_NUM_ECAL_HITS), dtype='float64')
         self.features =    np.zeros((len(self.var_data['x_e']), 1, 5, MAX_NUM_ECAL_HITS), dtype='float64')
         tmp_coord_arr = [[self.var_data['x_e'], self.var_data['y_e'], self.var_data['z_e'], self.var_data['layer_id_e'], self.var_data['log_energy_e']]
@@ -560,10 +561,16 @@ class ECalHitsDataset(Dataset):
                         self.features[i][j][k][l] = tmp_coord_arr[j][k][i][l]
                         if k < 3:
                             self.coordinates[i][j][k][l] = tmp_coord_arr[j][k][i][l]
+	
 
         assert(len(self.coordinates) == len(self.label))
         assert(len(self.features) == len(self.label))
+        '''
 
+        self.coordinates = np.stack((self.var_data['x_e'], self.var_data['y_e'], self.var_data['z_e']), axis=1)
+        self.features    = np.stack((self.var_data['x_e'], self.var_data['y_e'], self.var_data['z_e'],
+                                     self.var_data['layer_id_e'], self.var_data['log_energy_e']), axis=1)
+	
         # NEW:  Free up old variables after the coords and features have been assigned
         #for key, item in self.var_data.items():
         #    del item
@@ -637,3 +644,4 @@ class _SimpleCustomBatch:
 
 def collate_wrapper(batch):
     return _SimpleCustomBatch(batch)
+

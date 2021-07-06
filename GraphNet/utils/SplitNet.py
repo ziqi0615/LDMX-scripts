@@ -65,6 +65,7 @@ class SplitNet(nn.Module):
         # Divide up provided points+features, then hand them to the PNs
         # Points are [nregions] x 128  x 3 x 50 (note: nregions axis is gone for 1 region)
         # Note:  points[:,0].shape = (128, 3, 50)
+        print('features shape:' + str(features.shape))
         if self.nRegions == 1:
             x_e = self.eNet(points, features)
             output = self.fc(x_e)
