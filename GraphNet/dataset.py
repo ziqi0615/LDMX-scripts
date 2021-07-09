@@ -56,18 +56,6 @@ scoringPlaneZ = 240.5015
 ecalFaceZ = 248.35
 cell_radius = 5.0
 
-def CallX(Hitz, Recoilx, Recoily, Recoilz, RPx, RPy, RPz):
-    Point_xz = [Recoilx, Recoilz]
-    #Almost never happens
-    if RPx == 0:
-        slope_xz = 99999
-    else:
-        slope_xz = RPz / RPx
-    
-    x_val = (float(Hitz - Point_xz[1]) / float(slope_xz)) + Point_xz[0]
-    return x_val
-
-
 
 def projection(Recoilx, Recoily, Recoilz, RPx, RPy, RPz, HitZ):
     
@@ -614,8 +602,8 @@ class ECalHitsDataset(Dataset):
 
     @property
     def num_features(self):
-        #return self.features.shape[1]
-        return self.features.shape[2]  # Modified
+        return self.features.shape[1]
+        #return self.features.shape[2]  # Modified
 
     def __len__(self):
         return len(self.features)
