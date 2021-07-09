@@ -84,7 +84,7 @@ siglist = {
 if args.demo:
     bkglist = {
         # (filepath, num_events_for_training)
-        0: ('/home/dgj1118/LDMX-scripts/GraphNet/background_230_trunk/*.root', 800)
+        0: ('/home/dgj1118/LDMX-scripts/GraphNet/background_230_trunk/*.root', 100)
         }
 
     siglist = {
