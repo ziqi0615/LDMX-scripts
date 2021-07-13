@@ -110,7 +110,7 @@ if args.save_extra:
     
     # NEW:  EcalVeto branches must be handled separately in v2.2.1+.
     veto_branches = [
-        #'discValue_',  # Commented, will always be saved for now
+        'discValue_',  # Commented, will always be saved for now
         #'recoilX_',  # Only add if want to look at missing-e events (now redundant w/ fiducial studies)
         #'recoilY_',
     ]

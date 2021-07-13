@@ -21,7 +21,7 @@ import torch
 from torch.optim.optimizer import Optimizer, required
 import itertools as it
 
-torch.set_default_dtype(torch.float32)  # CHANGED
+torch.set_default_dtype(torch.float64)  # CHANGED
 
 
 class Ranger(Optimizer):
@@ -94,7 +94,7 @@ class Ranger(Optimizer):
             for p in group['params']:
                 if p.grad is None:
                     continue
-                grad = p.grad.data.float()  # CHANGEd
+                grad = p.grad.data.float()  # CHANGED
                 if grad.is_sparse:
                     raise RuntimeError('Ranger optimizer does not support sparse gradients')
 

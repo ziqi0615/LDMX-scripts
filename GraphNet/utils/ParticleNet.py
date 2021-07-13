@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 
 # NEW:  32-bit float resolution (23 for decimal) isn't enough for PN scores ~ 1 - 1e-6.
-torch.set_default_dtype(torch.float32)
+torch.set_default_dtype(torch.float64)
 
 '''Based on https://github.com/WangYueFt/dgcnn/blob/master/pytorch/model.py.'''
 

@@ -447,7 +447,7 @@ class ECalHitsDataset(Dataset):
                         if len(t.keys()) == 0:
 #                             print('... ignoring empty file %s' % fp)
                             continue
-                        load_branches = [k for k in self._branches + obs_branches if '.' in k and k[-1] == '_']
+                        load_branches = [k for k in self._branches + obs_branches]
                         table_temp = t.arrays(expressions=load_branches, interpretation_executor=executor)  #, library="ak")
                         table = {}
                         for k in load_branches:
