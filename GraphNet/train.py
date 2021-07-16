@@ -72,29 +72,29 @@ args = parser.parse_args()
 #####i# location of the signal and background files ######
 bkglist = {
     # (filepath, num_events_for_training)
-    0: ('/home/pmasterson/GraphNet_input/v12/processed/*pn*.root', -1)
+    0: ('/home/dgj1118/LDMX-scripts/GraphNet/processed/*pn*.root', -1)
     }
 
 siglist = {
     # (filepath, num_events_for_training)
-    1:    ('/home/pmasterson/GraphNet_input/v12/processed/*0.001*.root', 400000),
-    10:   ('/home/pmasterson/GraphNet_input/v12/processed/*0.01*.root',  400000),
-    100:  ('/home/pmasterson/GraphNet_input/v12/processed/*0.1*.root',   400000),
-    1000: ('/home/pmasterson/GraphNet_input/v12/processed/*1.0*.root',   400000),
+    1:    ('/home/dgj1118/LDMX-scripts/GraphNet/processed/*0.001*.root', 400000),
+    10:   ('/home/dgj1118/LDMX-scripts/GraphNet/processed/*0.01*.root',  400000),
+    100:  ('/home/dgj1118/LDMX-scripts/GraphNet/processed/*0.1*.root',   400000),
+    1000: ('/home/dgj1118/LDMX-scripts/GraphNet/processed/*1.0*.root',   400000),
     }
 
 if args.demo:
     bkglist = {
         # (filepath, num_events_for_training)
-        0: ('/home/pmasterson/GraphNet_input/v12/processed/*pn*.root', 800)
+        0: ('/home/dgj1118/LDMX-scripts/GraphNet/processed/*pn*.root', 800)
         }
 
     siglist = {
         # (filepath, num_events_for_training)
-        1:    ('/home/pmasterson/GraphNet_input/v12/processed/*0.001*.root', 200),
-        10:   ('/home/pmasterson/GraphNet_input/v12/processed/*0.01*.root',  200),
-        100:  ('/home/pmasterson/GraphNet_input/v12/processed/*0.1*.root',   200),
-        1000: ('/home/pmasterson/GraphNet_input/v12/processed/*1.0*.root',   200),
+        1:    ('/home/dgj1118/LDMX-scripts/GraphNet/processed/*0.001*.root', 200),
+        10:   ('/home/dgj1118/LDMX-scripts/GraphNet/processed/*0.01*.root',  200),
+        100:  ('/home/dgj1118/LDMX-scripts/GraphNet/processed/*0.1*.root',   200),
+        1000: ('/home/dgj1118/LDMX-scripts/GraphNet/processed/*1.0*.root',   200),
         }
 
 # NOTE:  Must manually pass this to PN from preprocessing input
