@@ -1,110 +1,0 @@
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [07:05<00:00, 425.86s/it]100%|██████████| 1/1 [07:05<00:00, 425.86s/it]
-  0%|          | 0/5 [00:00<?, ?it/s]***SAVING EXTRA
-conv_params: [(7, (32, 32, 32)), (7, (64, 64, 64))]
-fc_params: [(128, 0.1)]
-Initializing model
-INITIALIZING SPLITNET
-INITIALIZED PARTICLENET
-FINISHED INIT
-Loading model models/v12_kaon_training/model_state_epoch-19_acc-0.9948.pt for eval
-bkg /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/*.root
-sig 
-0/9
-Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_101_ldmx-det-v12_run1_seeds_2_3_None.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_101_ldmx-det-v12_run1_seeds_2_3_None.root (bkg)
-EVENTS BEFORE PRESELECTION (in _read_file):  119669
-EVENTS AFTER PRESELECTION:  119669
-Total 119669 events, selected 119669 events, finally loaded 563 events.
-Preparing to train on 563 background events, 0 (total) signal events
-  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.73it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:01,  2.73it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  2.73it/s, Acc=0.99219, AvgAcc=0.99479] 20%|██        | 1/5 [00:00<00:01,  2.73it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:01,  2.73it/s, Acc=1.00000, AvgAcc=0.99645]100%|██████████| 5/5 [00:00<00:00, 10.65it/s, Acc=1.00000, AvgAcc=0.99645]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [08:21<00:00, 501.04s/it]100%|██████████| 1/1 [08:21<00:00, 501.04s/it]
-  0%|          | 0/4 [00:00<?, ?it/s]1/9
-Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_102_ldmx-det-v12_run2_seeds_4_5_None.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_102_ldmx-det-v12_run2_seeds_4_5_None.root (bkg)
-EVENTS BEFORE PRESELECTION (in _read_file):  119001
-EVENTS AFTER PRESELECTION:  119001
-Total 119001 events, selected 119001 events, finally loaded 509 events.
-Preparing to train on 509 background events, 0 (total) signal events
-  0%|          | 0/4 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 25%|██▌       | 1/4 [00:00<00:00,  6.53it/s, Acc=0.99219, AvgAcc=0.99219] 25%|██▌       | 1/4 [00:00<00:00,  6.53it/s, Acc=0.99219, AvgAcc=0.99219] 25%|██▌       | 1/4 [00:00<00:00,  6.53it/s, Acc=1.00000, AvgAcc=0.99479] 25%|██▌       | 1/4 [00:00<00:00,  6.53it/s, Acc=1.00000, AvgAcc=0.99607]100%|██████████| 4/4 [00:00<00:00, 15.99it/s, Acc=1.00000, AvgAcc=0.99607]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [07:43<00:00, 463.82s/it]100%|██████████| 1/1 [07:43<00:00, 463.82s/it]
-  0%|          | 0/5 [00:00<?, ?it/s]2/9
-Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_103_ldmx-det-v12_run3_seeds_6_7_None.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_103_ldmx-det-v12_run3_seeds_6_7_None.root (bkg)
-EVENTS BEFORE PRESELECTION (in _read_file):  118901
-EVENTS AFTER PRESELECTION:  118901
-Total 118901 events, selected 118901 events, finally loaded 553 events.
-Preparing to train on 553 background events, 0 (total) signal events
-  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  6.68it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  6.68it/s, Acc=0.99219, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  6.68it/s, Acc=1.00000, AvgAcc=0.99740] 20%|██        | 1/5 [00:00<00:00,  6.68it/s, Acc=1.00000, AvgAcc=0.99805] 20%|██        | 1/5 [00:00<00:00,  6.68it/s, Acc=1.00000, AvgAcc=0.99819]100%|██████████| 5/5 [00:00<00:00, 19.42it/s, Acc=1.00000, AvgAcc=0.99819]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [07:23<00:00, 443.49s/it]100%|██████████| 1/1 [07:23<00:00, 443.49s/it]
-  0%|          | 0/5 [00:00<?, ?it/s]3/9
-Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_104_ldmx-det-v12_run4_seeds_8_9_None.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_104_ldmx-det-v12_run4_seeds_8_9_None.root (bkg)
-EVENTS BEFORE PRESELECTION (in _read_file):  119196
-EVENTS AFTER PRESELECTION:  119196
-Total 119196 events, selected 119196 events, finally loaded 526 events.
-Preparing to train on 526 background events, 0 (total) signal events
-  0%|          | 0/5 [00:00<?, ?it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  6.72it/s, Acc=0.99219, AvgAcc=0.99219] 20%|██        | 1/5 [00:00<00:00,  6.72it/s, Acc=1.00000, AvgAcc=0.99609] 20%|██        | 1/5 [00:00<00:00,  6.72it/s, Acc=1.00000, AvgAcc=0.99740] 20%|██        | 1/5 [00:00<00:00,  6.72it/s, Acc=1.00000, AvgAcc=0.99805] 20%|██        | 1/5 [00:00<00:00,  6.72it/s, Acc=0.92857, AvgAcc=0.99620]100%|██████████| 5/5 [00:00<00:00, 19.38it/s, Acc=0.92857, AvgAcc=0.99620]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [07:12<00:00, 432.93s/it]100%|██████████| 1/1 [07:12<00:00, 432.93s/it]
-  0%|          | 0/4 [00:00<?, ?it/s]4/9
-Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_105_ldmx-det-v12_run5_seeds_10_11_None.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_105_ldmx-det-v12_run5_seeds_10_11_None.root (bkg)
-EVENTS BEFORE PRESELECTION (in _read_file):  119011
-EVENTS AFTER PRESELECTION:  119011
-Total 119011 events, selected 119011 events, finally loaded 499 events.
-Preparing to train on 499 background events, 0 (total) signal events
-  0%|          | 0/4 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  6.68it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  6.68it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  6.68it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  6.68it/s, Acc=1.00000, AvgAcc=1.00000]100%|██████████| 4/4 [00:00<00:00, 15.63it/s, Acc=1.00000, AvgAcc=1.00000]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [07:12<00:00, 432.98s/it]100%|██████████| 1/1 [07:12<00:00, 432.98s/it]
-  0%|          | 0/5 [00:00<?, ?it/s]5/9
-Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_106_ldmx-det-v12_run6_seeds_12_13_None.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_106_ldmx-det-v12_run6_seeds_12_13_None.root (bkg)
-EVENTS BEFORE PRESELECTION (in _read_file):  118997
-EVENTS AFTER PRESELECTION:  118997
-Total 118997 events, selected 118997 events, finally loaded 534 events.
-Preparing to train on 534 background events, 0 (total) signal events
-  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  6.47it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  6.47it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  6.47it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  6.47it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  6.47it/s, Acc=1.00000, AvgAcc=1.00000]100%|██████████| 5/5 [00:00<00:00, 18.81it/s, Acc=1.00000, AvgAcc=1.00000]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [07:01<00:00, 421.60s/it]100%|██████████| 1/1 [07:01<00:00, 421.60s/it]
-  0%|          | 0/4 [00:00<?, ?it/s]6/9
-Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_107_ldmx-det-v12_run7_seeds_14_15_None.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_107_ldmx-det-v12_run7_seeds_14_15_None.root (bkg)
-EVENTS BEFORE PRESELECTION (in _read_file):  120005
-EVENTS AFTER PRESELECTION:  120005
-Total 120005 events, selected 120005 events, finally loaded 511 events.
-Preparing to train on 511 background events, 0 (total) signal events
-  0%|          | 0/4 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  6.20it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  6.20it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  6.20it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  6.20it/s, Acc=1.00000, AvgAcc=1.00000]100%|██████████| 4/4 [00:00<00:00, 14.75it/s, Acc=1.00000, AvgAcc=1.00000]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [07:08<00:00, 428.70s/it]100%|██████████| 1/1 [07:08<00:00, 428.70s/it]
-  0%|          | 0/5 [00:00<?, ?it/s]7/9
-Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_108_ldmx-det-v12_run8_seeds_16_17_None.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_108_ldmx-det-v12_run8_seeds_16_17_None.root (bkg)
-EVENTS BEFORE PRESELECTION (in _read_file):  119290
-EVENTS AFTER PRESELECTION:  119290
-Total 119290 events, selected 119290 events, finally loaded 524 events.
-Preparing to train on 524 background events, 0 (total) signal events
-  0%|          | 0/5 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  6.19it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  6.19it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  6.19it/s, Acc=1.00000, AvgAcc=1.00000] 20%|██        | 1/5 [00:00<00:00,  6.19it/s, Acc=0.99219, AvgAcc=0.99805] 20%|██        | 1/5 [00:00<00:00,  6.19it/s, Acc=1.00000, AvgAcc=0.99809]100%|██████████| 5/5 [00:00<00:00, 17.47it/s, Acc=1.00000, AvgAcc=0.99809]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [07:07<00:00, 427.53s/it]100%|██████████| 1/1 [07:07<00:00, 427.53s/it]
-  0%|          | 0/4 [00:00<?, ?it/s]8/9
-Running file /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_109_ldmx-det-v12_run9_seeds_18_19_None.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/4gev_v12_pn_109_ldmx-det-v12_run9_seeds_18_19_None.root (bkg)
-EVENTS BEFORE PRESELECTION (in _read_file):  118909
-EVENTS AFTER PRESELECTION:  118909
-Total 118909 events, selected 118909 events, finally loaded 487 events.
-Preparing to train on 487 background events, 0 (total) signal events
-  0%|          | 0/4 [00:00<?, ?it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  6.39it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  6.39it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  6.39it/s, Acc=1.00000, AvgAcc=1.00000] 25%|██▌       | 1/4 [00:00<00:00,  6.39it/s, Acc=0.99029, AvgAcc=0.99795]100%|██████████| 4/4 [00:00<00:00, 14.75it/s, Acc=0.99029, AvgAcc=0.99795]
-PROGRAM FINISHED

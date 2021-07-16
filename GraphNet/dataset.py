@@ -84,7 +84,7 @@ def _concat(arrays, axis=0):
 
 class ECalHitsDataset(Dataset):
 
-    def __init__(self, siglist, bkglist, load_range=(0, 1), apply_preselection=False, ignore_evt_limits=False, obs_branches=[], veto_branches=[], coord_ref=None, detector_version='v12'):
+    def __init__(self, siglist, bkglist, load_range=(0, 1), apply_preselection=True, ignore_evt_limits=False, obs_branches=[], veto_branches=[], coord_ref=None, detector_version='v12'):
         super(ECalHitsDataset, self).__init__()
 
         self.cells = []
@@ -228,11 +228,11 @@ class ECalHitsDataset(Dataset):
                  (t['EcalScoringPlaneHits_v12.trackID_'].array() == 1) * \
                  (t['EcalScoringPlaneHits_v12.pz_'].array() > 0)
     
-            recoilX = _pad_array(t['EcalScoringPlaneHits_v12.x_'].array()[el])[start:stop]#[pos_pass_presel]
-            recoilY = _pad_array(t['EcalScoringPlaneHits_v12.y_'].array()[el])[start:stop]#[pos_pass_presel]
-            recoilPx = _pad_array(t['EcalScoringPlaneHits_v12.px_'].array()[el])[start:stop]#[pos_pass_presel]
-            recoilPy = _pad_array(t['EcalScoringPlaneHits_v12.py_'].array()[el])[start:stop]#[pos_pass_presel]
-            recoilPz = _pad_array(t['EcalScoringPlaneHits_v12.pz_'].array()[el])[start:stop]#[pos_pass_presel]
+            recoilX = _pad_array(t['EcalScoringPlaneHits_v12.x_'].array()[el])[start:stop][pos_pass_presel]
+            recoilY = _pad_array(t['EcalScoringPlaneHits_v12.y_'].array()[el])[start:stop][pos_pass_presel]
+            recoilPx = _pad_array(t['EcalScoringPlaneHits_v12.px_'].array()[el])[start:stop][pos_pass_presel]
+            recoilPy = _pad_array(t['EcalScoringPlaneHits_v12.py_'].array()[el])[start:stop][pos_pass_presel]
+            recoilPz = _pad_array(t['EcalScoringPlaneHits_v12.pz_'].array()[el])[start:stop][pos_pass_presel]
             
 	    ### LOOPING THROUGH EACH EVENT TO MAKE A BOOLEAN ARRAY THAT SELECTS ONLY NON-FIDUCIAL ELECTRONS ###
             N = len(recoilX)

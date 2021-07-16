@@ -1,141 +1,0 @@
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [02:13<00:00, 133.12s/it]100%|██████████| 1/1 [02:13<00:00, 133.12s/it]
-  0%|          | 0/2 [00:00<?, ?it/s]***SAVING EXTRA
-conv_params: [(7, (32, 32, 32)), (7, (64, 64, 64))]
-fc_params: [(128, 0.1)]
-Initializing model
-INITIALIZING SPLITNET
-INITIALIZED PARTICLENET
-FINISHED INIT
-Loading model models/v12_training_2/model_state_epoch-19_acc-0.9961.pt for eval
-bkg /home/pmasterson/GraphNet_input/v12/kaon_eval/*.root
-sig 
-0/10
-Running file /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run10.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run10.root (bkg)
-First few hit sums:  [97, 91, 81, 86, 101, 100, 81, 78, 109, 83]
-EVENTS BEFORE PRESELECTION (in _read_file):  126540
-EVENTS AFTER PRESELECTION:  18244
-N_SELECTED:   18244
-TOTAL SELECTED:   18244
-Total 126540 events, selected 18244 events, finally loaded 192 events.
-  0%|          | 0/2 [00:00<?, ?it/s, Acc=0.92188, AvgAcc=0.92188] 50%|█████     | 1/2 [00:00<00:00,  2.97it/s, Acc=0.92188, AvgAcc=0.92188] 50%|█████     | 1/2 [00:00<00:00,  2.97it/s, Acc=0.93750, AvgAcc=0.92708]100%|██████████| 2/2 [00:00<00:00,  5.05it/s, Acc=0.93750, AvgAcc=0.92708]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [02:17<00:00, 137.02s/it]100%|██████████| 1/1 [02:17<00:00, 137.02s/it]
-  0%|          | 0/2 [00:00<?, ?it/s]1/10
-Running file /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run11.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run11.root (bkg)
-First few hit sums:  [111, 65, 104, 120, 126, 105, 78, 99, 105, 91]
-EVENTS BEFORE PRESELECTION (in _read_file):  126617
-EVENTS AFTER PRESELECTION:  18081
-N_SELECTED:   18081
-TOTAL SELECTED:   18081
-Total 126617 events, selected 18081 events, finally loaded 223 events.
-  0%|          | 0/2 [00:00<?, ?it/s, Acc=0.96875, AvgAcc=0.96875] 50%|█████     | 1/2 [00:00<00:00,  7.29it/s, Acc=0.96875, AvgAcc=0.96875] 50%|█████     | 1/2 [00:00<00:00,  7.29it/s, Acc=0.95789, AvgAcc=0.96413]100%|██████████| 2/2 [00:00<00:00,  9.54it/s, Acc=0.95789, AvgAcc=0.96413]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [02:12<00:00, 132.59s/it]100%|██████████| 1/1 [02:12<00:00, 132.59s/it]
-  0%|          | 0/2 [00:00<?, ?it/s]2/10
-Running file /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run12.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run12.root (bkg)
-First few hit sums:  [110, 107, 101, 74, 71, 106, 91, 61, 118, 117]
-EVENTS BEFORE PRESELECTION (in _read_file):  126620
-EVENTS AFTER PRESELECTION:  18226
-N_SELECTED:   18226
-TOTAL SELECTED:   18226
-Total 126620 events, selected 18226 events, finally loaded 191 events.
-  0%|          | 0/2 [00:00<?, ?it/s, Acc=0.95312, AvgAcc=0.95312] 50%|█████     | 1/2 [00:00<00:00,  7.74it/s, Acc=0.95312, AvgAcc=0.95312] 50%|█████     | 1/2 [00:00<00:00,  7.74it/s, Acc=0.90476, AvgAcc=0.93717]100%|██████████| 2/2 [00:00<00:00,  9.73it/s, Acc=0.90476, AvgAcc=0.93717]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [02:11<00:00, 131.79s/it]100%|██████████| 1/1 [02:11<00:00, 131.79s/it]
-  0%|          | 0/2 [00:00<?, ?it/s]3/10
-Running file /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run13.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run13.root (bkg)
-First few hit sums:  [111, 105, 131, 107, 97, 99, 116, 102, 104, 96]
-EVENTS BEFORE PRESELECTION (in _read_file):  127535
-EVENTS AFTER PRESELECTION:  17824
-N_SELECTED:   17824
-TOTAL SELECTED:   17824
-Total 127535 events, selected 17824 events, finally loaded 219 events.
-  0%|          | 0/2 [00:00<?, ?it/s, Acc=0.94531, AvgAcc=0.94531] 50%|█████     | 1/2 [00:00<00:00,  7.46it/s, Acc=0.94531, AvgAcc=0.94531] 50%|█████     | 1/2 [00:00<00:00,  7.46it/s, Acc=0.89011, AvgAcc=0.92237]100%|██████████| 2/2 [00:00<00:00,  9.65it/s, Acc=0.89011, AvgAcc=0.92237]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [02:13<00:00, 133.03s/it]100%|██████████| 1/1 [02:13<00:00, 133.03s/it]
-  0%|          | 0/2 [00:00<?, ?it/s]4/10
-Running file /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run14.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run14.root (bkg)
-First few hit sums:  [85, 94, 76, 113, 49, 89, 116, 82, 72, 111]
-EVENTS BEFORE PRESELECTION (in _read_file):  127094
-EVENTS AFTER PRESELECTION:  18010
-N_SELECTED:   18010
-TOTAL SELECTED:   18010
-Total 127094 events, selected 18010 events, finally loaded 200 events.
-  0%|          | 0/2 [00:00<?, ?it/s, Acc=0.97656, AvgAcc=0.97656] 50%|█████     | 1/2 [00:00<00:00,  8.44it/s, Acc=0.97656, AvgAcc=0.97656] 50%|█████     | 1/2 [00:00<00:00,  8.44it/s, Acc=0.98611, AvgAcc=0.98000]100%|██████████| 2/2 [00:00<00:00, 10.55it/s, Acc=0.98611, AvgAcc=0.98000]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [02:12<00:00, 132.74s/it]100%|██████████| 1/1 [02:12<00:00, 132.74s/it]
-  0%|          | 0/2 [00:00<?, ?it/s]5/10
-Running file /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run15.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run15.root (bkg)
-First few hit sums:  [86, 75, 82, 126, 99, 86, 106, 57, 97, 67]
-EVENTS BEFORE PRESELECTION (in _read_file):  126208
-EVENTS AFTER PRESELECTION:  17792
-N_SELECTED:   17792
-TOTAL SELECTED:   17792
-Total 126208 events, selected 17792 events, finally loaded 195 events.
-  0%|          | 0/2 [00:00<?, ?it/s, Acc=0.96875, AvgAcc=0.96875] 50%|█████     | 1/2 [00:00<00:00,  7.59it/s, Acc=0.96875, AvgAcc=0.96875] 50%|█████     | 1/2 [00:00<00:00,  7.59it/s, Acc=0.98507, AvgAcc=0.97436]100%|██████████| 2/2 [00:00<00:00,  9.18it/s, Acc=0.98507, AvgAcc=0.97436]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [02:15<00:00, 135.19s/it]100%|██████████| 1/1 [02:15<00:00, 135.19s/it]
-  0%|          | 0/2 [00:00<?, ?it/s]6/10
-Running file /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run16.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run16.root (bkg)
-First few hit sums:  [124, 100, 103, 111, 90, 98, 108, 74, 94, 95]
-EVENTS BEFORE PRESELECTION (in _read_file):  126384
-EVENTS AFTER PRESELECTION:  17785
-N_SELECTED:   17785
-TOTAL SELECTED:   17785
-Total 126384 events, selected 17785 events, finally loaded 190 events.
-  0%|          | 0/2 [00:00<?, ?it/s, Acc=0.97656, AvgAcc=0.97656] 50%|█████     | 1/2 [00:00<00:00,  7.53it/s, Acc=0.97656, AvgAcc=0.97656] 50%|█████     | 1/2 [00:00<00:00,  7.53it/s, Acc=0.93548, AvgAcc=0.96316]100%|██████████| 2/2 [00:00<00:00,  9.59it/s, Acc=0.93548, AvgAcc=0.96316]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [02:20<00:00, 140.31s/it]100%|██████████| 1/1 [02:20<00:00, 140.31s/it]
-  0%|          | 0/2 [00:00<?, ?it/s]7/10
-Running file /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run17.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run17.root (bkg)
-First few hit sums:  [72, 104, 104, 93, 85, 125, 106, 105, 82, 95]
-EVENTS BEFORE PRESELECTION (in _read_file):  126522
-EVENTS AFTER PRESELECTION:  18066
-N_SELECTED:   18066
-TOTAL SELECTED:   18066
-Total 126522 events, selected 18066 events, finally loaded 229 events.
-  0%|          | 0/2 [00:00<?, ?it/s, Acc=0.92969, AvgAcc=0.92969] 50%|█████     | 1/2 [00:00<00:00,  7.21it/s, Acc=0.92969, AvgAcc=0.92969] 50%|█████     | 1/2 [00:00<00:00,  7.21it/s, Acc=0.96040, AvgAcc=0.94323]100%|██████████| 2/2 [00:00<00:00,  9.33it/s, Acc=0.96040, AvgAcc=0.94323]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [02:19<00:00, 139.24s/it]100%|██████████| 1/1 [02:19<00:00, 139.24s/it]
-  0%|          | 0/2 [00:00<?, ?it/s]8/10
-Running file /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run18.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run18.root (bkg)
-First few hit sums:  [117, 100, 61, 144, 101, 86, 91, 113, 122, 72]
-EVENTS BEFORE PRESELECTION (in _read_file):  127264
-EVENTS AFTER PRESELECTION:  18149
-N_SELECTED:   18149
-TOTAL SELECTED:   18149
-Total 127264 events, selected 18149 events, finally loaded 245 events.
-  0%|          | 0/2 [00:00<?, ?it/s, Acc=0.92969, AvgAcc=0.92969] 50%|█████     | 1/2 [00:00<00:00,  7.48it/s, Acc=0.92969, AvgAcc=0.92969] 50%|█████     | 1/2 [00:00<00:00,  7.48it/s, Acc=0.97436, AvgAcc=0.95102]100%|██████████| 2/2 [00:00<00:00,  9.62it/s, Acc=0.97436, AvgAcc=0.95102]
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [02:14<00:00, 134.11s/it]100%|██████████| 1/1 [02:14<00:00, 134.11s/it]
-  0%|          | 0/2 [00:00<?, ?it/s]9/10
-Running file /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run19.root
-Loaded detector info
-Using coord_ref=ecal_sp
-Start loading dataset /home/pmasterson/GraphNet_input/v12/kaon_eval/4gev_1e_ecal_upkaons_v12_ldmx-det-v12_run19.root (bkg)
-First few hit sums:  [121, 97, 56, 87, 93, 112, 118, 103, 110, 113]
-EVENTS BEFORE PRESELECTION (in _read_file):  127221
-EVENTS AFTER PRESELECTION:  18150
-N_SELECTED:   18150
-TOTAL SELECTED:   18150
-Total 127221 events, selected 18150 events, finally loaded 225 events.
-  0%|          | 0/2 [00:00<?, ?it/s, Acc=0.96875, AvgAcc=0.96875] 50%|█████     | 1/2 [00:00<00:00,  7.54it/s, Acc=0.96875, AvgAcc=0.96875] 50%|█████     | 1/2 [00:00<00:00,  7.54it/s, Acc=0.93814, AvgAcc=0.95556]100%|██████████| 2/2 [00:00<00:00,  9.48it/s, Acc=0.93814, AvgAcc=0.95556]
-PROGRAM FINISHED

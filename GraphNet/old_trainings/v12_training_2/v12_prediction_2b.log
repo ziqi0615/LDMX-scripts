@@ -1,400 +1,0 @@
-  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:15<03:39, 15.70s/it] 13%|█▎        | 2/15 [00:31<03:25, 15.83s/it] 20%|██        | 3/15 [00:47<03:09, 15.82s/it] 27%|██▋       | 4/15 [01:03<02:54, 15.84s/it] 33%|███▎      | 5/15 [01:18<02:36, 15.67s/it] 40%|████      | 6/15 [01:34<02:21, 15.75s/it] 47%|████▋     | 7/15 [01:50<02:06, 15.86s/it] 53%|█████▎    | 8/15 [02:06<01:51, 15.93s/it] 60%|██████    | 9/15 [02:22<01:35, 15.96s/it] 67%|██████▋   | 10/15 [02:39<01:20, 16.03s/it] 73%|███████▎  | 11/15 [02:58<01:08, 17.08s/it] 80%|████████  | 12/15 [03:14<00:49, 16.55s/it] 87%|████████▋ | 13/15 [03:33<00:35, 17.56s/it] 93%|█████████▎| 14/15 [03:49<00:17, 17.00s/it]100%|██████████| 15/15 [04:05<00:00, 16.72s/it]100%|██████████| 15/15 [04:05<00:00, 16.38s/it]
-  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:12<02:48, 12.05s/it] 13%|█▎        | 2/15 [00:27<02:50, 13.09s/it] 20%|██        | 3/15 [00:45<02:55, 14.66s/it] 27%|██▋       | 4/15 [01:01<02:43, 14.82s/it] 33%|███▎      | 5/15 [01:22<02:46, 16.68s/it] 40%|████      | 6/15 [01:36<02:23, 15.97s/it] 47%|████▋     | 7/15 [01:47<01:55, 14.45s/it] 53%|█████▎    | 8/15 [01:58<01:34, 13.47s/it] 60%|██████    | 9/15 [02:13<01:23, 13.96s/it] 67%|██████▋   | 10/15 [02:20<00:58, 11.78s/it] 73%|███████▎  | 11/15 [02:35<00:51, 12.80s/it] 80%|████████  | 12/15 [02:54<00:43, 14.54s/it] 87%|████████▋ | 13/15 [02:59<00:23, 11.71s/it] 93%|█████████▎| 14/15 [03:14<00:12, 12.71s/it]100%|██████████| 15/15 [03:22<00:00, 11.50s/it]100%|██████████| 15/15 [03:22<00:00, 13.53s/it]
-  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:08<02:02,  8.75s/it] 13%|█▎        | 2/15 [00:20<02:05,  9.63s/it] 20%|██        | 3/15 [00:31<02:01, 10.12s/it] 27%|██▋       | 4/15 [00:40<01:47,  9.74s/it] 33%|███▎      | 5/15 [00:52<01:43, 10.38s/it] 40%|████      | 6/15 [01:01<01:29,  9.96s/it] 47%|████▋     | 7/15 [01:10<01:16,  9.57s/it] 53%|█████▎    | 8/15 [01:20<01:07,  9.70s/it] 60%|██████    | 9/15 [01:32<01:02, 10.37s/it] 67%|██████▋   | 10/15 [01:43<00:53, 10.72s/it] 73%|███████▎  | 11/15 [01:52<00:40, 10.17s/it] 80%|████████  | 12/15 [02:04<00:31, 10.62s/it] 87%|████████▋ | 13/15 [02:10<00:18,  9.46s/it] 93%|█████████▎| 14/15 [02:22<00:10, 10.11s/it]100%|██████████| 15/15 [02:31<00:00,  9.69s/it]100%|██████████| 15/15 [02:31<00:00, 10.08s/it]
-  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:22<05:12, 22.35s/it] 13%|█▎        | 2/15 [00:44<04:47, 22.15s/it] 20%|██        | 3/15 [01:06<04:27, 22.30s/it] 27%|██▋       | 4/15 [01:28<04:05, 22.31s/it] 33%|███▎      | 5/15 [01:50<03:41, 22.19s/it] 40%|████      | 6/15 [02:13<03:20, 22.31s/it] 47%|████▋     | 7/15 [02:35<02:58, 22.29s/it] 53%|█████▎    | 8/15 [02:57<02:34, 22.10s/it] 60%|██████    | 9/15 [03:19<02:13, 22.18s/it] 67%|██████▋   | 10/15 [03:41<01:49, 21.98s/it] 73%|███████▎  | 11/15 [04:03<01:28, 22.00s/it] 80%|████████  | 12/15 [04:25<01:06, 22.05s/it] 87%|████████▋ | 13/15 [04:47<00:44, 22.02s/it] 93%|█████████▎| 14/15 [05:09<00:22, 22.01s/it]100%|██████████| 15/15 [05:31<00:00, 21.89s/it]100%|██████████| 15/15 [05:31<00:00, 22.07s/it]
-  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:50<06:40, 50.10s/it] 22%|██▏       | 2/9 [01:41<05:53, 50.48s/it] 33%|███▎      | 3/9 [02:32<05:03, 50.50s/it] 44%|████▍     | 4/9 [03:26<04:18, 51.69s/it] 56%|█████▌    | 5/9 [04:18<03:27, 51.77s/it] 67%|██████▋   | 6/9 [05:09<02:34, 51.65s/it] 78%|███████▊  | 7/9 [06:03<01:44, 52.32s/it] 89%|████████▉ | 8/9 [06:54<00:51, 51.88s/it]100%|██████████| 9/9 [07:51<00:00, 53.32s/it]100%|██████████| 9/9 [07:51<00:00, 52.36s/it]
-  0%|          | 0/42 [00:00<?, ?it/s]***SAVING EXTRA
-conv_params: [(7, (32, 32, 32)), (7, (64, 64, 64))]
-fc_params: [(128, 0.1)]
-Siglist adn bkglist:
-{1: ('/home/pmasterson/GraphNet_input/v12/*0.001*.root', 200000), 10: ('/home/pmasterson/GraphNet_input/v12/*0.01*.root', 200000), 100: ('/home/pmasterson/GraphNet_input/v12/*0.1*.root', 200000), 1000: ('/home/pmasterson/GraphNet_input/v12/*1.0*.root', 200000)}
-{0: ('/home/pmasterson/GraphNet_input/v12/kaon_training/*.root', -1)}
-Loaded detector info
-Using coord_ref=none
-Start loading dataset /home/pmasterson/GraphNet_input/v12/*0.001*.root (sig)
-First few hit sums:  [71, 77, 66, 78, 106, 118, 69, 71, 64, 50]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3002
-N_SELECTED:   3002
-TOTAL SELECTED:   3002
-First few hit sums:  [59, 104, 54, 80, 62, 28, 76, 105, 85, 29]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  2954
-N_SELECTED:   2954
-TOTAL SELECTED:   5956
-First few hit sums:  [57, 27, 38, 92, 58, 58, 34, 95, 65, 78]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  2996
-N_SELECTED:   2996
-TOTAL SELECTED:   8952
-First few hit sums:  [79, 53, 81, 39, 42, 18, 48, 115, 88, 98]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3003
-N_SELECTED:   3003
-TOTAL SELECTED:   11955
-First few hit sums:  [64, 39, 68, 79, 46, 65, 29, 38, 85, 50]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  2980
-N_SELECTED:   2980
-TOTAL SELECTED:   14935
-First few hit sums:  [35, 27, 49, 81, 29, 88, 64, 49, 65, 37]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  2989
-N_SELECTED:   2989
-TOTAL SELECTED:   17924
-First few hit sums:  [74, 94, 73, 83, 101, 99, 69, 75, 64, 48]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3004
-N_SELECTED:   3004
-TOTAL SELECTED:   20928
-First few hit sums:  [25, 69, 57, 57, 83, 94, 100, 43, 60, 64]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3057
-N_SELECTED:   3057
-TOTAL SELECTED:   23985
-First few hit sums:  [55, 55, 35, 40, 65, 34, 71, 60, 51, 51]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  2997
-N_SELECTED:   2997
-TOTAL SELECTED:   26982
-First few hit sums:  [58, 66, 71, 38, 36, 81, 66, 107, 75, 42]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  2985
-N_SELECTED:   2985
-TOTAL SELECTED:   29967
-First few hit sums:  [81, 60, 63, 74, 109, 72, 76, 69, 73, 75]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  2973
-N_SELECTED:   2973
-TOTAL SELECTED:   32940
-First few hit sums:  [107, 63, 69, 45, 42, 71, 95, 85, 79, 73]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  2954
-N_SELECTED:   2954
-TOTAL SELECTED:   35894
-First few hit sums:  [34, 67, 62, 54, 35, 56, 89, 115, 44, 79]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3000
-N_SELECTED:   3000
-TOTAL SELECTED:   38894
-First few hit sums:  [74, 55, 89, 58, 89, 35, 57, 92, 41, 91]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  2972
-N_SELECTED:   2972
-TOTAL SELECTED:   41866
-First few hit sums:  [33, 55, 79, 79, 83, 32, 91, 74, 58, 47]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3003
-N_SELECTED:   3003
-TOTAL SELECTED:   44869
-Total 60000 events, selected 44869 events, finally loaded 256 events.
-Start loading dataset /home/pmasterson/GraphNet_input/v12/*0.01*.root (sig)
-First few hit sums:  [28, 24, 57, 75, 29, 89, 73, 81, 25, 22]
-EVENTS BEFORE PRESELECTION (in _read_file):  2034
-EVENTS AFTER PRESELECTION:  1921
-N_SELECTED:   1921
-TOTAL SELECTED:   1921
-First few hit sums:  [44, 28, 53, 28, 52, 56, 14, 22, 21, 35]
-EVENTS BEFORE PRESELECTION (in _read_file):  3104
-EVENTS AFTER PRESELECTION:  2851
-N_SELECTED:   2851
-TOTAL SELECTED:   4772
-First few hit sums:  [27, 104, 48, 23, 11, 79, 17, 59, 36, 25]
-EVENTS BEFORE PRESELECTION (in _read_file):  3471
-EVENTS AFTER PRESELECTION:  3223
-N_SELECTED:   3223
-TOTAL SELECTED:   7995
-First few hit sums:  [49, 49, 42, 46, 22, 30, 33, 48, 35, 41]
-EVENTS BEFORE PRESELECTION (in _read_file):  3095
-EVENTS AFTER PRESELECTION:  2871
-N_SELECTED:   2871
-TOTAL SELECTED:   10866
-First few hit sums:  [34, 102, 44, 22, 35, 42, 46, 51, 22, 21]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3692
-N_SELECTED:   3692
-TOTAL SELECTED:   14558
-First few hit sums:  [78, 24, 19, 22, 48, 19, 41, 33, 35, 22]
-EVENTS BEFORE PRESELECTION (in _read_file):  2941
-EVENTS AFTER PRESELECTION:  2736
-N_SELECTED:   2736
-TOTAL SELECTED:   17294
-First few hit sums:  [34, 31, 52, 78, 37, 94, 58, 78, 29, 27]
-EVENTS BEFORE PRESELECTION (in _read_file):  2034
-EVENTS AFTER PRESELECTION:  1902
-N_SELECTED:   1902
-TOTAL SELECTED:   19196
-First few hit sums:  [27, 87, 56, 39, 52, 80, 44, 25, 43, 23]
-EVENTS BEFORE PRESELECTION (in _read_file):  2195
-EVENTS AFTER PRESELECTION:  2027
-N_SELECTED:   2027
-TOTAL SELECTED:   21223
-First few hit sums:  [52, 41, 75, 26, 33, 60, 36, 25, 25, 23]
-EVENTS BEFORE PRESELECTION (in _read_file):  3120
-EVENTS AFTER PRESELECTION:  2878
-N_SELECTED:   2878
-TOTAL SELECTED:   24101
-First few hit sums:  [18, 53, 31, 46, 27, 34, 22, 31, 32, 45]
-EVENTS BEFORE PRESELECTION (in _read_file):  1274
-EVENTS AFTER PRESELECTION:  1177
-N_SELECTED:   1177
-TOTAL SELECTED:   25278
-First few hit sums:  [25, 30, 107, 25, 43, 74, 38, 84, 53, 69]
-EVENTS BEFORE PRESELECTION (in _read_file):  3092
-EVENTS AFTER PRESELECTION:  2875
-N_SELECTED:   2875
-TOTAL SELECTED:   28153
-First few hit sums:  [78, 28, 94, 46, 67, 47, 59, 18, 63, 25]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3710
-N_SELECTED:   3710
-TOTAL SELECTED:   31863
-First few hit sums:  [24, 45, 23, 16, 29, 22, 35, 44, 39, 68]
-EVENTS BEFORE PRESELECTION (in _read_file):  879
-EVENTS AFTER PRESELECTION:  814
-N_SELECTED:   814
-TOTAL SELECTED:   32677
-First few hit sums:  [20, 30, 39, 26, 31, 36, 21, 42, 27, 21]
-EVENTS BEFORE PRESELECTION (in _read_file):  3094
-EVENTS AFTER PRESELECTION:  2857
-N_SELECTED:   2857
-TOTAL SELECTED:   35534
-First few hit sums:  [33, 24, 36, 18, 15, 33, 62, 45, 64, 21]
-EVENTS BEFORE PRESELECTION (in _read_file):  1597
-EVENTS AFTER PRESELECTION:  1480
-N_SELECTED:   1480
-TOTAL SELECTED:   37014
-Total 39930 events, selected 37014 events, finally loaded 759 events.
-Start loading dataset /home/pmasterson/GraphNet_input/v12/*0.1*.root (sig)
-First few hit sums:  [39, 16, 67, 27, 22, 75, 33, 73, 30, 31]
-EVENTS BEFORE PRESELECTION (in _read_file):  1648
-EVENTS AFTER PRESELECTION:  1583
-N_SELECTED:   1583
-TOTAL SELECTED:   1583
-First few hit sums:  [24, 52, 20, 24, 81, 26, 28, 45, 66, 28]
-EVENTS BEFORE PRESELECTION (in _read_file):  2245
-EVENTS AFTER PRESELECTION:  2162
-N_SELECTED:   2162
-TOTAL SELECTED:   3745
-First few hit sums:  [26, 41, 24, 32, 35, 28, 23, 51, 20, 31]
-EVENTS BEFORE PRESELECTION (in _read_file):  2241
-EVENTS AFTER PRESELECTION:  2148
-N_SELECTED:   2148
-TOTAL SELECTED:   5893
-First few hit sums:  [28, 17, 29, 32, 89, 76, 31, 22, 29, 43]
-EVENTS BEFORE PRESELECTION (in _read_file):  1646
-EVENTS AFTER PRESELECTION:  1584
-N_SELECTED:   1584
-TOTAL SELECTED:   7477
-First few hit sums:  [17, 35, 30, 29, 35, 23, 35, 46, 46, 52]
-EVENTS BEFORE PRESELECTION (in _read_file):  2272
-EVENTS AFTER PRESELECTION:  2168
-N_SELECTED:   2168
-TOTAL SELECTED:   9645
-First few hit sums:  [41, 22, 16, 52, 17, 111, 32, 39, 59, 71]
-EVENTS BEFORE PRESELECTION (in _read_file):  1656
-EVENTS AFTER PRESELECTION:  1592
-N_SELECTED:   1592
-TOTAL SELECTED:   11237
-First few hit sums:  [35, 16, 62, 17, 27, 69, 32, 61, 22, 36]
-EVENTS BEFORE PRESELECTION (in _read_file):  1648
-EVENTS AFTER PRESELECTION:  1583
-N_SELECTED:   1583
-TOTAL SELECTED:   12820
-First few hit sums:  [21, 44, 67, 26, 52, 79, 28, 23, 58, 34]
-EVENTS BEFORE PRESELECTION (in _read_file):  1853
-EVENTS AFTER PRESELECTION:  1778
-N_SELECTED:   1778
-TOTAL SELECTED:   14598
-First few hit sums:  [44, 34, 52, 66, 80, 37, 29, 44, 39, 64]
-EVENTS BEFORE PRESELECTION (in _read_file):  2266
-EVENTS AFTER PRESELECTION:  2166
-N_SELECTED:   2166
-TOTAL SELECTED:   16764
-First few hit sums:  [28, 36, 35, 32, 64, 28, 24, 28, 35, 20]
-EVENTS BEFORE PRESELECTION (in _read_file):  2266
-EVENTS AFTER PRESELECTION:  2174
-N_SELECTED:   2174
-TOTAL SELECTED:   18938
-First few hit sums:  [19, 44, 43, 40, 25, 24, 35, 25, 36, 42]
-EVENTS BEFORE PRESELECTION (in _read_file):  1654
-EVENTS AFTER PRESELECTION:  1571
-N_SELECTED:   1571
-TOTAL SELECTED:   20509
-First few hit sums:  [20, 19, 23, 38, 24, 61, 19, 31, 19, 21]
-EVENTS BEFORE PRESELECTION (in _read_file):  2263
-EVENTS AFTER PRESELECTION:  2161
-N_SELECTED:   2161
-TOTAL SELECTED:   22670
-First few hit sums:  [31, 30, 57, 21, 22, 27, 25, 19, 47, 31]
-EVENTS BEFORE PRESELECTION (in _read_file):  1177
-EVENTS AFTER PRESELECTION:  1142
-N_SELECTED:   1142
-TOTAL SELECTED:   23812
-First few hit sums:  [50, 21, 19, 64, 32, 21, 85, 20, 59, 23]
-EVENTS BEFORE PRESELECTION (in _read_file):  2271
-EVENTS AFTER PRESELECTION:  2207
-N_SELECTED:   2207
-TOTAL SELECTED:   26019
-First few hit sums:  [26, 35, 85, 60, 27, 45, 19, 25, 26, 22]
-EVENTS BEFORE PRESELECTION (in _read_file):  1646
-EVENTS AFTER PRESELECTION:  1568
-N_SELECTED:   1568
-TOTAL SELECTED:   27587
-Total 28752 events, selected 27587 events, finally loaded 600 events.
-Start loading dataset /home/pmasterson/GraphNet_input/v12/*1.0*.root (sig)
-First few hit sums:  [61, 12, 39, 43, 20, 14, 50, 29, 29, 25]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3979
-N_SELECTED:   3979
-TOTAL SELECTED:   3979
-First few hit sums:  [27, 16, 28, 22, 34, 27, 27, 55, 26, 19]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3972
-N_SELECTED:   3972
-TOTAL SELECTED:   7951
-First few hit sums:  [30, 23, 80, 22, 23, 31, 36, 20, 40, 35]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3978
-N_SELECTED:   3978
-TOTAL SELECTED:   11929
-First few hit sums:  [28, 33, 20, 18, 19, 29, 23, 77, 20, 36]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3975
-N_SELECTED:   3975
-TOTAL SELECTED:   15904
-First few hit sums:  [20, 25, 53, 48, 79, 41, 28, 19, 46, 68]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3962
-N_SELECTED:   3962
-TOTAL SELECTED:   19866
-First few hit sums:  [31, 19, 42, 37, 23, 65, 15, 30, 31, 76]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3967
-N_SELECTED:   3967
-TOTAL SELECTED:   23833
-First few hit sums:  [58, 20, 47, 34, 14, 32, 47, 23, 31, 26]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3968
-N_SELECTED:   3968
-TOTAL SELECTED:   27801
-First few hit sums:  [26, 33, 76, 29, 47, 52, 50, 27, 40, 27]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3974
-N_SELECTED:   3974
-TOTAL SELECTED:   31775
-First few hit sums:  [62, 34, 19, 19, 55, 47, 36, 46, 26, 24]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3981
-N_SELECTED:   3981
-TOTAL SELECTED:   35756
-First few hit sums:  [51, 29, 26, 25, 17, 24, 34, 45, 47, 19]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3971
-N_SELECTED:   3971
-TOTAL SELECTED:   39727
-First few hit sums:  [31, 36, 28, 73, 29, 21, 62, 39, 31, 25]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3970
-N_SELECTED:   3970
-TOTAL SELECTED:   43697
-First few hit sums:  [29, 27, 28, 27, 54, 24, 34, 41, 63, 18]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3966
-N_SELECTED:   3966
-TOTAL SELECTED:   47663
-First few hit sums:  [31, 47, 18, 24, 19, 25, 25, 42, 12, 34]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3969
-N_SELECTED:   3969
-TOTAL SELECTED:   51632
-First few hit sums:  [10, 73, 31, 50, 27, 41, 68, 26, 22, 25]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3967
-N_SELECTED:   3967
-TOTAL SELECTED:   55599
-First few hit sums:  [15, 19, 24, 27, 23, 55, 40, 26, 34, 43]
-EVENTS BEFORE PRESELECTION (in _read_file):  4000
-EVENTS AFTER PRESELECTION:  3963
-N_SELECTED:   3963
-TOTAL SELECTED:   59562
-Total 60000 events, selected 59562 events, finally loaded 3368 events.
-Start loading dataset /home/pmasterson/GraphNet_input/v12/kaon_training/*.root (bkg)
-First few hit sums:  [104, 93, 131, 97, 101, 129, 61, 80, 127, 111]
-EVENTS BEFORE PRESELECTION (in _read_file):  25305
-EVENTS AFTER PRESELECTION:  3693
-N_SELECTED:   3693
-TOTAL SELECTED:   3693
-First few hit sums:  [88, 74, 106, 119, 76, 109, 94, 81, 128, 109]
-EVENTS BEFORE PRESELECTION (in _read_file):  25296
-EVENTS AFTER PRESELECTION:  3617
-N_SELECTED:   3617
-TOTAL SELECTED:   7310
-First few hit sums:  [104, 118, 86, 128, 96, 78, 97, 131, 83, 86]
-EVENTS BEFORE PRESELECTION (in _read_file):  25289
-EVENTS AFTER PRESELECTION:  3542
-N_SELECTED:   3542
-TOTAL SELECTED:   10852
-First few hit sums:  [113, 100, 113, 85, 95, 106, 80, 55, 119, 130]
-EVENTS BEFORE PRESELECTION (in _read_file):  25342
-EVENTS AFTER PRESELECTION:  3622
-N_SELECTED:   3622
-TOTAL SELECTED:   14474
-First few hit sums:  [58, 103, 110, 103, 78, 104, 108, 94, 124, 97]
-EVENTS BEFORE PRESELECTION (in _read_file):  25283
-EVENTS AFTER PRESELECTION:  3722
-N_SELECTED:   3722
-TOTAL SELECTED:   18196
-First few hit sums:  [126, 88, 91, 103, 91, 91, 128, 90, 77, 73]
-EVENTS BEFORE PRESELECTION (in _read_file):  25410
-EVENTS AFTER PRESELECTION:  3618
-N_SELECTED:   3618
-TOTAL SELECTED:   21814
-First few hit sums:  [121, 114, 142, 62, 92, 106, 99, 105, 118, 86]
-EVENTS BEFORE PRESELECTION (in _read_file):  25318
-EVENTS AFTER PRESELECTION:  3524
-N_SELECTED:   3524
-TOTAL SELECTED:   25338
-First few hit sums:  [84, 63, 104, 103, 89, 87, 66, 80, 94, 106]
-EVENTS BEFORE PRESELECTION (in _read_file):  25365
-EVENTS AFTER PRESELECTION:  3591
-N_SELECTED:   3591
-TOTAL SELECTED:   28929
-First few hit sums:  [91, 99, 114, 99, 114, 89, 73, 119, 97, 100]
-EVENTS BEFORE PRESELECTION (in _read_file):  25265
-EVENTS AFTER PRESELECTION:  3579
-N_SELECTED:   3579
-TOTAL SELECTED:   32508
-Total 227873 events, selected 32508 events, finally loaded 384 events.
-Initializing model
-Usage: 8.7
-INITIALIZING SPLITNET
-INITIALIZED PARTICLENET
-FINISHED INIT
-Loading model models/v12_training_2/model_state_epoch-19_acc-0.9961.pt for eval
-  0%|          | 0/42 [00:00<?, ?it/s, Acc=0.98438, AvgAcc=0.98438]  2%|▏         | 1/42 [00:00<00:16,  2.55it/s, Acc=0.98438, AvgAcc=0.98438]  2%|▏         | 1/42 [00:00<00:16,  2.55it/s, Acc=0.98438, AvgAcc=0.98438]  2%|▏         | 1/42 [00:00<00:16,  2.55it/s, Acc=1.00000, AvgAcc=0.98958]  2%|▏         | 1/42 [00:00<00:16,  2.55it/s, Acc=1.00000, AvgAcc=0.99219]  2%|▏         | 1/42 [00:00<00:16,  2.55it/s, Acc=1.00000, AvgAcc=0.99375]  2%|▏         | 1/42 [00:00<00:16,  2.55it/s, Acc=1.00000, AvgAcc=0.99479]  2%|▏         | 1/42 [00:00<00:16,  2.55it/s, Acc=1.00000, AvgAcc=0.99554]  2%|▏         | 1/42 [00:00<00:16,  2.55it/s, Acc=0.99219, AvgAcc=0.99512] 19%|█▉        | 8/42 [00:00<00:09,  3.57it/s, Acc=0.99219, AvgAcc=0.99512] 19%|█▉        | 8/42 [00:00<00:09,  3.57it/s, Acc=1.00000, AvgAcc=0.99566] 19%|█▉        | 8/42 [00:00<00:09,  3.57it/s, Acc=0.99219, AvgAcc=0.99531] 19%|█▉        | 8/42 [00:00<00:09,  3.57it/s, Acc=1.00000, AvgAcc=0.99574] 19%|█▉        | 8/42 [00:00<00:09,  3.57it/s, Acc=1.00000, AvgAcc=0.99609] 19%|█▉        | 8/42 [00:00<00:09,  3.57it/s, Acc=1.00000, AvgAcc=0.99639] 19%|█▉        | 8/42 [00:00<00:09,  3.57it/s, Acc=1.00000, AvgAcc=0.99665] 19%|█▉        | 8/42 [00:00<00:09,  3.57it/s, Acc=1.00000, AvgAcc=0.99687] 36%|███▌      | 15/42 [00:00<00:05,  4.98it/s, Acc=1.00000, AvgAcc=0.99687] 36%|███▌      | 15/42 [00:00<00:05,  4.98it/s, Acc=1.00000, AvgAcc=0.99707] 36%|███▌      | 15/42 [00:00<00:05,  4.98it/s, Acc=1.00000, AvgAcc=0.99724] 36%|███▌      | 15/42 [00:00<00:05,  4.98it/s, Acc=1.00000, AvgAcc=0.99740] 36%|███▌      | 15/42 [00:00<00:05,  4.98it/s, Acc=1.00000, AvgAcc=0.99753] 36%|███▌      | 15/42 [00:00<00:05,  4.98it/s, Acc=1.00000, AvgAcc=0.99766] 36%|███▌      | 15/42 [00:00<00:05,  4.98it/s, Acc=1.00000, AvgAcc=0.99777] 36%|███▌      | 15/42 [00:00<00:05,  4.98it/s, Acc=1.00000, AvgAcc=0.99787] 52%|█████▏    | 22/42 [00:00<00:02,  6.87it/s, Acc=1.00000, AvgAcc=0.99787] 52%|█████▏    | 22/42 [00:00<00:02,  6.87it/s, Acc=1.00000, AvgAcc=0.99796] 52%|█████▏    | 22/42 [00:00<00:02,  6.87it/s, Acc=1.00000, AvgAcc=0.99805] 52%|█████▏    | 22/42 [00:00<00:02,  6.87it/s, Acc=1.00000, AvgAcc=0.99813] 52%|█████▏    | 22/42 [00:00<00:02,  6.87it/s, Acc=1.00000, AvgAcc=0.99820] 52%|█████▏    | 22/42 [00:00<00:02,  6.87it/s, Acc=1.00000, AvgAcc=0.99826] 52%|█████▏    | 22/42 [00:00<00:02,  6.87it/s, Acc=1.00000, AvgAcc=0.99833] 52%|█████▏    | 22/42 [00:00<00:02,  6.87it/s, Acc=1.00000, AvgAcc=0.99838] 69%|██████▉   | 29/42 [00:00<00:01,  9.41it/s, Acc=1.00000, AvgAcc=0.99838] 69%|██████▉   | 29/42 [00:00<00:01,  9.41it/s, Acc=1.00000, AvgAcc=0.99844] 69%|██████▉   | 29/42 [00:00<00:01,  9.41it/s, Acc=1.00000, AvgAcc=0.99849] 69%|██████▉   | 29/42 [00:00<00:01,  9.41it/s, Acc=1.00000, AvgAcc=0.99854] 69%|██████▉   | 29/42 [00:00<00:01,  9.41it/s, Acc=1.00000, AvgAcc=0.99858] 69%|██████▉   | 29/42 [00:00<00:01,  9.41it/s, Acc=1.00000, AvgAcc=0.99862] 69%|██████▉   | 29/42 [00:00<00:01,  9.41it/s, Acc=1.00000, AvgAcc=0.99866] 69%|██████▉   | 29/42 [00:00<00:01,  9.41it/s, Acc=1.00000, AvgAcc=0.99870] 86%|████████▌ | 36/42 [00:00<00:00, 12.64it/s, Acc=1.00000, AvgAcc=0.99870] 86%|████████▌ | 36/42 [00:00<00:00, 12.64it/s, Acc=1.00000, AvgAcc=0.99873] 86%|████████▌ | 36/42 [00:00<00:00, 12.64it/s, Acc=1.00000, AvgAcc=0.99877] 86%|████████▌ | 36/42 [00:00<00:00, 12.64it/s, Acc=1.00000, AvgAcc=0.99880] 86%|████████▌ | 36/42 [00:01<00:00, 12.64it/s, Acc=0.93750, AvgAcc=0.99727] 86%|████████▌ | 36/42 [00:01<00:00, 12.64it/s, Acc=0.97656, AvgAcc=0.99676] 86%|████████▌ | 36/42 [00:01<00:00, 12.64it/s, Acc=0.96639, AvgAcc=0.99609]100%|██████████| 42/42 [00:01<00:00, 38.59it/s, Acc=0.96639, AvgAcc=0.99609]1 MeV (auc* = 0.997264)
-10 MeV (auc* = 0.999698)
-100 MeV (auc* = 0.999753)
-1000 MeV (auc* = 0.999916)
- === Summary ===
-model_name: particle-net-lite
-model_params: {'conv_params': [(7, (32, 32, 32)), (7, (64, 64, 64))], 'fc_params': [(128, 0.1)]}
-coord_ref: none
-date: 2021-02-22
-model_path: models/v12_training_2/model_state_epoch-19_acc-0.9961.pt
-siglist: {1: ('/home/pmasterson/GraphNet_input/v12/*0.001*.root', 200000), 10: ('/home/pmasterson/GraphNet_input/v12/*0.01*.root', 200000), 100: ('/home/pmasterson/GraphNet_input/v12/*0.1*.root', 200000), 1000: ('/home/pmasterson/GraphNet_input/v12/*1.0*.root', 200000)}
-bkglist: {0: ('/home/pmasterson/GraphNet_input/v12/kaon_training/*.root', -1)}
-presel_eff: {1: 0.7478166666666667, 10: 0.9269722013523667, 100: 0.9594810795770728, 1000: 0.9927, 0: 0.14265841060590767}
-1 MeV: {'auc-presel': 0.9972635904947916, 'acc-presel': 0.9703125, 'effs': [(0.0011145188328586537, 0.6981569661458333), (0.0003715062776195512, 0.6280491536458334), (0.0003715062776195512, 0.6280491536458334), (0.0003715062776195512, 0.6280491536458334)]}
-10 MeV: {'auc-presel': 0.9996980676328502, 'acc-presel': 0.9860017497812773, 'effs': [(0.0011145188328586537, 0.9159804361189394), (0.0003715062776195512, 0.8952182129002435), (0.0003715062776195512, 0.8952182129002435), (0.0003715062776195512, 0.8952182129002435)]}
-100 MeV: {'auc-presel': 0.9997526041666667, 'acc-presel': 0.983739837398374, 'effs': [(0.0011145188328586537, 0.956282809311816), (0.0003715062776195512, 0.9434897282507883), (0.0003715062776195512, 0.9434897282507883), (0.0003715062776195512, 0.9434897282507883)]}
-1000 MeV: {'auc-presel': 0.9999157202593032, 'acc-presel': 0.9960021321961621, 'effs': [(0.0011145188328586537, 0.9897525534441806), (0.0003715062776195512, 0.9723626187648456), (0.0003715062776195512, 0.9723626187648456), (0.0003715062776195512, 0.9723626187648456)]}
-Exporting ONNX model to plot_data/v12_training_2/model_state_epoch-19_acc-0.9961.onnx
-INITIALIZING SPLITNET
-INITIALIZED PARTICLENET
-FINISHED INIT
-
-/home/dgj1118/miniconda3/envs/pytorch/lib/python3.7/site-packages/torch/onnx/utils.py:1190: UserWarning: No names were found for specified dynamic axes of provided input.Automatically generated names will be applied to each dynamic axes of input coordinates
-  'Automatically generated names will be applied to each dynamic axes of input {}'.format(key))
-/home/dgj1118/miniconda3/envs/pytorch/lib/python3.7/site-packages/torch/onnx/utils.py:1190: UserWarning: No names were found for specified dynamic axes of provided input.Automatically generated names will be applied to each dynamic axes of input features
-  'Automatically generated names will be applied to each dynamic axes of input {}'.format(key))
