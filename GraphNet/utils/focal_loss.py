@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-torch.set_default_dtype(torch.float32)
+torch.set_default_dtype(torch.float64)
 
 # https://github.com/kornia/kornia/blob/master/kornia/utils/one_hot.py
 def one_hot(labels: torch.Tensor,
@@ -137,4 +137,3 @@ class FocalLoss(nn.Module):
             input: torch.Tensor,
             target: torch.Tensor) -> torch.Tensor:
         return focal_loss(input, target, self.alpha, self.gamma, self.reduction, self.eps)
-
