@@ -4,6 +4,7 @@ import awkward
 import glob
 import os
 import re
+import math
 print("Importing ROOT")
 import ROOT as r
 print("Imported root.  Starting...")
@@ -47,25 +48,50 @@ data_to_save = {
 # Base:
 
 #output_dir = '/home/pmasterson/GraphNet_input/v12/processed'
-output_dir = 'test_output_files'
+output_dir = '/home/dgj1118/LDMX-scripts/Graphnet/processed'
 file_templates = {
-    #0.001: '/home/pmasterson/GraphNet_input/v12/signal_230_trunk/*0.001*.root',
-    #0.01:  '/home/pmasterson/GraphNet_input/v12/signal_230_trunk/*0.01*.root',
-    #0.1:   '/home/pmasterson/GraphNet_input/v12/signal_230_trunk/*0.1*.root',
-    #1.0:   '/home/pmasterson/GraphNet_input/v12/signal_230_trunk/*1.0*.root',  # was sig_extended_tracking
-    0:     '/home/pmasterson/GraphNet_input/v12/background_230_trunk/*.root'  # was bkg_12M
+    #0.001: '/home/dgj1118/LDMX-scripts/GraphNet/sig_extended_tracking/*0.001*.root',
+    #0.01:  '/home/dgj1118/LDMX-scripts/GraphNet/sig_extended_tracking/*0.01*.root',
+    #0.1:   '/home/dgj1118/LDMX-scripts/GraphNet/sig_extended_tracking/*0.1*.root',
+    #1.0:   '/home/dgj1118/LDMX-scripts/GraphNet/sig_extended_tracking/*1.0*.root', 
+    0:     '/home/dgj1118/LDMX-scripts/GraphNet/background_230_trunk/*.root' 
 }
 """
 # For eval:
 output_dir = '/home/pmasterson/GraphNet_input/v12/processed_eval'
 file_templates = {
-    #0.001: '/home/pmasterson/GraphNet_input/v12/sig_extended_extra/*0.001*.root',
-    #0.01:  '/home/pmasterson/GraphNet_input/v12/sig_extended_extra/*0.01*.root',
-    #0.1:   '/home/pmasterson/GraphNet_input/v12/sig_extended_extra/*0.1*.root',
-    #1.0:   '/home/pmasterson/GraphNet_input/v12/sig_extended_extra/*1.0*.root',
-    0:     '/home/pmasterson/GraphNet_input/v12/bkg_12M/evaluation/*.root'
+    #0.001: '/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.001*.root',
+    #0.01:  '/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.01*.root',
+    #0.1:   '/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.1*.root',
+    #1.0:   '/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*1.0*.root',
+    0:     '/home/dgj1118/LDMX-scripts/GraphNet/background_230_trunk/evaluation/*.root'
 }
 """
+
+scoringPlaneZ = 240.5015
+ecalFaceZ = 248.35
+cell_radius = 5.0
+
+def dist(p1, p2):
+    return math.sqrt(np.sum( ( np.array(p1) - np.array(p2) )**2 ))
+
+def projection(Recoilx, Recoily, Recoilz, RPx, RPy, RPz, HitZ):
+    if RPx == 0:
+        x_final = Recoilx + (HitZ - Recoilz)/99999
+    else:
+        x_final = Recoilx + RPx/RPz*(HitZ - Recoilz)
+    if RPy == 0:
+        y_final = Recoily + (HitZ - Recoilz)/99999
+    else:
+        y_final = Recoily + RPy/RPz*(HitZ - Recoilz)
+    return (x_final, y_final)
+
+def _load_cellMap(version='v12'):
+    global cellMap = {}
+    for i, x, y in np.loadtxt('data/%s/cellmodule.txt' % version):
+        cellMap[i] = (x, y)
+        global cells = np.array(list(cellMap.values()))
+        print("Loaded detector info")
 
 def processFile(input_vars):
 
@@ -111,6 +137,46 @@ def processFile(input_vars):
     preselected_data = {}
     for branch in branchList:
         preselected_data[branch] = raw_data[branch][el]
+
+    # trigger cut:
+    t_cut = (preselected_data['EcalVeto_v12/summedTightIso_'] - preselected_data['EcalVeto_v12/ecalBackEnergy_'] < 1500.0)
+    for branch in branchList:
+        preselected_data[branch] = preselected_data[branch][t_cut]
+
+    # nonfiducial cut:
+    n1_cut = (preselected_data['EcalScoringPlaneHits_v12.pdgID_'] == 11) * \
+             (preselected_data['EcalScoringPlaneHits_v12.trackID_'] == 1) * \
+             (preselected_data['EcalScoringPlaneHits_v12.z_'] > 240.0) * \
+             (preselected_data['EcalScoringPlaneHits_v12.z_'] < 241.001) * \
+             (preselected_data['EcalScoringPlaneHits_v12.pz_'] > 0)
+    for branch in branchList:
+        preselected_data[branch] = preselected_data[branch][n1_cut]
+
+    N = len(preselected_data['EcalScoringPlaneHits_v12.x_'])
+    simEvents = np.zeros(N, dtype=bool)
+    recoilX = preselected_data['EcalScoringPlaneHits_v12.x_']
+    recoilY = preselected_data['EcalScoringPlaneHits_v12.y_']
+    recoilPx = preselected_data['EcalScoringPlaneHits_v12.px_']
+    recoilPy = preselected_data['EcalScoringPlaneHits_v12.py_']
+    recoilPz = preselected_data['EcalScoringPlaneHits_v12.pz_']
+
+    for event in range(N):
+        fiducial = False
+        fXY = projection(recoilX[event], recoilY[event], scoringPlaneZ, recoilPx[event], recoilPy[event], recoilPz[event], ecalFaceZ)
+        if not recoilX[event] == -9999 and not recoilY[event] == -9999 and not recoilPx[event] == -9999 and not recoilPy[event] == -9999:
+            for cell in range(len(cells)):
+                celldis = dist(cells[cell], fXY)             
+                if celldis <= cell_radius:
+                    fiducial = True
+                    break
+        if recoilX[event] == 0 and recoilY[event] == 0 and recoilPx[event] == 0 and recoilPy[event] == 0 and recoilPz[event] == 0: 
+            fiducial = False
+        if fiducial == False:
+            simEvents[event] = 1              
+    
+    for branch in branchList:
+        preselected_data[branch] = preselected_data[branch][simEvents]
+
     #print("Preselected data")
     nEvents = len(preselected_data['EcalVeto_v12/summedTightIso_'])
     print("Skimming from {} events".format(nEvents))
@@ -280,6 +346,9 @@ if __name__ == '__main__':
     # New approach:  Use multiprocessing
     #pool = Pool(8)  # 8 processors, factor of 8 speedup in theory...
     presel_eff = {}
+    cellMap = []
+    cells = []
+    _load_cellMap()
     for mass, filepath in file_templates.items():
         print("======  m={}  ======".format(mass))
         # Assemble list of function params
