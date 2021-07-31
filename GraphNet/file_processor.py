@@ -29,11 +29,11 @@ MAX_ISO_ENERGY = 650
 data_to_save = {
     'EcalScoringPlaneHits_v12': {
         'scalars':[],
-        'vectors':['pdgID_', 'layerID_', 'x_', 'y_', 'z_',
+        'vectors':['pdgID_', 'trackID_', 'layerID_', 'x_', 'y_', 'z_',
                    'px_', 'py_', 'pz_', 'energy_']
     },
     'EcalVeto_v12': {
-        'scalars':['passesVeto_', 'nReadoutHits_', 'summedDet_',
+        'scalars':['ecalBackEnergy_', 'passesVeto_', 'nReadoutHits_', 'summedDet_',
                    'summedTightIso_', 'discValue_',
                    'recoilX_', 'recoilY_',
                    'recoilPx_', 'recoilPy_', 'recoilPz_'],
@@ -47,28 +47,21 @@ data_to_save = {
 
 # Base:
 
-#output_dir = '/home/pmasterson/GraphNet_input/v12/processed'
-output_dir = '/home/dgj1118/LDMX-scripts/Graphnet/processed'
-file_templates = {
-    #0.001: '/home/dgj1118/LDMX-scripts/GraphNet/sig_extended_tracking/*0.001*.root',
-    #0.01:  '/home/dgj1118/LDMX-scripts/GraphNet/sig_extended_tracking/*0.01*.root',
-    #0.1:   '/home/dgj1118/LDMX-scripts/GraphNet/sig_extended_tracking/*0.1*.root',
-    #1.0:   '/home/dgj1118/LDMX-scripts/GraphNet/sig_extended_tracking/*1.0*.root', 
-    0:     '/home/dgj1118/LDMX-scripts/GraphNet/background_230_trunk/*.root' 
-}
-"""
-# For eval:
-output_dir = '/home/pmasterson/GraphNet_input/v12/processed_eval'
+#output_dir = '/home/dgj1118/LDMX-scripts/GraphNet/processed' # for TRAINING
+#output_dir = '/home/dgj1118/LDMX-scripts/GraphNet/processed_eval' # for EVALUATION
+output_dir = '/home/dgj1118/LDMX-scripts/GraphNet'
+
 file_templates = {
     #0.001: '/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.001*.root',
     #0.01:  '/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.01*.root',
     #0.1:   '/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*0.1*.root',
-    #1.0:   '/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*1.0*.root',
-    0:     '/home/dgj1118/LDMX-scripts/GraphNet/background_230_trunk/evaluation/*.root'
+    #1.0:   '/home/pmasterson/GraphNet_input/v12/sig_extended_tracking/*1.0*.root', 
+    #0:     '/home/dgj1118/LDMX-scripts/GraphNet/background_230_trunk/*.root' 
+    #0:      '/home/dgj1118/LDMX-scripts/GraphNet/background_230_trunk/evaluation/*.root' # for EVALUATION
+    0:      '/home/dgj1118/LDMX-scripts/GraphNet/background_230_trunk/evaluation/4gev_v12_pn_enlarged_191_ldmx-det-v12_run91_seeds_182_183_None.root' # for debug
 }
-"""
 
-scoringPlaneZ = 240.5015
+scoringPlaneZ = 240.5005
 ecalFaceZ = 248.35
 cell_radius = 5.0
 
@@ -87,11 +80,26 @@ def projection(Recoilx, Recoily, Recoilz, RPx, RPy, RPz, HitZ):
     return (x_final, y_final)
 
 def _load_cellMap(version='v12'):
-    global cellMap = {}
+    cellMap = {}
     for i, x, y in np.loadtxt('data/%s/cellmodule.txt' % version):
         cellMap[i] = (x, y)
-        global cells = np.array(list(cellMap.values()))
-        print("Loaded detector info")
+    global cells 
+    cells = np.array(list(cellMap.values()))
+    print("Loaded detector info")
+
+def get_layer_id(cid):
+    layer = (awkward.to_numpy(awkward.flatten(cid)) >> 17) & 0x3F
+
+    def unflatten_array(x, base_array):
+        return awkward.Array(awkward.layout.ListOffsetArray32(awkward.layout.Index32(base_array.layout.offsets),awkward.layout.NumpyArray(np.array(x, dtype='float32'))))
+
+    layer_id = unflatten_array(layer,cid)
+    return layer_id
+
+def pad_array(arr):
+    arr = awkward.pad_none(arr, 1, clip=True)
+    arr = awkward.fill_none(arr, 0)
+    return awkward.flatten(arr)
 
 def processFile(input_vars):
 
@@ -101,9 +109,9 @@ def processFile(input_vars):
 
     print("Processing file {}".format(filename))
     if mass == 0:
-        outfile_name = "v12_pn_mipless_{}.root".format(filenum)
+        outfile_name = "v12_pn_bkg_{}.root".format(filenum)
     else:
-        outfile_name = "v12_{}_mipless_{}.root".format(mass, filenum)
+        outfile_name = "v12_{}MeV_{}.root".format(mass, filenum)
     outfile_path = os.sep.join([output_dir, outfile_name])
 
     # NOTE:  Added this to ...
@@ -133,61 +141,102 @@ def processFile(input_vars):
     print("Before preselection:  found {} events".format(nTotalEvents))
 
     raw_data = t.arrays(branchList) #, preselection)  #, aliases=alias_dict)
-    el = (raw_data['EcalVeto_v12/nReadoutHits_'] < MAX_NUM_ECAL_HITS) * (raw_data['EcalVeto_v12/summedTightIso_'] < MAX_ISO_ENERGY)
     preselected_data = {}
-    for branch in branchList:
-        preselected_data[branch] = raw_data[branch][el]
-
-    # trigger cut:
-    t_cut = (preselected_data['EcalVeto_v12/summedTightIso_'] - preselected_data['EcalVeto_v12/ecalBackEnergy_'] < 1500.0)
-    for branch in branchList:
-        preselected_data[branch] = preselected_data[branch][t_cut]
 
     # nonfiducial cut:
-    n1_cut = (preselected_data['EcalScoringPlaneHits_v12.pdgID_'] == 11) * \
-             (preselected_data['EcalScoringPlaneHits_v12.trackID_'] == 1) * \
-             (preselected_data['EcalScoringPlaneHits_v12.z_'] > 240.0) * \
-             (preselected_data['EcalScoringPlaneHits_v12.z_'] < 241.001) * \
-             (preselected_data['EcalScoringPlaneHits_v12.pz_'] > 0)
-    for branch in branchList:
-        preselected_data[branch] = preselected_data[branch][n1_cut]
 
-    N = len(preselected_data['EcalScoringPlaneHits_v12.x_'])
-    simEvents = np.zeros(N, dtype=bool)
-    recoilX = preselected_data['EcalScoringPlaneHits_v12.x_']
-    recoilY = preselected_data['EcalScoringPlaneHits_v12.y_']
-    recoilPx = preselected_data['EcalScoringPlaneHits_v12.px_']
-    recoilPy = preselected_data['EcalScoringPlaneHits_v12.py_']
-    recoilPz = preselected_data['EcalScoringPlaneHits_v12.pz_']
+    # find the maximum momentum for each event's recoil electron:
+    recoilZ = raw_data['EcalScoringPlaneHits_v12.z_']
+    pX = raw_data['EcalScoringPlaneHits_v12.px_']
+    pY = raw_data['EcalScoringPlaneHits_v12.py_']
+    pZ = raw_data['EcalScoringPlaneHits_v12.pz_']
+    pdgID = raw_data['EcalScoringPlaneHits_v12.pdgID_']
+    trackID = raw_data['EcalScoringPlaneHits_v12.trackID_']
+    
+    # create boolean array with every hit set equal to 0 (false)
+    pre_cut = []
+    for event in range(len(pZ)):
+        pre_cut.append([])
+        for hit in range(len(pZ[event])):
+            pre_cut[event].append(False)
+    
+    for event in range(len(pZ)):
+        maxP = 0
+        maxP_index = 0
+        for hit in range(len(pZ[event])):
+            pMag = np.sqrt(pX[event][hit]**2 + pY[event][hit]**2 + pZ[event][hit]**2)
+            if (pdgID[event][hit] == 11 and trackID[event][hit] == 1 and recoilZ[event][hit] > 240 and recoilZ[event][hit] < 241 and pMag > maxP):
+                maxP = pMag
+                maxP_index = hit
+        pre_cut[event][maxP_index] = True
 
+    # apply the pre-cut: checks for pdgID, trackID, z position, max momentum                   
+    recoilX = pad_array(raw_data['EcalScoringPlaneHits_v12.x_'][pre_cut])
+    recoilY = pad_array(raw_data['EcalScoringPlaneHits_v12.y_'][pre_cut])
+    recoilPx = pad_array(pX[pre_cut])
+    recoilPy = pad_array(pY[pre_cut])
+    recoilPz = pad_array(pZ[pre_cut])
+
+    N = len(recoilX)
+    nf_cut = np.zeros(N, dtype = bool)
+    
     for event in range(N):
         fiducial = False
         fXY = projection(recoilX[event], recoilY[event], scoringPlaneZ, recoilPx[event], recoilPy[event], recoilPz[event], ecalFaceZ)
+
         if not recoilX[event] == -9999 and not recoilY[event] == -9999 and not recoilPx[event] == -9999 and not recoilPy[event] == -9999:
             for cell in range(len(cells)):
-                celldis = dist(cells[cell], fXY)             
+                celldis = dist(cells[cell], fXY)
                 if celldis <= cell_radius:
                     fiducial = True
                     break
-        if recoilX[event] == 0 and recoilY[event] == 0 and recoilPx[event] == 0 and recoilPy[event] == 0 and recoilPz[event] == 0: 
+        
+        if recoilX[event] == 0 and recoilY[event] == 0 and recoilPx[event] == 0 and recoilPy[event] == 0 and recoilPz[event] == 0:
             fiducial = False
-        if fiducial == False:
-            simEvents[event] = 1              
-    
-    for branch in branchList:
-        preselected_data[branch] = preselected_data[branch][simEvents]
 
+        if fiducial == False:
+            nf_cut[event] = 1
+     
+    for branch in branchList:
+        preselected_data[branch] = raw_data[branch][nf_cut]
+
+    # preselection cut:
+    el = (preselected_data['EcalVeto_v12/nReadoutHits_'] < MAX_NUM_ECAL_HITS) * (preselected_data['EcalVeto_v12/summedTightIso_'] < MAX_ISO_ENERGY)
+    for branch in branchList:
+        preselected_data[branch] = preselected_data[branch][el]
+
+    # trigger cut:
+    eid = preselected_data['EcalRecHits_v12.id_']
+    energy = preselected_data['EcalRecHits_v12.energy_']
+    pos = energy > 0
+    eid = eid[pos]
+    energy = energy[pos]
+    layer_id = get_layer_id(eid)
+
+    t_cut = np.zeros(len(eid), dtype = bool)
+
+    for event in range(len(eid)):
+        en = 0.0
+        for hit in range(len(eid[event])):
+            if layer_id[event][hit] < 20.0:
+                en += energy[event][hit]
+        if en < 1500.0:
+            t_cut[event] = 1
+
+    for branch in branchList:
+        preselected_data[branch] = preselected_data[branch][t_cut]
+    
     #print("Preselected data")
     nEvents = len(preselected_data['EcalVeto_v12/summedTightIso_'])
     print("Skimming from {} events".format(nEvents))
 
     # ADDITIONALLY:  Have to compute TargetSPRecoilE_pt here instead of in train.py.  (No access to TSP data)
     # For each event, find the recoil electron:
-    pdgID_ = t['TargetScoringPlaneHits_v12.pdgID_'].array()[el]
-    z_     = t['TargetScoringPlaneHits_v12.z_'].array()[el]
-    px_    = t['TargetScoringPlaneHits_v12.px_'].array()[el]
-    py_    = t['TargetScoringPlaneHits_v12.py_'].array()[el]
-    pz_    = t['TargetScoringPlaneHits_v12.pz_'].array()[el]
+    pdgID_ = t['TargetScoringPlaneHits_v12.pdgID_'].array()[nf_cut][el][t_cut]
+    z_     = t['TargetScoringPlaneHits_v12.z_'].array()[nf_cut][el][t_cut]
+    px_    = t['TargetScoringPlaneHits_v12.px_'].array()[nf_cut][el][t_cut]
+    py_    = t['TargetScoringPlaneHits_v12.py_'].array()[nf_cut][el][t_cut]
+    pz_    = t['TargetScoringPlaneHits_v12.pz_'].array()[nf_cut][el][t_cut]
     tspRecoil = []
     # Currently trying the slow approach...
     for i in range(nEvents):
@@ -264,7 +313,6 @@ def processFile(input_vars):
     # TESTING:  This code works
     tree.Branch('nSPHits', scalar_holders['nSPHits'], 'nSPHits/I')
     tree.Branch('x_', vector_holders['EcalScoringPlaneHits_v12.x_'], 'x_[nSPHits]/F')
-
     scalar_holders['nSPHits'][0] = 3
     vector_holders['EcalScoringPlaneHits_v12.x_'][0] = 1
     vector_holders['EcalScoringPlaneHits_v12.x_'][1] = 2
@@ -346,17 +394,15 @@ if __name__ == '__main__':
     # New approach:  Use multiprocessing
     #pool = Pool(8)  # 8 processors, factor of 8 speedup in theory...
     presel_eff = {}
-    cellMap = []
-    cells = []
     _load_cellMap()
     for mass, filepath in file_templates.items():
         print("======  m={}  ======".format(mass))
         # Assemble list of function params
         params = []
-        for filenum, f in enumerate(glob.glob(filepath)[:4]):
+        for filenum, f in enumerate(glob.glob(filepath)[:]):
             params.append([f, mass, filenum])
         print("num params:", len(params))
-        with Pool(2) as pool:
+        with Pool(10) as pool:
             results = pool.map(processFile, params)
         print("Finished.  Result len:", len(results))
         print(results)
@@ -383,9 +429,5 @@ if __name__ == '__main__':
             filenum += 1
         print("m = {} MeV:  Read {} events, {} passed preselection".format(int(mass*1000), nTotal, nEvents))
         presel_eff[int(mass * 1000)] = nEvents / nTotal
-
     print("DONE.  presel_eff: ", presel_eff)
     """
-
-
-
