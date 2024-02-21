@@ -55,7 +55,7 @@ wget https://raw.githubusercontent.com/LDMX-Software/ldmx-sw/trunk/Recon/include
 cd ~/LDMX-scripts/TutorialFiles
 # the following three lines are one single command!
 ldmx python3 gabrielle_treeMaker.py \
--i $PWD100k_v14_pn_testprod.root \
+-i $PWD/100k_v14_pn_testprod.root \
 -o $PWD -g 100k_pn_v14_flatout
 ```
 
