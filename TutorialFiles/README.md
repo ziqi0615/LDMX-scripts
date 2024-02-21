@@ -49,8 +49,10 @@ ls | grep -i '^calo[ct].*.h'
 wget https://raw.githubusercontent.com/LDMX-Software/ldmx-sw/trunk/Recon/include/Recon/Event/CaloTrigPrim.h
 wget https://raw.githubusercontent.com/LDMX-Software/ldmx-sw/trunk/Recon/include/Recon/Event/CaloCluster.h
 ```
-* Now we will flatten the tree of the PN samples we just generated. This essentially just means picking all the leaves we want in the root file (e.g., nReadoutHits) and placing them in a single branch. This would be a bit like placing all the files you want to keep in your home directory, and deleting all subdirectories. In this case, we want all the ECal Veto variables needed for the BDT. We will accomplish this by using ```gabrielle_treeMaker.py``` on our samples ```100k_v14_pn_testprod.root```. The output with the flattened tree will be saved as ```100k_pn_v14_flatout.root```...NOTE: copy and paste this entire block, it is one command not three!
+* Now we will flatten the tree of the PN samples we just generated. This essentially just means picking all the leaves we want in the root file (e.g., nReadoutHits) and placing them in a single branch. This would be a bit like placing all the files you want to keep in your home directory, and deleting all subdirectories. In this case, we want all the ECal Veto variables needed for the BDT. We will accomplish this by using ```gabrielle_treeMaker.py``` on our samples ```100k_v14_pn_testprod.root```. The output with the flattened tree will be saved as ```100k_pn_v14_flatout.root``` not three!
 ```
+cd ~/LDMX-scripts/TutorialFiles
+# the following three lines are one single command!
 ldmx python3 gabrielle_treeMaker.py \
 -i $PWD100k_v14_pn_testprod.root \
 -o $PWD -g 100k_pn_v14_flatout
@@ -59,7 +61,7 @@ ldmx python3 gabrielle_treeMaker.py \
 ![image](https://github.com/DuncanWilmot/LDMX-scripts/assets/71404398/e0869bf0-bf22-47b9-bb7e-0c51357f0c14)
 
 ## Evaluate Gabrielle BDT
-* We will now evaluate the pretrained v3 Gabrielle BDT on ```100k_pn_v14_flatout.root``` using a pickled set of weights in ```gabrielle_train_out_v3_weights.pkl``` obtained during training. The output will be saved as ```100k_pn_evalout.root```...Note: again, this is one command, not three
+* We will now evaluate the pretrained v3 Gabrielle BDT on ```100k_pn_v14_flatout.root``` using a pickled set of weights in ```gabrielle_train_out_v3_weights.pkl``` obtained during training. The output will be saved as ```100k_pn_evalout.root```...Note: again, the three lines are one command, not three
 ```
 ldmx python3 gabrielle_bdtEval.py \
 -i $PWD/100k_pn_v14_flatout.root \
