@@ -16,6 +16,7 @@ cd ldmx-sw; mkdir build; cd build;
 ldmx cmake ..
 ldmx make install
 ```
+NOTE: You will need to run the source command every time you start a new terminal and want to use ldmx-sw, or you can add it to your ```.bashrc``` file (runs on startup) using ```vim```
 * Now download LDMX-scripts
 ```
 cd ~
@@ -49,7 +50,7 @@ ls | grep -i '^calo[ct].*.h'
 wget https://raw.githubusercontent.com/LDMX-Software/ldmx-sw/trunk/Recon/include/Recon/Event/CaloTrigPrim.h
 wget https://raw.githubusercontent.com/LDMX-Software/ldmx-sw/trunk/Recon/include/Recon/Event/CaloCluster.h
 ```
-* Now we will flatten the tree of the PN samples we just generated. This essentially just means picking all the leaves we want in the root file (e.g., nReadoutHits) and placing them in a single branch. This would be a bit like placing all the files you want to keep in your home directory, and deleting all subdirectories. In this case, we want all the ECal Veto variables needed for the BDT. We will accomplish this by using ```gabrielle_treeMaker.py``` on our samples ```100k_v14_pn_testprod.root```. The output with the flattened tree will be saved as ```100k_pn_v14_flatout.root``` not three!
+* Now we will flatten the tree of the PN samples we just generated. This essentially just means picking all the leaves we want in the root file (e.g., nReadoutHits) and placing them in a single branch. This would be a bit like placing all the files you want to keep in your home directory, and deleting all subdirectories. In this case, we want all the ECal Veto variables needed for the BDT. We will accomplish this by using ```gabrielle_treeMaker.py``` on our samples ```100k_v14_pn_testprod.root```. The output with the flattened tree will be saved as ```100k_pn_v14_flatout.root```
 ```
 cd ~/LDMX-scripts/TutorialFiles
 # the following three lines are one single command!
@@ -70,7 +71,8 @@ ldmx python3 gabrielle_bdtEval.py \
 * Inspect the output with a ```TBrowser``` as before. You should see a new leaf called ```discValue_ECalVeto```. This discriminator value is a number between 0 and 1, which can more or less be interpreted as a measure of probability that an event is signal (so this number should be quite small for typical PN background events if your model is working well). We can set a threshold for this value and cut events accordingly to get rid of background while (ideally) preserving as much signal as possible.
 
 ## Plotting BDT Variables
-INSTRUCTIONS IN DEVELOPMENT...
+DETAILED INSTRUCTIONS IN DEVELOPMENT...
+For the time being, check out the [plotting scripts and README](https://github.com/IncandelaLab/LDMX-scripts/tree/master/plotting)
 
 
 
