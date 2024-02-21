@@ -29,7 +29,7 @@ git clone --recursive https://github.com/IncandelaLab/LDMX-scripts
 * We will use our ```v3_v14_pn_config.py``` file in the folder marked ```TutorialFiles``` in ```LDMX-scripts``` to generate some simulated samples using ldmx-sw v3 with v14 detector geometry. This will take a few minutes.
 ```
 cd ~/LDMX-scripts/TutorialFiles
-ldmx fire v3_v14_tskim_pn_config.py  
+ldmx fire v3_v14_pn_config.py  
 ```
 * The new samples will be saved as ```100k_v14_pn_testprod.root``` in ```~/LDMX-scripts/TutorialFiles```. Load ```ROOT``` and open a ```TBrowser``` to view them. You will need to first run the XQuartz or Xming app for this to work
 ```
