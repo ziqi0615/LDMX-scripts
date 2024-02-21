@@ -20,6 +20,8 @@ NOTE: You will need to run the source command every time you start a new termina
 * Now download LDMX-scripts
 ```
 cd ~
+# replace this next command this repo for now (until I do a pull request)
+# i.e., git clone -b v14_tutorial_files --recursive https://github.com/DuncanWilmot/LDMX-scripts
 git clone --recursive https://github.com/IncandelaLab/LDMX-scripts
 ```
 
