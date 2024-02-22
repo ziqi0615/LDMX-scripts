@@ -16,7 +16,7 @@ cd ldmx-sw; mkdir build; cd build;
 ldmx cmake ..
 ldmx make install
 ```
-NOTE: You will need to run the source command every time you start a new terminal and want to use ldmx-sw, or you can add it to your ```.bashrc``` file (runs on startup) using ```vim```
+NOTE: You will need to run the source command every time you start a new terminal and want to use ldmx-sw, or you can add it to your ```.bashrc``` file (runs on startup) using ```vim```. You will also need your Docker desktop app running. 
 * Now download LDMX-scripts
 ```
 cd ~
