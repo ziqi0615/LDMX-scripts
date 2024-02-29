@@ -76,6 +76,53 @@ ldmx python3 gabrielle_bdtEval.py \
 DETAILED INSTRUCTIONS IN DEVELOPMENT...
 For the time being, check out the [plotting scripts and README](https://github.com/IncandelaLab/LDMX-scripts/tree/master/plotting)
 
+## Skimming ROOT Files with Uproot
+
+Much of the time we would like apply various cuts to our data. For example, we may want to get rid of all events containing 50 or more ECal readout hits. Or we may want to apply the trigger, which (for a 4 GeV electron beam) cuts all events depositing more than 1500 MeV (1.5 GeV) in the first 20 layers of the ECal. Some studies may require you to look only at fiducial (or non-fiducial) events...the list goes on. This is also called skimming a tree (or TTree, the main structure in a root file). We may want to save our skimmed data to a new set of root files, which must be done with ROOT. Alternatively, we may just want to store the skimmed data for particular variables in arrays to perform calculations with and/or plot. This can be done in python with the library ```uproot```.
+* The basic syntax for opening a root file with uproot (within a .py script) is as follows
+  ```python
+  import uproot
+
+  # create emply list for skimmed energy data (or some other variable of interest)
+  totalE = []
+
+  # location of root file
+  # (when you have many files, instead iterate through directories with glob and for loops)
+  filename = '/path/to/file.root'
+
+  # list of branches to look at (here I just have number of ECal readout hits and total energy deposited in ECal using v14 naming conventions)
+  branchList = ['EcalVeto_signal/nReadoutHits_', 'EcalVeto_signal/summedDet_'] 
+
+  # open root file and generate arrays with variable data
+  with uproot.open(filename)['LDMX_Events'] as t:
+      raw_data = t.arrays(branchList)
+      # this next line creates a 1D array of length equal to the # of events in the file
+      # each element is a scalar number indicating the number of ECal readout hits in that event
+      # when dealing with many variables it is useful to define dictionaries and naming functions
+      # that way you can use for loops and easily point to the data using meaningful strings like 'EcalVeto' and 'nReadoutHits_'
+      # instead of the index 0, which may change if I alter my original list
+      nReadoutHits = data[branchList[0]]
+  
+      # now make a similar array where each element is the total energy desposited in the ECal (for each event in file)
+      summedDet = data[branchList[1]]
+
+      # now I'll make a logical comparison that evaluates True when I have less than 50 ECal hits in an event, and False otherwise
+      MAX_NUM_ECAL_HITS = 50
+      cut = (nReadoutHits < MAX_NUM_ECAL_HITS)
+
+      # now apply the cut
+      skimmed_data = {}
+      for branch in branchList:
+          skimmed_data[branch] = raw_data[branch][cut]
+
+      # put the skimmed summedDet data into the empty list totalE
+      summedDet_skimmed = skimmed_data[branchList[1]]
+      totalE.extend(summedDet_skimmed)
+
+  # Now you can plot totalE in a 1D histogram, or keep performing other operations
+
+  ```
+
 
 
 
