@@ -72,10 +72,6 @@ ldmx python3 gabrielle_bdtEval.py \
 ```
 * Inspect the output with a ```TBrowser``` as before. You should see a new leaf called ```discValue_ECalVeto```. This discriminator value is a number between 0 and 1, which can more or less be interpreted as a measure of probability that an event is signal (so this number should be quite small for typical PN background events if your model is working well). We can set a threshold for this value and cut events accordingly to get rid of background while (ideally) preserving as much signal as possible.
 
-## Plotting BDT Variables
-DETAILED INSTRUCTIONS IN DEVELOPMENT...
-For the time being, check out the [plotting scripts and README](https://github.com/IncandelaLab/LDMX-scripts/tree/master/plotting)
-
 ## Skimming ROOT Files with Uproot
 
 Much of the time we would like apply various cuts to our data. For example, we may want to get rid of all events containing 50 or more ECal readout hits. Or we may want to apply the trigger, which (for a 4 GeV electron beam) cuts all events depositing more than 1500 MeV (1.5 GeV) in the first 20 layers of the ECal. Some studies may require you to look only at fiducial (or non-fiducial) events...the list goes on. This is also called skimming a tree (or TTree, the main structure in a root file). We may want to save our skimmed data to a new set of root files, which must be done with ROOT. Alternatively, we may just want to store the skimmed data for particular variables in arrays to perform calculations with and/or plot. This can be done in python with the library ```uproot```.
@@ -122,6 +118,58 @@ Much of the time we would like apply various cuts to our data. For example, we m
   # Now you can plot totalE in a 1D histogram, or keep performing other operations
 
   ```
+
+## Plotting LDMX Variables
+* For official LDMX plots, check out the [plotting scripts and README](https://github.com/IncandelaLab/LDMX-scripts/tree/master/plotting). You can also keep reading to use the custom plotting code in ```TutorialFiles```
+
+* Plot 1D histograms of LDMX variables (value vs. event density), using EcalVeto variables in this case, with ```v14_plotvars.py```. Plots will be saved as ```png``` image files in ```v14_4gev_plots``` (or some other specified directory with the default being the current working directory). Currently, ```v14_plotvars.py``` uses root files stored on POD (go read the code and comments). You can alter the file templates to use the root files you generated locally, or ssh into POD and run as is.
+```
+# ssh into POD
+ssh -Y [username]@pod-login1.cnsi.ucsb.edu  # don't forget the -Y flag for visuals
+```
+You will need python 3 installed for this. This can be achieved by installing miniconda (if you dont already have it)
+```
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+# Follow the insturctions to finish the installation
+```
+Verify the installation is successful by running ```conda info```
+If you cannot run the conda command, check if you added the conda path to your PATH variable in your bashrc/zshrc file, e.g.,
+```
+export PATH="$HOME/miniconda3/bin:$PATH"
+```
+Now you can run the plotting script
+```
+cd LDMX-scripts/TutorialFiles
+python3 v14_plotvars.py --save -o v14_4gev_plots
+```
+* You can view your plots by starting a ```jupyter notebook``` server
+```
+which jupyter # check that you have it
+jupyter notebook --no-browser
+```
+The output of the last command should look something like this
+```
+To access the notebook, open this file in a browser:
+        file:///home/duncansw/.local/share/jupyter/runtime/nbserver-207241-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=7ed46b4cda4b3265b75f68d569f2a722123b5fddc4b87f3f
+     or http://127.0.0.1:8888/?token=7ed46b4cda4b3265b75f68d569f2a722123b5fddc4b87f3f
+```
+Note the port number (8888 in this case) and open a NEW terminal window then run the following command
+```
+ssh -fNT -L 8888:localhost:8888 [username]@pod-login1.cnsi.ucsb.edu
+```
+At this point, copy and paste one of the URL's above into a browser and navigate to your plots.
+
+![image](https://github.com/DuncanWilmot/LDMX-scripts/assets/71404398/a868fc93-85c4-43fc-a22d-a3b619bb5937)
+
+![image](https://github.com/DuncanWilmot/LDMX-scripts/assets/71404398/5ed83710-9112-4e1b-846c-04970b4a813c)
+
+
+
+  
+  
 
 
 
