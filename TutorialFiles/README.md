@@ -162,9 +162,10 @@ ssh -fNT -L 8888:localhost:8888 [username]@pod-login1.cnsi.ucsb.edu
 ```
 At this point, copy and paste one of the URL's above into a browser and navigate to your plots.
 
-![image](https://github.com/DuncanWilmot/LDMX-scripts/assets/71404398/a868fc93-85c4-43fc-a22d-a3b619bb5937)
+![image](https://github.com/DuncanWilmot/LDMX-scripts/assets/71404398/93bd56c6-4c6c-47ab-a8d5-8d498928c033)
 
-![image](https://github.com/DuncanWilmot/LDMX-scripts/assets/71404398/5ed83710-9112-4e1b-846c-04970b4a813c)
+![image](https://github.com/DuncanWilmot/LDMX-scripts/assets/71404398/8bb58c3d-2407-41d7-80b9-1640aa0117ab)
+
 
 
 
