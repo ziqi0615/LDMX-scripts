@@ -23,6 +23,8 @@ cd ~
 # replace this next command with this repo for now (until I do a pull request)
 # i.e., git clone -b v14_tutorial_files --recursive https://github.com/DuncanWilmot/LDMX-scripts LDMX-scripts-temp
 git clone --recursive https://github.com/IncandelaLab/LDMX-scripts
+# if you already have this, use git pull to update
+# if you want to make and save changes to the code, fork this repository (on the github site) then clone your fork and commit changes with git push
 ```
 
 ## Generating Photonuclear (PN) Background samples
