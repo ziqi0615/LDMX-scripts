@@ -40,7 +40,7 @@ Outline:
 """
 
 # Directory to write output files to:
-output_dir = '/home/duncansw/GraphNet_input/v14/8gev/v3_tskim/XCal_total'
+output_dir = '/home/ziqilin/GraphNet/data'
 # Locations of the 2.3.0 ldmx-sw ROOT files to process+train on:
 """
 file_templates = {
