@@ -39,7 +39,7 @@ Outline:
 # Base:
 
 # Directory to write output files to:
-output_dir = 'processor_output'
+output_dir = '/home/ziqilin/GraphNet/data'
 # Used v12/signal_230_trunk, background_230_trunk for 2.3.0
 # 3.0.0:
 """
