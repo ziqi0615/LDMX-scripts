@@ -79,7 +79,7 @@ MAX_ISO_ENERGY = 500  # NOTE:  650 passes 99.99% sig, ~13% bkg for 3.0.0!  Lower
 data_to_save = {
     'EcalScoringPlaneHits': {
         'scalars':[],
-        'vectors':['id', 'layerID_','trackID_' ,'x_', 'y_', 'z_',
+        'vectors':['pdgID_', 'layerID_','trackID_' ,'x_', 'y_', 'z_',
                    'px_', 'py_', 'pz_', 'energy_']
     },
     # NEW:  Added to correct photon trajectory calculation
