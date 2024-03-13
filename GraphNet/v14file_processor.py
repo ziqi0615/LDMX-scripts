@@ -303,38 +303,44 @@ def processFile(input_vars):
     print("All branches added.  Filling...")
 
     for i in range(nEvents):
-        # For each event, fill the temporary arrays with data, then write them to the tree with Fill()
-        # ALSO:  If event contains no ecal hits, ignore it.
-        if preselected_data['nRecHits'][i] == 0:  continue
+            # For each event, fill the temporary arrays with data, then write them to the tree with Fill()
+            # Also: ignore events with zero ecal hits 
+            #if preselected_data['nRecHits'][i] == 0:  
+                #continue                           
+            for branch in branchList:
+                # Contains both vector and scalar data.  Treat them differently:
+                if branch in scalar_holders.keys():  # Scalar
+                    # fill scalar data
+                    #if i==0:  print("filling scalar", branch)
+                    try:
+                        scalar_holders[branch][0] = preselected_data[branch][i]
+                    except IndexError:
+                        print("Encountered index error filling scalar branches.")
+                        print(f"SKIPPING FILE: {filename}")
+                        return 0,0
+                elif branch in vector_holders.keys():  # Vector
+                    # fill vector data
+                    #if i==0:  print("filling vector", branch)
+                    for j in range(len(preselected_data[branch][i])):
+                        try:
+                            vector_holders[branch][j] = preselected_data[branch][i][j]
+                        except IndexError:
+                            print("INDEX ERROR FILLING VECTOR BRANCHES...")
+                            print(f"Offending file: {filename}")
+                            print(f"Offending branch: {branch}")
+                            print("EXITING PROGRAM ...")
+                            sys.exit(1)
+                else:
+                    print("FATAL ERROR:  {} not found in *_holders".format(branch))
+                    assert(False)
+            tree.Fill()
 
-        for branch in branchList:
-            # Contains both vector and scalar data.  Treat them differently:
-            if branch in scalar_holders.keys():  # Scalar
-                # fill scalar data
-                if i==0:  print("filling scalar", branch)
-                scalar_holders[branch][0] = preselected_data[branch][i]
-            elif branch in vector_holders.keys():  # Vector
-                # fill vector data
-                #print("vec data i is {}".format(type(preselected_data[branch][i])))
-                #if len(preselected_data[branch][i] == 0):
-                #    print("WARNING: found 0-len data, branch={}, i={}, nrh={}".format(branch, i, preselected_data['nRecHits'][i]))
-                #    if preselected_data['nRecHits'][i] == 0:  print("  IS 0")
-
-                #print(i, preselected_data[branch][i][0])  # make sure len is 1
-                if i==0:  print("filling vector", branch)
-                for j in range(len(preselected_data[branch][i])):
-                    vector_holders[branch][j] = preselected_data[branch][i][j]
-            else:
-                print("FATAL ERROR:  {} not found in *_holders".format(branch))
-                assert(False)
-        tree.Fill()
-
-    # Finally, write the filled tree to the ouput file:
-    outfile.Write()
-    print("FINISHED.  File written to {}.".format(outfile_path))
+        # Finally, write the filled tree to the ouput file:
+        outfile.Write()
+        outfile.Close()
+        print("FINISHED.  File written to {}.".format(outfile_path))
 
     return (nTotalEvents, nEvents)
-
 
 if __name__ == '__main__':
     # New approach:  Use multiprocessing
