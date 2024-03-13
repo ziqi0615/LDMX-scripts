@@ -102,7 +102,7 @@ class XCalHitsDataset(Dataset):
         filelist = {}
         for label, fname in bkglist.items():
             filelist[label] = fname
-        for label, fname in siglist.items():
+        for label, fname in siglist.items(): 
             filelist[label] = fname
         print("Using filelist=", filelist)
 

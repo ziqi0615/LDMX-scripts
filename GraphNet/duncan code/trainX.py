@@ -23,10 +23,10 @@ import datetime
 import argparse
 import gc
 
-from utils.ParticleNetX import ParticleNetX
+from torch.utils.ParticleNetX import ParticleNetX
 from datasetX import XCalHitsDataset
 from datasetX import collate_wrapper as collate_fn
-from utils.SplitNetX import SplitNetX
+from torch.utils.SplitNetX import SplitNetX
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--demo', action='store_true', default=False,
