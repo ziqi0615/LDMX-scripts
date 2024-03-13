@@ -39,7 +39,7 @@ Outline:
 # Base:
 
 # Directory to write output files to:
-output_dir = '/home/ziqilin/LDMX-scripts/GraphNet/data'
+output_dir = '/home/ziqilin/LDMX-scripts/GraphNet/data/v14_4Gev'
 # Used v12/signal_230_trunk, background_230_trunk for 2.3.0
 # 3.0.0:
 """
@@ -53,7 +53,7 @@ file_templates = {
 }
 """
 
-# v13 geometry:
+# v14 geometry:
 file_templates = {
     0.001:  '/home/aminali/production/v_14prof/Ap0.001GeV_1e_v3.2.2_v14_tskim/*.root',
     0.01:  '/home/aminali/production/v_14prof/Ap0.01GeV_1e_v3.2.2_v14_tskim/*.root',
