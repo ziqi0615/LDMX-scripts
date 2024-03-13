@@ -114,7 +114,7 @@ file_templates = {
     0:     '/home/aminali/production/v14_prod/v3.2.0_ecalPN_tskim_sizeskim/*.root'
 }
 '''
-'''
+
 file_templates = {
     0.001: '/home/aminali/production/v14_prod/Ap0.001GeV_1e_v3.2.2_v14_tskim/*.root',
     0.01:  '/home/aminali/production/v14_prod/Ap0.01GeV_1e_v3.2.2_v14_tskim/*.root',
@@ -122,7 +122,7 @@ file_templates = {
     1.0:   '/home/aminali/production/v14_prod/Ap1GeV_1e_v3.2.3_v14_tskim/*.root',
     0:     '/home/aminali/production/v14_prod/v3.2.0_ecalPN_tskim_sizeskim/*.root'
 }
-'''
+
 '''
 file_templates = {
     0.001:  '/home/vamitamas/Samples8GeV/Ap0.001GeV_sim/*.root',
@@ -133,13 +133,7 @@ file_templates = {
 }
 '''
 
-file_templates = {
-    0.001:  '/home/aminali/production/v_14prof/Ap0.001GeV_1e_v3.2.2_v14_tskim/*.root',
-    0.01:  '/home/aminali/production/v_14prof/Ap0.01GeV_1e_v3.2.2_v14_tskim/*.root',
-    0.1:   '/home/aminali/production/v_14prof/Ap0.1GeV_1e_v3.2.2_v14_tskim/*.root',
-    1.0:   '/home/aminali/production/v_14prof/Ap1GeV_1e_v3.2.2_v14_tskim/*.root',
-    0:     '/home/aminali/production/v_14prof/v3.2.0_ecalPN_tskim_sizeskim/*.root'    
-}
+
 
 # Standard preselection values (-> 95% sig/5% bkg)
 MAX_NUM_ECAL_HITS = 90 #50 #60  #110  #Now MUCH lower!  >99% of 1 MeV sig should pass this. (and >10% of bkg)
