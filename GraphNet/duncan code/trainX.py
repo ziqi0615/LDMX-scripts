@@ -16,6 +16,8 @@ from torch.utils.data import DataLoader
 
 torch.set_default_dtype(torch.float64)
 
+utils = {('/home/ziqilin/LDMX-scripts/GraphNet/utils')}
+
 import tqdm
 import os
 import sys
@@ -23,10 +25,10 @@ import datetime
 import argparse
 import gc
 
-from torch.utils.ParticleNetX import ParticleNetX
+from utils.ParticleNetX import ParticleNetX
 from datasetX import XCalHitsDataset
 from datasetX import collate_wrapper as collate_fn
-from torch.utils.SplitNetX import SplitNetX
+from utils.SplitNetX import SplitNetX
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--demo', action='store_true', default=False,

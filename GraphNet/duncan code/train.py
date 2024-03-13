@@ -15,7 +15,8 @@ import torch
 from torch.utils.data import DataLoader
 
 torch.set_default_dtype(torch.float32)
-utils = /home/ziqilin/LDMX-scripts/GraphNet/utils
+
+utils = {('/home/ziqilin/LDMX-scripts/GraphNet/utils')}
 
 import tqdm
 import os
