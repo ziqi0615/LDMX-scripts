@@ -302,7 +302,7 @@ def processFile(input_vars):
 
     print("All branches added.  Filling...")
 
-    for i in range(nEvents):
+        for i in range(nEvents):
             # For each event, fill the temporary arrays with data, then write them to the tree with Fill()
             # Also: ignore events with zero ecal hits 
             #if preselected_data['nRecHits'][i] == 0:  
@@ -335,10 +335,10 @@ def processFile(input_vars):
                     assert(False)
             tree.Fill()
 
-         # Finally, write the filled tree to the ouput file:
-         outfile.Write()
-         outfile.Close()
-         print("FINISHED.  File written to {}.".format(outfile_path))
+        # Finally, write the filled tree to the ouput file:
+        outfile.Write()
+        outfile.Close()
+        print("FINISHED.  File written to {}.".format(outfile_path))
 
     return (nTotalEvents, nEvents)
 
