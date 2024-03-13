@@ -40,7 +40,7 @@ Outline:
 """
 
 # Directory to write output files to:
-output_dir = '/home/duncansw/GraphNet_input/v14/8gev/v3_tskim/XCal_total'
+output_dir = '/home/ziqilin/v14_data'
 # Locations of the 2.3.0 ldmx-sw ROOT files to process+train on:
 """
 file_templates = {
@@ -114,7 +114,7 @@ file_templates = {
     0:     '/home/aminali/production/v14_prod/v3.2.0_ecalPN_tskim_sizeskim/*.root'
 }
 '''
-'''
+
 file_templates = {
     0.001: '/home/aminali/production/v14_prod/Ap0.001GeV_1e_v3.2.2_v14_tskim/*.root',
     0.01:  '/home/aminali/production/v14_prod/Ap0.01GeV_1e_v3.2.2_v14_tskim/*.root',
@@ -122,6 +122,7 @@ file_templates = {
     1.0:   '/home/aminali/production/v14_prod/Ap1GeV_1e_v3.2.3_v14_tskim/*.root',
     0:     '/home/aminali/production/v14_prod/v3.2.0_ecalPN_tskim_sizeskim/*.root'
 }
+
 '''
 file_templates = {
     0.001:  '/home/vamitamas/Samples8GeV/Ap0.001GeV_sim/*.root',
@@ -130,6 +131,7 @@ file_templates = {
     1.0:   '/home/vamitamas/Samples8GeV/Ap1GeV_sim/*.root',
     0:     '/home/vamitamas/Samples8GeV/v3.3.3_ecalPN*/*.root'
 }
+'''
 
 # Standard preselection values (-> 95% sig/5% bkg)
 MAX_NUM_ECAL_HITS = 90 #50 #60  #110  #Now MUCH lower!  >99% of 1 MeV sig should pass this. (and >10% of bkg)
