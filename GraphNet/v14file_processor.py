@@ -55,11 +55,11 @@ file_templates = {
 
 # v13 geometry:
 file_templates = {
-    0.001:  '/home/vamitamas/Samples8GeV/Ap0.001GeV_sim/*.root',
-    0.01:  '/home/vamitamas/Samples8GeV/Ap0.01GeV_sim/*.root',
-    0.1:   '/home/vamitamas/Samples8GeV/Ap0.1GeV_sim/*.root',
-    1.0:   '/home/vamitamas/Samples8GeV/Ap1GeV_sim/*.root',
-    0:     '/home/vamitamas/Samples8GeV/v3.3.3_ecalPN*/*.root'    
+    0.001:  '/home/aminali/production/v_14prof/Ap0.001GeV_1e_v3.2.2_v14_tskim/*.root',
+    0.01:  '/home/aminali/production/v_14prof/Ap0.01GeV_1e_v3.2.2_v14_tskim/*.root',
+    0.1:   '/home/aminali/production/v_14prof/Ap0.1GeV_1e_v3.2.2_v14_tskim/*.root',
+    1.0:   '/home/aminali/production/v_14prof/Ap1GeV_1e_v3.2.2_v14_tskim/*.root',
+    0:     '/home/aminali/production/v_14prof/v3.2.0_ecalPN_tskim_sizeskim/*.root'    
 }
 
 # additional eval sample:  Used v12/sig_extended_extra, v12/bkg_12M/evaluation for 2.3.0
