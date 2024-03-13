@@ -335,10 +335,10 @@ def processFile(input_vars):
                     assert(False)
             tree.Fill()
 
-        # Finally, write the filled tree to the ouput file:
-        outfile.Write()
-        outfile.Close()
-        print("FINISHED.  File written to {}.".format(outfile_path))
+         # Finally, write the filled tree to the ouput file:
+         outfile.Write()
+         outfile.Close()
+         print("FINISHED.  File written to {}.".format(outfile_path))
 
     return (nTotalEvents, nEvents)
 
