@@ -40,7 +40,7 @@ Outline:
 """
 
 # Directory to write output files to:
-output_dir = '/home/ziqilin/GraphNet/data'
+output_dir = '/home/ziqilin/LDMX-scripts/GraphNet/data/v14_4Gev'
 # Locations of the 2.3.0 ldmx-sw ROOT files to process+train on:
 """
 file_templates = {
@@ -123,12 +123,22 @@ file_templates = {
     0:     '/home/aminali/production/v14_prod/v3.2.0_ecalPN_tskim_sizeskim/*.root'
 }
 '''
+'''
 file_templates = {
     0.001:  '/home/vamitamas/Samples8GeV/Ap0.001GeV_sim/*.root',
     0.01:  '/home/vamitamas/Samples8GeV/Ap0.01GeV_sim/*.root',
     0.1:   '/home/vamitamas/Samples8GeV/Ap0.1GeV_sim/*.root',
     1.0:   '/home/vamitamas/Samples8GeV/Ap1GeV_sim/*.root',
     0:     '/home/vamitamas/Samples8GeV/v3.3.3_ecalPN*/*.root'
+}
+'''
+
+file_templates = {
+    0.001:  '/home/aminali/production/v_14prof/Ap0.001GeV_1e_v3.2.2_v14_tskim/*.root',
+    0.01:  '/home/aminali/production/v_14prof/Ap0.01GeV_1e_v3.2.2_v14_tskim/*.root',
+    0.1:   '/home/aminali/production/v_14prof/Ap0.1GeV_1e_v3.2.2_v14_tskim/*.root',
+    1.0:   '/home/aminali/production/v_14prof/Ap1GeV_1e_v3.2.2_v14_tskim/*.root',
+    0:     '/home/aminali/production/v_14prof/v3.2.0_ecalPN_tskim_sizeskim/*.root'    
 }
 
 # Standard preselection values (-> 95% sig/5% bkg)
