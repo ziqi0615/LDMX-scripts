@@ -3,8 +3,8 @@
 #SBATCH --gres=gpu:1
 #SBATCH --output=slurm_training3.out
 
-export MODEL_NAME=v13_f1r
-export BASE_DIRECTORY=/home/duncansw/LDMX-scripts/GraphNet
+export MODEL_NAME=v14_f1r
+export BASE_DIRECTORY=/home/ziqilin/LDMX-scripts/GraphNet
 
 cd $SLURM_SUBMIT_DIR
 
