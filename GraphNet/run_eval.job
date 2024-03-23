@@ -5,7 +5,7 @@
 
 export MODEL_NAME=v14_f1r
 export DATA_NAME=v14_f1r
-export BASE_DIRECTORY=/home/ziqilin/LDMX-scrpits/GraphNet
+export BASE_DIRECTORY=/home/ziqilin/LDMX-scripts/GraphNet
 
 cd $SLURM_SUBMIT_DIR
 
