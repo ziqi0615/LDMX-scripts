@@ -14,7 +14,7 @@ file_templates = {
 }
 
 # preselection values
-MAX_NUM_ECAL_HITS = 50 #60  #110 for ldmx-sw v2.3.0
+MAX_NUM_ECAL_HITS = 50 #60  #110 for ldmx-sw v2.3.0j
 MAX_ISO_ENERGY = 500  #650 for ldmx-sw v2.3.0
 # Results:  >0.994 vs 0.055
 
