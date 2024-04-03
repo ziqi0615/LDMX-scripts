@@ -3,13 +3,13 @@
 #SBATCH --gres=gpu:1
 #SBATCH --output=slurm_training3.out
 
-export MODEL_NAME=v14_f1rX
+export MODEL_NAME=v14_f1r
 export BASE_DIRECTORY=/home/ziqilin/LDMX-scripts/GraphNet
 
 cd $SLURM_SUBMIT_DIR
 
 /bin/hostname
-srun --gres=gpu:1 python -u trainX.py --optimizer ranger --start-lr 5e-3 --focal-loss-gamma 2 --network particle-net-lite --batch-size 128 --save-model-path $BASE_DIRECTORY/models/$MODEL_NAME/model --test-output-path $BASE_DIRECTORY/test_output/$MODEL_NAME/output --num-epochs 20 --num-workers 16 --device 'cuda:0' --num-regions 1
+srun --gres=gpu:1 python -u train.py --optimizer ranger --start-lr 5e-3 --focal-loss-gamma 2 --network particle-net-lite --batch-size 128 --save-model-path $BASE_DIRECTORY/models/$MODEL_NAME/model --test-output-path $BASE_DIRECTORY/test_output/$MODEL_NAME/output --num-epochs 20 --num-workers 16 --device 'cuda:0' --num-regions 1
 
 
 
