@@ -452,7 +452,7 @@ class XCalHitsDataset(Dataset):
                     else: # else E<0
                         log_energy_[r][j] = -1  # Note:  E<0 is very uncommon, so -1 is okay to round to.
                 
-        if self.extended
+        if self.extended:
             for k in range(len(h_energy)):
                 
                 hcal_regions = []
