@@ -21,7 +21,7 @@ import ROOT as r
 torch.set_default_dtype(torch.float32)
 
 # Should match value in the preselection.  Determines size of ParticleNet position arrays.
-MAX_NUM_ECAL_HITS = 50 #60  #110  # NOW REDUCED!
+MAX_NUM_ECAL_HITS = 90 #60  #110  # NOW REDUCED!
 
 # NEW: Radius of containment data
 # Note:  Should still be valid for 2e ParticleNet unless the shower shape has changed
