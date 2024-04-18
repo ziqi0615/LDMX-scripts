@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH -N 1 --partition=gpu --ntasks-per-node=1
 #SBATCH --gres=gpu:1
-#SBATCH --output=slurm_eval3.out
+#SBATCH --output=slurm_eval3_8gev.out
 
-export MODEL_NAME=v14_f1r
-export DATA_NAME=v14_f1r
+export MODEL_NAME=v14_f1r_8gev
+export DATA_NAME=v14_f1r_8gev
 export BASE_DIRECTORY=/home/ziqilin/LDMX-scripts/GraphNet
 
 cd $SLURM_SUBMIT_DIR

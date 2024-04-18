@@ -196,7 +196,7 @@ class XCalHitsDataset(Dataset):
         # Hard-coded; not worried about generalizing atm
         #return 5
         #return 4 # removed layer id
-        if args.extended:
+        if self.extended:
             return 6 # restored layer id, added strip id
         else:
             return 5
